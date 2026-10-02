@@ -17,8 +17,7 @@
   {
     "id": "cervical_vertebrae.transverse_processes",
     "name": "Cervical transverse processes",
-    "bone": "cervical_vertebrae",
-    "midline": true
+    "bone": "cervical_vertebrae"
   },
   {
     "id": "clavicle.medial_third",

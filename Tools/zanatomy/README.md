@@ -25,6 +25,7 @@ ZA=Z-Anatomy/Startup.blend; ZB=Z-Biomechanics/Startup.blend
 
 $B -b $ZA --python export_lines.py         # line muscles/tissues at 25% → out_lines.*
 $B -b $ZB --python rig_lines.py            # skeleton, skin weights, squat bone frames → rig_*
+$B -b $ZB --python ribbons.py              # ribbon points: stations on bone (landmark_rules.json) → ribbons.json
 $B -b $ZB --python limits.py | grep '^JSON' | sed 's/^JSON//' > zb_limits.json   # rig limits
 
 # Comparison page:
@@ -50,5 +51,11 @@ $B -b $ZA --python usdsize.py              # optional: USDZ size per layer at 10
   weighted by 1/(d + 1 cm)⁴. Leg and trunk structures can't follow forearm or
   hand bones, and arm structures can't follow leg bones. The hands hang beside
   the thighs at rest, so without this the thigh muscles stretch toward the hands.
+- **Ribbons:** each station is placed on its bone by a rule in
+  `landmark_rules.json`: the bone mesh, the direction to its extreme point, and
+  an optional height band (e.g. the ASIS is the front-most point of the upper
+  hip bone). Points between stations are the centre of the track's muscles,
+  sliced along the station-to-station direction. Muscle-contact heuristics
+  failed here, because Z-Anatomy has no separate tendon meshes.
 - **Geometry format** in the `.bin` files: gzip of uint16 positions quantised
   to the bbox in the matching `.json`, then uint32 triangle indices.

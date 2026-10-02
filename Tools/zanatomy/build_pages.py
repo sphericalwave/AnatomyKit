@@ -21,14 +21,14 @@ def load(name):
     return json.load(open(RES + name))
 
 
-# Line atlas: needs export_lines.py and rig_lines.py outputs.
+# Line atlas: needs export_lines.py, rig_lines.py and ribbons.py outputs.
 tissues = load('tissues.json')
 atlas_data = dict(
     rig=json.load(open(OUT + 'rig.json')), linesMeta=json.load(open(OUT + 'out_lines.json')),
     lines=load('lines.json'), landmarks=load('landmarks.json'),
     muscles={m['id']: m['name'] for m in load('muscles.json')},
     tissues=[{'id': t['id']} for t in tissues], tissueNames={t['id']: t['name'] for t in tissues},
-    meshmap=load('meshes-zanatomy.json')['meshes'])
+    meshmap=load('meshes-zanatomy.json')['meshes'], ribbons=json.load(open(OUT + 'ribbons.json')))
 atlas = open(PAGES + 'atlas_template.html').read()
 atlas = atlas.replace('__DATA__', blobs({'d-skel': 'rig_skel.bin', 'd-lines': 'out_lines.bin',
                                           'd-weights': 'rig_weights.bin', 'd-frames': 'rig_frames.bin'}))

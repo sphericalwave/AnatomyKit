@@ -77,7 +77,7 @@ ol.steps li { display: flex; align-items: center; gap: 6px; font-size: 14px; }
   <header>
     <span class="eyebrow">AnatomyKit · lines.json on the Z-Anatomy skeleton</span>
     <h1 id="title">Spiral Line</h1>
-    <p class="lede">Each line is drawn from AnatomyKit's ordered paths: every muscle and connective tissue on a track is lit on the real Z-Anatomy mesh. Pick a line, or show one side to follow it across the midline.</p>
+    <p class="lede">Each line is drawn from AnatomyKit's ordered paths. Muscles lights every muscle and connective tissue on a track on the real Z-Anatomy mesh. Ribbons draws the line as a band from bone landmark to bone landmark, like the book plates. Pick a line, or show one side to follow it across the midline.</p>
   </header>
 
   <div class="controls">
@@ -93,6 +93,11 @@ ol.steps li { display: flex; align-items: center; gap: 6px; font-size: 14px; }
       <button class="chip" data-view="front" aria-pressed="true">Front</button>
       <button class="chip" data-view="back" aria-pressed="false">Back</button>
       <button class="chip" data-view="side" aria-pressed="false">Side</button>
+    </div>
+    <div class="group" role="group" aria-label="Style">
+      <span class="lbl">Style</span>
+      <button class="chip" data-style="muscles" aria-pressed="true">Muscles</button>
+      <button class="chip" data-style="ribbons" aria-pressed="false">Ribbons</button>
     </div>
     <div class="group" role="group" aria-label="Pose">
       <span class="lbl">Pose</span>
@@ -120,6 +125,7 @@ ol.steps li { display: flex; align-items: center; gap: 6px; font-size: 14px; }
 
   <div class="notes">
     <p>Line routes are a draft reading of Myers, <i>Anatomy Trains</i> (4th ed.), marked unreviewed in AnatomyKit. Lines with several paths (Deep Front, arm lines) are branches or pieces Myers joins through bone. "Crosses" marks where a line passes the midline; with one side selected, tracks after a crossing light on the other side.</p>
+    <p>Ribbons: each station is placed on its bone by a rule (e.g. the ASIS is the front-most point of the upper hip bone), so stations move rigidly with the skeleton. Where Z-Anatomy has no mesh for a track (the patellar ligament, sternal fascia), the ribbon runs straight between stations.</p>
     <p>Meshes: Z-Anatomy (CC BY-SA 4.0), Gauthier Kervyn and contributors, built on BodyParts3D. Shown at 25% detail. Squat: the Z-Anatomy rig drives the bones; each muscle vertex follows its four nearest bones. That's a first pass, so muscles stretch but don't bulge or slide, and some pass through bone at full depth.</p>
   </div>
 </div>
@@ -164,7 +170,11 @@ __DATA__
   const boneMat = new THREE.MeshStandardMaterial({ roughness: 0.8 });
   const muscleMat = new THREE.MeshStandardMaterial({ roughness: 0.45, transparent: true, opacity: 0.88 });
   const tissueMat = new THREE.MeshStandardMaterial({ roughness: 0.4, transparent: true, opacity: 0.7, side: THREE.DoubleSide, depthWrite: false });
-  function theme() { boneMat.color.set(css("--bone")); muscleMat.color.set(css("--band")); tissueMat.color.set(css("--band-tissue")); }
+  const ribbonMat = new THREE.MeshStandardMaterial({ roughness: 0.4, transparent: true, opacity: 0.92 });
+  const stationMat = new THREE.MeshStandardMaterial({ roughness: 0.5 });
+  const crossMat = new THREE.MeshStandardMaterial({ roughness: 0.5 });
+  function theme() { boneMat.color.set(css("--bone")); muscleMat.color.set(css("--band")); tissueMat.color.set(css("--band-tissue"));
+    ribbonMat.color.set(css("--band")); stationMat.color.set(css("--fg")); crossMat.color.set(css("--accent")); }
   theme();
   new MutationObserver(theme).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
   matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", theme);
@@ -180,7 +190,6 @@ __DATA__
   const allParts = new THREE.BufferGeometry(); allParts.setAttribute("position", parts.pos);
   allParts.setIndex(new THREE.BufferAttribute(parts.idx, 1)); allParts.computeVertexNormals();
   const partNormals = allParts.getAttribute("normal");
-  sg.boundingSphere = new THREE.Sphere(new THREE.Vector3(0, 0.9, 0), 1.4);
   root.add(new THREE.Mesh(sg, boneMat));
 
   // One mesh per Z-Anatomy object, hidden until a line lights it.
@@ -189,7 +198,7 @@ __DATA__
   for (const [name, start, count] of D.linesMeta.ranges) {
     const g = new THREE.BufferGeometry(); g.setAttribute("position", parts.pos);
     g.setIndex(new THREE.BufferAttribute(parts.idx.subarray(start, start + count), 1)); g.setAttribute("normal", partNormals);
-    g.boundingSphere = new THREE.Sphere(new THREE.Vector3(0, 0.9, 0), 1.4);
+    g.boundingSphere = new THREE.Sphere(new THREE.Vector3(0, 0.9, 0), 1.2);
     const m = new THREE.Mesh(g, muscleMat); m.visible = false; m.renderOrder = 1; root.add(m); objects[name] = m;
   }
   const meshNames = (cid, side) => (D.meshmap[cid] || []).flatMap(base => {
@@ -201,7 +210,7 @@ __DATA__
   const lineByID = Object.fromEntries(D.lines.map(l => [l.id, l]));
   const nameOf = id => (D.muscles[id] || D.tissueNames[id] || id);
   const landmark = Object.fromEntries(D.landmarks.map(l => [l.id, l]));
-  let lineID = "spiral", side = "both", view = "front";
+  let lineID = "spiral", side = "both", view = "front", style = "muscles";
   try { const s = localStorage.getItem("atlas-line"); if (s && lineByID[s]) lineID = s; } catch (e) {}
 
   function sidedTracks(line, start) {
@@ -219,8 +228,9 @@ __DATA__
     const line = lineByID[lineID];
     Object.values(objects).forEach(m => { m.visible = false; });
     const walked = sidedTracks(line, side);
-    for (const steps of walked) for (const st of steps) if (st.via) for (const cid of st.via)
+    if (style === "muscles") for (const steps of walked) for (const st of steps) if (st.via) for (const cid of st.via)
       for (const n of meshNames(cid, st.side)) { objects[n].visible = true; objects[n].material = tissueIDs.has(cid) ? tissueMat : muscleMat; }
+    buildRibbons();
     document.getElementById("title").textContent = line.name;
     document.getElementById("route-short").textContent = line.shortName + (side === "both" ? "" : ` · ${side} line`);
     const host = document.getElementById("paths"); host.textContent = "";
@@ -320,14 +330,61 @@ __DATA__
       mp[o] = px; mp[o + 1] = py; mp[o + 2] = pz; mn[o] = qx; mn[o + 1] = qy; mn[o + 2] = qz;
     }
     parts.pos.needsUpdate = true; partNormals.needsUpdate = true;
+    posed = true; buildRibbons();
   }
+  function rest() {
+    skel.pos.array.set(sRestP); sg.getAttribute("normal").array.set(sRestN); skel.pos.needsUpdate = true; sg.getAttribute("normal").needsUpdate = true;
+    parts.pos.array.set(mRestP); partNormals.array.set(mRestN); parts.pos.needsUpdate = true; partNormals.needsUpdate = true;
+    posed = false; buildRibbons();
+  }
+  // --- Ribbons: a tube through each path's points. Stations sit on bone; points
+  // between follow the track's muscles. Points are skinned like the muscles.
+  const ribbonGroup = new THREE.Group(); root.add(ribbonGroup);
+  const ball = new THREE.SphereGeometry(0.013, 16, 12);
+  let posed = false;
+  function ribbonPoints(rp) {
+    const pts = [];
+    for (let i = 0; i < rp.k.length; i++) {
+      const x = rp.p[i * 3], y = rp.p[i * 3 + 1], z = rp.p[i * 3 + 2];
+      if (!posed) { pts.push(new THREE.Vector3(x, y, z)); continue; }
+      let px = 0, py = 0, pz = 0;
+      for (let k = 0; k < 4; k++) {
+        const w = rp.w[i * 4 + k] / 255; if (!w) continue;
+        const b = rp.b[i * 4 + k], r = b * 9;
+        px += w * (Rm[r] * x + Rm[r + 3] * y + Rm[r + 6] * z + Tv[b * 3]);
+        py += w * (Rm[r + 1] * x + Rm[r + 4] * y + Rm[r + 7] * z + Tv[b * 3 + 1]);
+        pz += w * (Rm[r + 2] * x + Rm[r + 5] * y + Rm[r + 8] * z + Tv[b * 3 + 2]);
+      }
+      pts.push(new THREE.Vector3(px, py, pz));
+    }
+    return pts;
+  }
+  function buildRibbons() {
+    for (const c of [...ribbonGroup.children]) { ribbonGroup.remove(c); if (c.geometry !== ball) c.geometry.dispose(); }
+    if (style !== "ribbons") return;
+    for (const s of side === "both" ? ["left", "right"] : [side]) {
+      for (const rp of D.ribbons[lineID][s]) {
+        const pts = ribbonPoints(rp);
+        if (pts.length < 2) continue;
+        const curve = new THREE.CatmullRomCurve3(pts, false, "centripetal");
+        ribbonGroup.add(new THREE.Mesh(new THREE.TubeGeometry(curve, pts.length * 10, 0.011, 10, false), ribbonMat));
+        for (let i = 0; i < pts.length; i++) {
+          if (rp.k[i] === "t") continue;
+          const m = new THREE.Mesh(ball, rp.k[i] === "x" ? crossMat : stationMat);
+          m.position.copy(pts[i]); ribbonGroup.add(m);
+        }
+      }
+    }
+  }
+  document.querySelectorAll("[data-style]").forEach(b => b.addEventListener("click", () => { style = b.dataset.style; press("style", style); render(); }));
+
   const depth = document.getElementById("depth"), depthWrap = document.getElementById("depth-wrap");
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   let pose = "stand", playing = false, phase = 0, lastT = -1, last = performance.now();
   function setPose(p) {
     pose = p; press("pose", p); depthWrap.hidden = p !== "squat";
     playing = p === "squat" && !reduce; phase = 0;
-    if (p === "stand") { skin(0); lastT = 0; }
+    if (p === "stand") { rest(); lastT = -1; }
   }
   document.querySelectorAll("[data-pose]").forEach(b => b.addEventListener("click", () => setPose(b.dataset.pose)));
   depth.addEventListener("input", () => { playing = false; phase = depth.value / 2000; });
