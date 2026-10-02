@@ -2,61 +2,880 @@
   {
     "id": "superficial_back",
     "name": "Superficial Back Line",
-    "shortName": "SBL"
+    "shortName": "SBL",
+    "paths": [
+      {
+        "name": "main",
+        "steps": [
+          {
+            "at": "toe_phalanges.plantar_surface"
+          },
+          {
+            "via": [
+              "plantar_aponeurosis",
+              "flexor_digitorum_brevis"
+            ]
+          },
+          {
+            "at": "calcaneus.plantar_surface"
+          },
+          {
+            "via": [
+              "calcaneal_tendon",
+              "gastrocnemius",
+              "soleus"
+            ]
+          },
+          {
+            "at": "femur.posterior_condyles"
+          },
+          {
+            "via": [
+              "biceps_femoris",
+              "semitendinosus",
+              "semimembranosus"
+            ]
+          },
+          {
+            "at": "ischium.ischial_tuberosity"
+          },
+          {
+            "via": [
+              "sacrotuberous_ligament"
+            ]
+          },
+          {
+            "at": "sacrum.dorsal_surface"
+          },
+          {
+            "via": [
+              "thoracolumbar_fascia",
+              "erector_spinae"
+            ]
+          },
+          {
+            "at": "occipital.occipital_ridge"
+          },
+          {
+            "via": [
+              "epicranial_aponeurosis",
+              "occipitofrontalis"
+            ]
+          },
+          {
+            "at": "frontal.supraorbital_ridge"
+          }
+        ]
+      }
+    ],
+    "source": "Myers, Anatomy Trains (4th ed.), draft reading",
+    "reviewed": false
   },
   {
     "id": "superficial_front",
     "name": "Superficial Front Line",
-    "shortName": "SFL"
+    "shortName": "SFL",
+    "paths": [
+      {
+        "name": "leg",
+        "steps": [
+          {
+            "at": "toe_phalanges.dorsal_surface"
+          },
+          {
+            "via": [
+              "extensor_digitorum_longus",
+              "tibialis_anterior"
+            ]
+          },
+          {
+            "at": "tibia.tibial_tuberosity"
+          },
+          {
+            "via": [
+              "patellar_ligament"
+            ]
+          },
+          {
+            "at": "patella.apex"
+          },
+          {
+            "via": [
+              "rectus_femoris",
+              "vastus_lateralis",
+              "vastus_medialis"
+            ]
+          },
+          {
+            "at": "ilium.aiis"
+          }
+        ]
+      },
+      {
+        "name": "trunk",
+        "steps": [
+          {
+            "at": "pubis.pubic_tubercle"
+          },
+          {
+            "via": [
+              "rectus_abdominis"
+            ]
+          },
+          {
+            "at": "rib5.costal_cartilage"
+          },
+          {
+            "via": [
+              "sternochondral_fascia"
+            ]
+          },
+          {
+            "at": "sternum.manubrium"
+          },
+          {
+            "via": [
+              "sternocleidomastoid"
+            ]
+          },
+          {
+            "at": "temporal.mastoid_process"
+          }
+        ]
+      }
+    ],
+    "source": "Myers, Anatomy Trains (4th ed.), draft reading",
+    "reviewed": false
   },
   {
     "id": "lateral",
     "name": "Lateral Line",
-    "shortName": "LL"
+    "shortName": "LL",
+    "paths": [
+      {
+        "name": "main",
+        "steps": [
+          {
+            "at": "fifth_metatarsal.base"
+          },
+          {
+            "via": [
+              "fibularis_longus",
+              "fibularis_brevis"
+            ]
+          },
+          {
+            "at": "fibula.head"
+          },
+          {
+            "via": [
+              "anterior_ligament_fibular_head"
+            ]
+          },
+          {
+            "at": "tibia.lateral_condyle"
+          },
+          {
+            "via": [
+              "iliotibial_tract",
+              "tensor_fasciae_latae",
+              "gluteus_maximus"
+            ]
+          },
+          {
+            "at": "ilium.iliac_crest"
+          },
+          {
+            "via": [
+              "external_oblique",
+              "internal_oblique"
+            ]
+          },
+          {
+            "at": "ribs.lower_lateral"
+          },
+          {
+            "via": [
+              "intercostals"
+            ]
+          },
+          {
+            "at": "rib1.superior_surface"
+          },
+          {
+            "via": [
+              "splenius_capitis",
+              "sternocleidomastoid"
+            ]
+          },
+          {
+            "at": "occipital.occipital_ridge"
+          }
+        ]
+      }
+    ],
+    "source": "Myers, Anatomy Trains (4th ed.), draft reading",
+    "reviewed": false
   },
   {
     "id": "spiral",
     "name": "Spiral Line",
-    "shortName": "SPL"
+    "shortName": "SPL",
+    "paths": [
+      {
+        "name": "main",
+        "steps": [
+          {
+            "at": "occipital.occipital_ridge"
+          },
+          {
+            "via": [
+              "splenius_capitis",
+              "splenius_cervicis"
+            ]
+          },
+          {
+            "at": "thoracic_vertebrae.upper_spinous_processes",
+            "crosses": true
+          },
+          {
+            "via": [
+              "rhomboid_major",
+              "rhomboid_minor"
+            ]
+          },
+          {
+            "at": "scapula.medial_border"
+          },
+          {
+            "via": [
+              "serratus_anterior"
+            ]
+          },
+          {
+            "at": "ribs.lateral"
+          },
+          {
+            "via": [
+              "external_oblique"
+            ]
+          },
+          {
+            "at": "linea_alba",
+            "crosses": true
+          },
+          {
+            "via": [
+              "abdominal_aponeurosis",
+              "internal_oblique"
+            ]
+          },
+          {
+            "at": "ilium.asis"
+          },
+          {
+            "via": [
+              "tensor_fasciae_latae",
+              "iliotibial_tract"
+            ]
+          },
+          {
+            "at": "tibia.lateral_condyle"
+          },
+          {
+            "via": [
+              "tibialis_anterior"
+            ]
+          },
+          {
+            "at": "first_metatarsal.base"
+          },
+          {
+            "via": [
+              "fibularis_longus"
+            ]
+          },
+          {
+            "at": "fibula.head"
+          },
+          {
+            "via": [
+              "biceps_femoris"
+            ]
+          },
+          {
+            "at": "ischium.ischial_tuberosity"
+          },
+          {
+            "via": [
+              "sacrotuberous_ligament"
+            ]
+          },
+          {
+            "at": "sacrum.dorsal_surface"
+          },
+          {
+            "via": [
+              "erector_spinae"
+            ]
+          },
+          {
+            "at": "occipital.occipital_ridge"
+          }
+        ]
+      }
+    ],
+    "source": "Myers, Anatomy Trains (4th ed.), draft reading",
+    "reviewed": false
   },
   {
     "id": "deep_front",
     "name": "Deep Front Line",
-    "shortName": "DFL"
+    "shortName": "DFL",
+    "paths": [
+      {
+        "name": "foot to pelvic floor",
+        "steps": [
+          {
+            "at": "tarsals.plantar_surface"
+          },
+          {
+            "via": [
+              "tibialis_posterior",
+              "flexor_digitorum_longus",
+              "flexor_hallucis_longus"
+            ]
+          },
+          {
+            "at": "tibia.posterior_upper"
+          },
+          {
+            "via": [
+              "popliteus"
+            ]
+          },
+          {
+            "at": "femur.medial_epicondyle"
+          },
+          {
+            "via": [
+              "adductor_magnus"
+            ]
+          },
+          {
+            "at": "ischium.ischial_ramus"
+          },
+          {
+            "via": [
+              "levator_ani"
+            ]
+          },
+          {
+            "at": "coccyx"
+          },
+          {
+            "via": [
+              "anterior_longitudinal_ligament"
+            ]
+          },
+          {
+            "at": "lumbar_vertebrae.bodies"
+          }
+        ]
+      },
+      {
+        "name": "adductors",
+        "steps": [
+          {
+            "at": "femur.linea_aspera"
+          },
+          {
+            "via": [
+              "adductor_longus",
+              "adductor_brevis",
+              "gracilis"
+            ]
+          },
+          {
+            "at": "pubis.superior_ramus"
+          }
+        ]
+      },
+      {
+        "name": "psoas",
+        "steps": [
+          {
+            "at": "femur.lesser_trochanter"
+          },
+          {
+            "via": [
+              "psoas_major",
+              "iliacus",
+              "pectineus"
+            ]
+          },
+          {
+            "at": "lumbar_vertebrae.bodies"
+          }
+        ]
+      },
+      {
+        "name": "quadratus lumborum",
+        "steps": [
+          {
+            "at": "ilium.iliac_crest"
+          },
+          {
+            "via": [
+              "quadratus_lumborum"
+            ]
+          },
+          {
+            "at": "rib12.inferior_border"
+          }
+        ]
+      },
+      {
+        "name": "diaphragm",
+        "steps": [
+          {
+            "at": "lumbar_vertebrae.bodies"
+          },
+          {
+            "via": [
+              "diaphragm"
+            ]
+          },
+          {
+            "at": "sternum.xiphoid_process"
+          }
+        ]
+      },
+      {
+        "name": "neck",
+        "steps": [
+          {
+            "at": "lumbar_vertebrae.bodies"
+          },
+          {
+            "via": [
+              "anterior_longitudinal_ligament",
+              "longus_colli",
+              "longus_capitis"
+            ]
+          },
+          {
+            "at": "occipital.basilar_part"
+          }
+        ]
+      },
+      {
+        "name": "scalenes",
+        "steps": [
+          {
+            "at": "rib1.superior_surface"
+          },
+          {
+            "via": [
+              "scalenus_anterior"
+            ]
+          },
+          {
+            "at": "cervical_vertebrae.transverse_processes"
+          }
+        ]
+      },
+      {
+        "name": "hyoid",
+        "steps": [
+          {
+            "at": "hyoid.body"
+          },
+          {
+            "via": [
+              "digastric"
+            ]
+          },
+          {
+            "at": "mandible.digastric_fossa"
+          }
+        ]
+      }
+    ],
+    "source": "Myers, Anatomy Trains (4th ed.), draft reading",
+    "reviewed": false
   },
   {
     "id": "superficial_back_arm",
     "name": "Superficial Back Arm Line",
-    "shortName": "SBAL"
+    "shortName": "SBAL",
+    "paths": [
+      {
+        "name": "main",
+        "steps": [
+          {
+            "at": "occipital.occipital_ridge"
+          },
+          {
+            "via": [
+              "nuchal_ligament",
+              "trapezius"
+            ]
+          },
+          {
+            "at": "scapula.spine"
+          },
+          {
+            "via": [
+              "deltoid"
+            ]
+          },
+          {
+            "at": "humerus.deltoid_tuberosity"
+          },
+          {
+            "via": [
+              "lateral_intermuscular_septum_arm"
+            ]
+          },
+          {
+            "at": "humerus.lateral_epicondyle"
+          },
+          {
+            "via": [
+              "extensor_digitorum",
+              "extensor_carpi_radialis_longus"
+            ]
+          },
+          {
+            "at": "finger_phalanges.dorsal_surface"
+          }
+        ]
+      }
+    ],
+    "source": "Myers, Anatomy Trains (4th ed.), draft reading",
+    "reviewed": false
   },
   {
     "id": "deep_back_arm",
     "name": "Deep Back Arm Line",
-    "shortName": "DBAL"
+    "shortName": "DBAL",
+    "paths": [
+      {
+        "name": "shoulder and arm",
+        "steps": [
+          {
+            "at": "thoracic_vertebrae.upper_spinous_processes"
+          },
+          {
+            "via": [
+              "rhomboid_major",
+              "rhomboid_minor",
+              "levator_scapulae"
+            ]
+          },
+          {
+            "at": "scapula.medial_border"
+          },
+          {
+            "via": [
+              "supraspinatus",
+              "infraspinatus",
+              "teres_minor"
+            ]
+          },
+          {
+            "at": "humerus.greater_tubercle"
+          },
+          {
+            "via": [
+              "triceps_brachii"
+            ]
+          },
+          {
+            "at": "ulna.olecranon"
+          }
+        ]
+      },
+      {
+        "name": "wrist and hand",
+        "steps": [
+          {
+            "at": "ulna.styloid_process"
+          },
+          {
+            "via": [
+              "ulnar_collateral_ligament_wrist"
+            ]
+          },
+          {
+            "at": "carpals.triquetrum"
+          },
+          {
+            "via": [
+              "abductor_digiti_minimi_manus"
+            ]
+          },
+          {
+            "at": "fifth_finger.proximal_phalanx"
+          }
+        ]
+      }
+    ],
+    "source": "Myers, Anatomy Trains (4th ed.), draft reading",
+    "reviewed": false
   },
   {
     "id": "superficial_front_arm",
     "name": "Superficial Front Arm Line",
-    "shortName": "SFAL"
+    "shortName": "SFAL",
+    "paths": [
+      {
+        "name": "pectoral",
+        "steps": [
+          {
+            "at": "clavicle.medial_third"
+          },
+          {
+            "via": [
+              "pectoralis_major"
+            ]
+          },
+          {
+            "at": "humerus.intertubercular_groove"
+          },
+          {
+            "via": [
+              "medial_intermuscular_septum_arm"
+            ]
+          },
+          {
+            "at": "humerus.medial_epicondyle"
+          },
+          {
+            "via": [
+              "flexor_carpi_radialis",
+              "flexor_digitorum_superficialis",
+              "flexor_retinaculum_hand"
+            ]
+          },
+          {
+            "at": "finger_phalanges.palmar_surface"
+          }
+        ]
+      },
+      {
+        "name": "latissimus",
+        "steps": [
+          {
+            "at": "ilium.iliac_crest"
+          },
+          {
+            "via": [
+              "thoracolumbar_fascia",
+              "latissimus_dorsi"
+            ]
+          },
+          {
+            "at": "humerus.intertubercular_groove"
+          }
+        ]
+      }
+    ],
+    "source": "Myers, Anatomy Trains (4th ed.), draft reading",
+    "reviewed": false
   },
   {
     "id": "deep_front_arm",
     "name": "Deep Front Arm Line",
-    "shortName": "DFAL"
+    "shortName": "DFAL",
+    "paths": [
+      {
+        "name": "chest and arm",
+        "steps": [
+          {
+            "at": "ribs.third_to_fifth"
+          },
+          {
+            "via": [
+              "pectoralis_minor",
+              "clavipectoral_fascia"
+            ]
+          },
+          {
+            "at": "scapula.coracoid_process"
+          },
+          {
+            "via": [
+              "biceps_brachii",
+              "coracobrachialis"
+            ]
+          },
+          {
+            "at": "radius.radial_tuberosity"
+          }
+        ]
+      },
+      {
+        "name": "wrist and thumb",
+        "steps": [
+          {
+            "at": "radius.styloid_process"
+          },
+          {
+            "via": [
+              "radial_collateral_ligament_wrist"
+            ]
+          },
+          {
+            "at": "carpals.scaphoid_trapezium"
+          },
+          {
+            "via": [
+              "abductor_pollicis_brevis"
+            ]
+          },
+          {
+            "at": "thumb.proximal_phalanx"
+          }
+        ]
+      }
+    ],
+    "source": "Myers, Anatomy Trains (4th ed.), draft reading",
+    "reviewed": false
   },
   {
     "id": "back_functional",
     "name": "Back Functional Line",
-    "shortName": "BFL"
+    "shortName": "BFL",
+    "paths": [
+      {
+        "name": "main",
+        "steps": [
+          {
+            "at": "humerus.intertubercular_groove"
+          },
+          {
+            "via": [
+              "latissimus_dorsi",
+              "thoracolumbar_fascia"
+            ]
+          },
+          {
+            "at": "sacrum.dorsal_surface",
+            "crosses": true
+          },
+          {
+            "via": [
+              "gluteus_maximus"
+            ]
+          },
+          {
+            "at": "femur.gluteal_tuberosity"
+          },
+          {
+            "via": [
+              "vastus_lateralis"
+            ]
+          },
+          {
+            "at": "patella.apex"
+          },
+          {
+            "via": [
+              "patellar_ligament"
+            ]
+          },
+          {
+            "at": "tibia.tibial_tuberosity"
+          }
+        ]
+      }
+    ],
+    "source": "Myers, Anatomy Trains (4th ed.), draft reading",
+    "reviewed": false
   },
   {
     "id": "front_functional",
     "name": "Front Functional Line",
-    "shortName": "FFL"
+    "shortName": "FFL",
+    "paths": [
+      {
+        "name": "main",
+        "steps": [
+          {
+            "at": "humerus.intertubercular_groove"
+          },
+          {
+            "via": [
+              "pectoralis_major"
+            ]
+          },
+          {
+            "at": "rib5.costal_cartilage"
+          },
+          {
+            "via": [
+              "rectus_abdominis"
+            ]
+          },
+          {
+            "at": "pubis.pubic_symphysis",
+            "crosses": true
+          },
+          {
+            "via": [
+              "adductor_longus"
+            ]
+          },
+          {
+            "at": "femur.linea_aspera"
+          }
+        ]
+      }
+    ],
+    "source": "Myers, Anatomy Trains (4th ed.), draft reading",
+    "reviewed": false
   },
   {
     "id": "ipsilateral_functional",
     "name": "Ipsilateral Functional Line",
-    "shortName": "IFL"
+    "shortName": "IFL",
+    "paths": [
+      {
+        "name": "main",
+        "steps": [
+          {
+            "at": "humerus.intertubercular_groove"
+          },
+          {
+            "via": [
+              "latissimus_dorsi"
+            ]
+          },
+          {
+            "at": "ribs.lower_lateral"
+          },
+          {
+            "via": [
+              "external_oblique"
+            ]
+          },
+          {
+            "at": "ilium.asis"
+          },
+          {
+            "via": [
+              "sartorius"
+            ]
+          },
+          {
+            "at": "tibia.pes_anserinus"
+          }
+        ]
+      }
+    ],
+    "source": "Myers, Anatomy Trains (4th ed.), draft reading",
+    "reviewed": false
   }
 ]

@@ -36,6 +36,8 @@ public enum DirectionKind {}
 public enum JointComplexKind {}
 public enum MuscleKind {}
 public enum TrainLineKind {}
+public enum TissueKind {}
+public enum LandmarkKind {}
 
 public typealias RegionID = AnatomyID<RegionKind>
 public typealias JointID = AnatomyID<JointKind>
@@ -44,3 +46,6 @@ public typealias DirectionID = AnatomyID<DirectionKind>
 public typealias JointComplexID = AnatomyID<JointComplexKind>
 public typealias MuscleID = AnatomyID<MuscleKind>
 public typealias TrainLineID = AnatomyID<TrainLineKind>
+public typealias TissueID = AnatomyID<TissueKind>
+/// `"<bone>.<feature>"`, e.g. `"ischium.ischial_tuberosity"`.
+public typealias LandmarkID = AnatomyID<LandmarkKind>

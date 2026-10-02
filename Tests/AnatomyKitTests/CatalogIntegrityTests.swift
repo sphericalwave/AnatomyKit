@@ -68,7 +68,9 @@ final class CatalogIntegrityTests: XCTestCase {
         for muscle in catalog.muscles {
             XCTAssertTrue(regions.contains(muscle.region), "\(muscle.id) → unknown region")
             XCTAssertFalse(muscle.source.isEmpty, "\(muscle.id) has no source")
-            for l in muscle.lines { XCTAssertNotNil(catalog.line(l), "\(muscle.id) → unknown line \(l)") }
+        }
+        for tissue in catalog.tissues {
+            XCTAssertTrue(regions.contains(tissue.region), "\(tissue.id) → unknown region")
         }
         for binding in catalog.rigBindings {
             for bone in binding.bones {

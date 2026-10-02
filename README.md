@@ -22,6 +22,8 @@ let gh = catalog.joint("glenohumeral")
 let dir = catalog.direction(forTorqueMovement: "gh.flex")   // glenohumeral.flexion
 let shoulder = catalog.complex(forSuitJoint: "shoulder")    // scapulothoracic + glenohumeral
 let spiral = catalog.muscles(on: "spiral")
+let movers = catalog.muscles(producing: "hip.flexion")        // psoas, iliacus (prime) …
+let loaded = catalog.lines(trainedBy: "hip.flexion")          // deep_front, superficial_front …
 ```
 
 ## Data
@@ -31,12 +33,15 @@ The JSON in `Sources/AnatomyKit/Resources` is the source of truth:
 | File | Holds |
 |---|---|
 | `regions.json` | 7 body regions |
-| `joints.json` | 20 joints, each with its DOFs; every DOF names a positive and (usually) negative direction. Direction ID = `<joint>.<direction>` |
+| `joints.json` | 20 joints, each with its DOFs; every DOF names a positive and (usually) negative direction, its plane and a typical range. Direction ID = `<joint>.<direction>` |
 | `complexes.json` | 13 joint groups people name ("shoulder", "low back") |
-| `muscles.json` | 70 entries (69 muscles + sacrotuberous ligament) with line membership |
-| `lines.json` | Myers' 12 lines |
+| `muscles.json` | 75 entries (74 muscles + sacrotuberous ligament), each with the movements it produces (prime or secondary) |
+| `tissues.json` | 17 connective tissues the lines run through (fascia, aponeuroses, ligaments …) |
+| `landmarks.json` | 64 bony landmarks (`<bone>.<feature>`) the lines attach to |
+| `lines.json` | Myers' 12 lines as ordered paths: landmark → muscles/tissue → landmark …, with midline crossings marked. Line membership is derived from these paths |
 | `aliases.json` | Every string torque and suit persisted before AnatomyKit → its new ID |
 | `rig-mixamo.json` | Which joints each Mixamo bone drives |
+| `rig-zanatomy.json` | Same for the Z-Anatomy (Z-Biomechanics) rig's control bones, with that rig's own rotation limits |
 
 Entries carry `source` and `reviewed`. Everything is `reviewed: false` until a
 person checks it against the cited source.
