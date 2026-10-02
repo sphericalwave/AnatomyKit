@@ -145,4 +145,19 @@ final class JoinedGraphTests: XCTestCase {
         XCTAssertEqual(knee?.joints, ["knee"])
         XCTAssertEqual(knee?.limitsDegrees?["x"], [-165, 0])
     }
+
+    // MARK: Meshes
+
+    /// Every structure a line runs through has a Z-Anatomy mesh to light,
+    /// except the two Z-Anatomy doesn't model.
+    func testLineTracksHaveZAnatomyMeshes() {
+        let noMesh: Set<String> = ["sternochondral_fascia", "patellar_ligament"]
+        for id in catalog.lines.reduce(into: Set<String>(), { $0.formUnion($1.trackIDs) }) where !noMesh.contains(id) {
+            XCTAssertFalse(catalog.zAnatomyMeshes[id, default: []].isEmpty, "\(id) has no Z-Anatomy mesh")
+        }
+        for id in catalog.zAnatomyMeshes.keys {
+            let known = catalog.muscle(MuscleID(id)) != nil || catalog.tissue(TissueID(id)) != nil
+            XCTAssertTrue(known, "mesh table names unknown structure \(id)")
+        }
+    }
 }

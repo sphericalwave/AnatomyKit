@@ -41,6 +41,7 @@ The JSON in `Sources/AnatomyKit/Resources` is the source of truth:
 | `lines.json` | Myers' 12 lines as ordered paths: landmark → muscles/tissue → landmark …, with midline crossings marked. Line membership is derived from these paths |
 | `aliases.json` | Every string torque and suit persisted before AnatomyKit → its new ID |
 | `rig-mixamo.json` | Which joints each Mixamo bone drives |
+| `meshes-zanatomy.json` | Muscle/tissue ID → Z-Anatomy mesh names, for lighting structures in a 3D viewer |
 | `rig-zanatomy.json` | Same for the Z-Anatomy (Z-Biomechanics) rig's control bones, with that rig's own rotation limits |
 
 Entries carry `source` and `reviewed`. Everything is `reviewed: false` until a
