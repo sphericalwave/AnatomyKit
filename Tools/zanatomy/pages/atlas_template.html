@@ -1,0 +1,361 @@
+<title>Myofascial Line Atlas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: an atlas plate. Large front view (A) beside stacked back (B) and side (C) views; the line's route reads beneath. */
+:root {
+  --bg: #f2f3f5; --surface: #ffffff; --fg: #1b2230; --muted: #5b6475; --line: #d9dde5;
+  --accent: #2f4ea3; --stage: #eef0f3; --bone: #e6dcc6; --band: #2d4fc4; --band-tissue: #6f8ce8;
+  --display: "Newsreader", Georgia, "Times New Roman", serif;
+  --body: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #12151b; --surface: #181c24; --fg: #e7eaf0; --muted: #9aa3b5; --line: #2a303b;
+  --accent: #8ea6ff; --stage: #1a1e26; --bone: #d4cab4; --band: #4f72f0; --band-tissue: #8ea6ff; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #12151b; --surface: #181c24; --fg: #e7eaf0; --muted: #9aa3b5; --line: #2a303b;
+  --accent: #8ea6ff; --stage: #1a1e26; --bone: #d4cab4; --band: #4f72f0; --band-tissue: #8ea6ff; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 15px/1.55 var(--body); }
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: 16px; padding-block: 24px 48px; display: grid; gap: 22px; }
+h1, h2 { font-family: var(--display); font-weight: 600; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+h1 { font-size: clamp(1.7rem, 3.2vw, 2.4rem); line-height: 1.1; }
+h2 { font-size: 1.3rem; }
+p { margin: 0; max-width: 70ch; }
+.eyebrow { font: 500 11px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.lede { color: var(--muted); }
+header { display: grid; gap: 10px; }
+
+.controls { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; }
+.group { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.lbl { font: 500 11px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-right: 4px; }
+select, button.chip { font: 500 14px/1.2 var(--body); color: var(--fg); background: var(--surface); border: 1px solid var(--line); min-height: 38px; }
+select { border-radius: 8px; padding: 8px 10px; font-weight: 600; }
+button.chip { border-radius: 999px; padding: 9px 14px; cursor: pointer; }
+button.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+button.chip:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.plate { position: relative; background: var(--stage); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.plate canvas { display: block; width: 100%; height: min(80vh, 780px); touch-action: none; }
+.tags { position: absolute; inset: 0; display: grid; grid-template-columns: 1.7fr 1fr; grid-template-rows: 1fr 1fr; pointer-events: none; }
+.tags > div { position: relative; border-left: 1px solid var(--line); }
+.tags .a { grid-row: 1 / 3; border-left: 0; }
+.tags .c { border-top: 1px solid var(--line); }
+.tag { position: absolute; left: 12px; bottom: 10px; font: 600 15px/1 var(--display); color: var(--muted); }
+.tag small { font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; margin-left: 6px; }
+.hint { position: absolute; right: 12px; top: 10px; font: 12px var(--mono); color: var(--muted); }
+.loading { position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); font: 13px var(--mono); }
+.loading[hidden] { display: none; }
+@media (max-width: 720px) {
+  .plate canvas { height: 130vh; max-height: 1100px; }
+  .tags { grid-template-columns: 1fr 1fr; grid-template-rows: 1.6fr 1fr; }
+  .tags .a { grid-column: 1 / 3; grid-row: 1; }
+  .tags .b { border-left: 0; border-top: 1px solid var(--line); }
+  .hint { display: none; }
+}
+
+.route { display: grid; gap: 12px; }
+.route-head { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: baseline; }
+.route-head .short { font: 500 12px var(--mono); color: var(--accent); letter-spacing: .08em; }
+.path { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 8px; min-width: 0; }
+.path h3 { margin: 0; font: 500 11px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+ol.steps { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+ol.steps li { display: flex; align-items: center; gap: 6px; font-size: 14px; }
+.st { font-weight: 600; }
+.tr { color: var(--band); }
+.tr .tissue { color: var(--band-tissue); }
+.arrow { color: var(--muted); }
+.cross { font: 500 10px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--bg); background: var(--accent); border-radius: 4px; padding: 4px 6px; }
+.side { font: 500 10px/1 var(--mono); color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 3px 5px; }
+.paths { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+.notes { font-size: 13px; color: var(--muted); display: grid; gap: 6px; }
+.notes p { max-width: 95ch; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">AnatomyKit · lines.json on the Z-Anatomy skeleton</span>
+    <h1 id="title">Spiral Line</h1>
+    <p class="lede">Each line is drawn from AnatomyKit's ordered paths: every muscle and connective tissue on a track is lit on the real Z-Anatomy mesh. Pick a line, or show one side to follow it across the midline.</p>
+  </header>
+
+  <div class="controls">
+    <div class="group"><span class="lbl">Line</span><select id="line-pick" aria-label="Myofascial line"></select></div>
+    <div class="group" role="group" aria-label="Side">
+      <span class="lbl">Side</span>
+      <button class="chip" data-side="both" aria-pressed="true">Both</button>
+      <button class="chip" data-side="left" aria-pressed="false">Left line</button>
+      <button class="chip" data-side="right" aria-pressed="false">Right line</button>
+    </div>
+    <div class="group" role="group" aria-label="Main view">
+      <span class="lbl">Main view</span>
+      <button class="chip" data-view="front" aria-pressed="true">Front</button>
+      <button class="chip" data-view="back" aria-pressed="false">Back</button>
+      <button class="chip" data-view="side" aria-pressed="false">Side</button>
+    </div>
+    <div class="group" role="group" aria-label="Pose">
+      <span class="lbl">Pose</span>
+      <button class="chip" data-pose="stand" aria-pressed="true">Standing</button>
+      <button class="chip" data-pose="squat" aria-pressed="false">Squat</button>
+      <label class="group" for="depth" id="depth-wrap" hidden><span class="lbl">Depth</span><input type="range" id="depth" min="0" max="1000" value="0" style="width:min(220px,45vw)"></label>
+    </div>
+  </div>
+
+  <div class="plate" id="plate">
+    <canvas id="gl" aria-label="3D skeleton with the selected myofascial line highlighted"></canvas>
+    <div class="tags">
+      <div class="a"><span class="tag" id="tag-a">A<small>Front</small></span></div>
+      <div class="b"><span class="tag">B<small>Back</small></span></div>
+      <div class="c"><span class="tag">C<small>Side</small></span></div>
+    </div>
+    <span class="hint">Drag A to rotate · scroll to zoom</span>
+    <div class="loading" id="loading">Unpacking models…</div>
+  </div>
+
+  <section class="route">
+    <div class="route-head"><h2 id="route-title">How the line runs</h2><span class="short" id="route-short"></span></div>
+    <div class="paths" id="paths"></div>
+  </section>
+
+  <div class="notes">
+    <p>Line routes are a draft reading of Myers, <i>Anatomy Trains</i> (4th ed.), marked unreviewed in AnatomyKit. Lines with several paths (Deep Front, arm lines) are branches or pieces Myers joins through bone. "Crosses" marks where a line passes the midline; with one side selected, tracks after a crossing light on the other side.</p>
+    <p>Meshes: Z-Anatomy (CC BY-SA 4.0), Gauthier Kervyn and contributors, built on BodyParts3D. Shown at 25% detail. Squat: the Z-Anatomy rig drives the bones; each muscle vertex follows its four nearest bones. That's a first pass, so muscles stretch but don't bulge or slide, and some pass through bone at full depth.</p>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+__DATA__
+<script>
+(async function () {
+  const D = __JSON__;
+  const loading = document.getElementById("loading"), canvas = document.getElementById("gl"), plate = document.getElementById("plate");
+  if (!window.THREE || !THREE.OrbitControls) { loading.textContent = "The 3D library didn't load. Reload the page to try again."; return; }
+
+  async function decode(id, meta) {
+    const bin = Uint8Array.from(atob(document.getElementById(id).textContent.trim()), c => c.charCodeAt(0));
+    const buf = await new Response(new Blob([bin]).stream().pipeThrough(new DecompressionStream("gzip"))).arrayBuffer();
+    const q = new Uint16Array(buf, 0, meta.verts * 3), idx = new Uint32Array(buf.slice(meta.verts * 6));
+    const pos = new Float32Array(meta.verts * 3);
+    for (let i = 0; i < meta.verts; i++) for (let k = 0; k < 3; k++) pos[i * 3 + k] = meta.lo[k] + q[i * 3 + k] / 65535 * (meta.hi[k] - meta.lo[k]);
+    return { pos: new THREE.BufferAttribute(pos, 3), idx };
+  }
+  async function gunzip(id) {
+    const bin = Uint8Array.from(atob(document.getElementById(id).textContent.trim()), c => c.charCodeAt(0));
+    return new Response(new Blob([bin]).stream().pipeThrough(new DecompressionStream("gzip"))).arrayBuffer();
+  }
+  let skel, parts, skelBone, wIdx, wVal, frames;
+  try {
+    const sk = D.rig.skel, sb = await gunzip("d-skel");
+    const q = new Uint16Array(sb, 0, sk.verts * 3), pos = new Float32Array(sk.verts * 3);
+    for (let i = 0; i < sk.verts; i++) for (let k = 0; k < 3; k++) pos[i * 3 + k] = sk.lo[k] + q[i * 3 + k] / 65535 * (sk.hi[k] - sk.lo[k]);
+    const ib = sk.verts * 6, ie = ib + sk.tris * 12;
+    skel = { pos: new THREE.BufferAttribute(pos, 3), idx: new Uint32Array(sb.slice(ib, ie)) };
+    skelBone = new Uint8Array(sb.slice(ie));
+    parts = await decode("d-lines", D.linesMeta);
+    const wb = new Uint8Array(await gunzip("d-weights")), n = D.rig.muscleVerts * D.rig.K;
+    wIdx = wb.subarray(0, n); wVal = wb.subarray(n, 2 * n);
+    frames = new Float32Array(await gunzip("d-frames"));
+  }
+  catch (e) { loading.textContent = "This browser couldn't unpack the models. Try current Safari or Chrome."; return; }
+
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const boneMat = new THREE.MeshStandardMaterial({ roughness: 0.8 });
+  const muscleMat = new THREE.MeshStandardMaterial({ roughness: 0.45, transparent: true, opacity: 0.88 });
+  const tissueMat = new THREE.MeshStandardMaterial({ roughness: 0.4, transparent: true, opacity: 0.7, side: THREE.DoubleSide, depthWrite: false });
+  function theme() { boneMat.color.set(css("--bone")); muscleMat.color.set(css("--band")); tissueMat.color.set(css("--band-tissue")); }
+  theme();
+  new MutationObserver(theme).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", theme);
+
+  const scene = new THREE.Scene();
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x4a5163, 0.8));
+  const k1 = new THREE.DirectionalLight(0xffffff, 0.7); k1.position.set(1.5, 3, 2.5); scene.add(k1);
+  const k2 = new THREE.DirectionalLight(0xffffff, 0.45); k2.position.set(-2, 2, -2.5); scene.add(k2);
+  const sm = D.rig.skel, off = new THREE.Vector3(-(sm.lo[0] + sm.hi[0]) / 2, -sm.lo[1], -(sm.lo[2] + sm.hi[2]) / 2);
+  const root = new THREE.Group(); root.position.copy(off); scene.add(root);
+  const sg = new THREE.BufferGeometry(); sg.setAttribute("position", skel.pos); sg.setIndex(new THREE.BufferAttribute(skel.idx, 1)); sg.computeVertexNormals();
+  // Muscle parts share one position buffer; compute normals once over all of it and share them too.
+  const allParts = new THREE.BufferGeometry(); allParts.setAttribute("position", parts.pos);
+  allParts.setIndex(new THREE.BufferAttribute(parts.idx, 1)); allParts.computeVertexNormals();
+  const partNormals = allParts.getAttribute("normal");
+  sg.boundingSphere = new THREE.Sphere(new THREE.Vector3(0, 0.9, 0), 1.4);
+  root.add(new THREE.Mesh(sg, boneMat));
+
+  // One mesh per Z-Anatomy object, hidden until a line lights it.
+  const tissueIDs = new Set(D.tissues.map(t => t.id));
+  const objects = {};
+  for (const [name, start, count] of D.linesMeta.ranges) {
+    const g = new THREE.BufferGeometry(); g.setAttribute("position", parts.pos);
+    g.setIndex(new THREE.BufferAttribute(parts.idx.subarray(start, start + count), 1)); g.setAttribute("normal", partNormals);
+    g.boundingSphere = new THREE.Sphere(new THREE.Vector3(0, 0.9, 0), 1.4);
+    const m = new THREE.Mesh(g, muscleMat); m.visible = false; m.renderOrder = 1; root.add(m); objects[name] = m;
+  }
+  const meshNames = (cid, side) => (D.meshmap[cid] || []).flatMap(base => {
+    const sides = side === "both" ? ["l", "r"] : [side === "left" ? "l" : "r"];
+    const hits = sides.map(s => `${base}.${s}`).filter(n => objects[n]);
+    return hits.length ? hits : (objects[base] ? [base] : []);
+  });
+
+  const lineByID = Object.fromEntries(D.lines.map(l => [l.id, l]));
+  const nameOf = id => (D.muscles[id] || D.tissueNames[id] || id);
+  const landmark = Object.fromEntries(D.landmarks.map(l => [l.id, l]));
+  let lineID = "spiral", side = "both", view = "front";
+  try { const s = localStorage.getItem("atlas-line"); if (s && lineByID[s]) lineID = s; } catch (e) {}
+
+  function sidedTracks(line, start) {
+    // Walk each path; a crossing station flips the side for the tracks after it.
+    return line.paths.map(p => {
+      let s = start;
+      return p.steps.map(step => {
+        if (step.at && step.crosses && s !== "both") s = s === "left" ? "right" : "left";
+        return { ...step, side: s };
+      });
+    });
+  }
+
+  function render() {
+    const line = lineByID[lineID];
+    Object.values(objects).forEach(m => { m.visible = false; });
+    const walked = sidedTracks(line, side);
+    for (const steps of walked) for (const st of steps) if (st.via) for (const cid of st.via)
+      for (const n of meshNames(cid, st.side)) { objects[n].visible = true; objects[n].material = tissueIDs.has(cid) ? tissueMat : muscleMat; }
+    document.getElementById("title").textContent = line.name;
+    document.getElementById("route-short").textContent = line.shortName + (side === "both" ? "" : ` · ${side} line`);
+    const host = document.getElementById("paths"); host.textContent = "";
+    walked.forEach((steps, i) => {
+      const box = document.createElement("div"); box.className = "path";
+      if (line.paths.length > 1) { const h = document.createElement("h3"); h.textContent = line.paths[i].name; box.append(h); }
+      const ol = document.createElement("ol"); ol.className = "steps";
+      steps.forEach((st, j) => {
+        const li = document.createElement("li");
+        if (j) { const a = document.createElement("span"); a.className = "arrow"; a.textContent = "→"; a.setAttribute("aria-hidden", "true"); li.append(a); }
+        if (st.at) {
+          const s = document.createElement("span"); s.className = "st"; s.textContent = landmark[st.at]?.name || st.at; li.append(s);
+          if (st.crosses) { const c = document.createElement("span"); c.className = "cross"; c.textContent = "crosses"; li.append(c); }
+        } else {
+          const t = document.createElement("span"); t.className = "tr";
+          st.via.forEach((cid, k) => {
+            const e = document.createElement("span"); if (tissueIDs.has(cid)) e.className = "tissue";
+            e.textContent = nameOf(cid) + (k < st.via.length - 1 ? ", " : ""); t.append(e);
+          });
+          li.append(t);
+          if (st.side !== "both") { const sd = document.createElement("span"); sd.className = "side"; sd.textContent = st.side === "left" ? "L" : "R"; li.append(sd); }
+        }
+        ol.append(li);
+      });
+      box.append(ol); host.append(box);
+    });
+    try { localStorage.setItem("atlas-line", lineID); } catch (e) {}
+  }
+
+  const pick = document.getElementById("line-pick");
+  D.lines.forEach(l => pick.add(new Option(`${l.name} (${l.shortName})`, l.id)));
+  pick.value = lineID; pick.addEventListener("change", () => { lineID = pick.value; render(); });
+  const press = (attr, val) => document.querySelectorAll(`[data-${attr}]`).forEach(b => b.setAttribute("aria-pressed", String(b.dataset[attr] === val)));
+  document.querySelectorAll("[data-side]").forEach(b => b.addEventListener("click", () => { side = b.dataset.side; press("side", side); render(); }));
+
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2)); renderer.setScissorTest(true);
+  const DIRS = { front: [0, 0.04, 1], back: [0, 0.04, -1], side: [-1, 0.04, 0] };
+  const mkCam = () => new THREE.PerspectiveCamera(28, 1, 0.01, 50);
+  const camA = mkCam(), camB = mkCam(), camC = mkCam();
+  const place = (cam, dir, dist) => { const d = new THREE.Vector3(...dir).normalize(); cam.position.set(d.x * dist, 0.87 + d.y * dist, d.z * dist); cam.lookAt(0, 0.87, 0); };
+  place(camB, DIRS.back, 4.3); place(camC, DIRS.side, 4.3);
+  const ctl = new THREE.OrbitControls(camA, canvas); ctl.enableDamping = true; ctl.dampingFactor = 0.12; ctl.minDistance = 0.4; ctl.maxDistance = 8;
+  function setView(v) { view = v; press("view", v); ctl.target.set(0, 0.87, 0); place(camA, DIRS[v], 4.3); ctl.update();
+    document.getElementById("tag-a").innerHTML = `A<small>${v[0].toUpperCase() + v.slice(1)}</small>`; }
+  document.querySelectorAll("[data-view]").forEach(b => b.addEventListener("click", () => setView(b.dataset.view)));
+  setView("front");
+
+  let W = 0, H = 0;
+  function size() { const r = canvas.getBoundingClientRect(); W = r.width; H = r.height; renderer.setSize(W, H, false); }
+  new ResizeObserver(size).observe(plate); size();
+  // --- Squat: CPU skinning from baked bone deltas (world space, feet planted).
+  const NB = D.rig.bones.length, NF = D.rig.frames, K = D.rig.K;
+  const sRestP = skel.pos.array.slice(), sRestN = sg.getAttribute("normal").array.slice();
+  const mRestP = parts.pos.array.slice(), mRestN = partNormals.array.slice();
+  const Rm = new Float32Array(NB * 9), Tv = new Float32Array(NB * 3);
+  const qa = new THREE.Quaternion(), qb = new THREE.Quaternion(), m4 = new THREE.Matrix4();
+  function boneMats(t) {
+    const f = t * (NF - 1), f0 = Math.floor(f), f1 = Math.min(NF - 1, f0 + 1), u = f - f0;
+    for (let b = 0; b < NB; b++) {
+      const a = (f0 * NB + b) * 7, c = (f1 * NB + b) * 7;
+      for (let k = 0; k < 3; k++) Tv[b * 3 + k] = frames[a + k] * (1 - u) + frames[c + k] * u;
+      qa.set(frames[a + 3], frames[a + 4], frames[a + 5], frames[a + 6]);
+      qb.set(frames[c + 3], frames[c + 4], frames[c + 5], frames[c + 6]); qa.slerp(qb, u);
+      const e = m4.makeRotationFromQuaternion(qa).elements;
+      Rm.set([e[0], e[1], e[2], e[4], e[5], e[6], e[8], e[9], e[10]], b * 9);
+    }
+  }
+  function skin(t) {
+    boneMats(t);
+    const sp = skel.pos.array, sn = sg.getAttribute("normal").array;
+    for (let i = 0; i < skelBone.length; i++) {
+      const b = skelBone[i], r = b * 9, o = i * 3, x = sRestP[o], y = sRestP[o + 1], z = sRestP[o + 2];
+      sp[o] = Rm[r] * x + Rm[r + 3] * y + Rm[r + 6] * z + Tv[b * 3];
+      sp[o + 1] = Rm[r + 1] * x + Rm[r + 4] * y + Rm[r + 7] * z + Tv[b * 3 + 1];
+      sp[o + 2] = Rm[r + 2] * x + Rm[r + 5] * y + Rm[r + 8] * z + Tv[b * 3 + 2];
+      const nx = sRestN[o], ny = sRestN[o + 1], nz = sRestN[o + 2];
+      sn[o] = Rm[r] * nx + Rm[r + 3] * ny + Rm[r + 6] * nz;
+      sn[o + 1] = Rm[r + 1] * nx + Rm[r + 4] * ny + Rm[r + 7] * nz;
+      sn[o + 2] = Rm[r + 2] * nx + Rm[r + 5] * ny + Rm[r + 8] * nz;
+    }
+    skel.pos.needsUpdate = true; sg.getAttribute("normal").needsUpdate = true;
+    const mp = parts.pos.array, mn = partNormals.array;
+    for (let i = 0; i < D.rig.muscleVerts; i++) {
+      const o = i * 3, x = mRestP[o], y = mRestP[o + 1], z = mRestP[o + 2], nx = mRestN[o], ny = mRestN[o + 1], nz = mRestN[o + 2];
+      let px = 0, py = 0, pz = 0, qx = 0, qy = 0, qz = 0;
+      for (let k = 0; k < K; k++) {
+        const w = wVal[i * K + k] / 255; if (!w) continue;
+        const b = wIdx[i * K + k], r = b * 9;
+        px += w * (Rm[r] * x + Rm[r + 3] * y + Rm[r + 6] * z + Tv[b * 3]);
+        py += w * (Rm[r + 1] * x + Rm[r + 4] * y + Rm[r + 7] * z + Tv[b * 3 + 1]);
+        pz += w * (Rm[r + 2] * x + Rm[r + 5] * y + Rm[r + 8] * z + Tv[b * 3 + 2]);
+        qx += w * (Rm[r] * nx + Rm[r + 3] * ny + Rm[r + 6] * nz);
+        qy += w * (Rm[r + 1] * nx + Rm[r + 4] * ny + Rm[r + 7] * nz);
+        qz += w * (Rm[r + 2] * nx + Rm[r + 5] * ny + Rm[r + 8] * nz);
+      }
+      mp[o] = px; mp[o + 1] = py; mp[o + 2] = pz; mn[o] = qx; mn[o + 1] = qy; mn[o + 2] = qz;
+    }
+    parts.pos.needsUpdate = true; partNormals.needsUpdate = true;
+  }
+  const depth = document.getElementById("depth"), depthWrap = document.getElementById("depth-wrap");
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let pose = "stand", playing = false, phase = 0, lastT = -1, last = performance.now();
+  function setPose(p) {
+    pose = p; press("pose", p); depthWrap.hidden = p !== "squat";
+    playing = p === "squat" && !reduce; phase = 0;
+    if (p === "stand") { skin(0); lastT = 0; }
+  }
+  document.querySelectorAll("[data-pose]").forEach(b => b.addEventListener("click", () => setPose(b.dataset.pose)));
+  depth.addEventListener("input", () => { playing = false; phase = depth.value / 2000; });
+  depth.addEventListener("change", () => { playing = false; });
+  canvas.addEventListener("dblclick", () => { if (pose === "squat") playing = !playing; });
+  function tick(now) {
+    const dt = (now - last) / 1000; last = now;
+    if (pose !== "squat") return;
+    if (playing) phase = (phase + dt / 4) % 1;
+    const t = phase < 0.5 ? phase * 2 : 2 - phase * 2;
+    if (playing) depth.value = Math.round(t * 1000);
+    if (Math.abs(t - lastT) > 1e-4) { skin(t); lastT = t; }
+  }
+
+  render(); loading.hidden = true;
+  (function loop(now) {
+    tick(now ?? performance.now());
+    ctl.update();
+    const narrow = matchMedia("(max-width: 720px)").matches;
+    // Viewports in GL coordinates (origin bottom-left).
+    const vps = narrow
+      ? [[camA, 0, H * (1 / 2.6), W, H * (1.6 / 2.6)], [camB, 0, 0, W / 2, H / 2.6], [camC, W / 2, 0, W / 2, H / 2.6]]
+      : [[camA, 0, 0, W * 1.7 / 2.7, H], [camB, W * 1.7 / 2.7, H / 2, W / 2.7, H / 2], [camC, W * 1.7 / 2.7, 0, W / 2.7, H / 2]];
+    for (const [cam, x, y, w, h] of vps) {
+      renderer.setViewport(x, y, w, h); renderer.setScissor(x, y, w, h);
+      cam.aspect = w / h; cam.updateProjectionMatrix(); renderer.render(scene, cam);
+    }
+    requestAnimationFrame(loop);
+  })();
+})();
+</script>
