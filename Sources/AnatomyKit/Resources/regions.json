@@ -1,0 +1,30 @@
+[
+  {
+    "id": "head_neck",
+    "name": "Head & neck"
+  },
+  {
+    "id": "trunk",
+    "name": "Trunk"
+  },
+  {
+    "id": "shoulder",
+    "name": "Shoulder"
+  },
+  {
+    "id": "arm",
+    "name": "Arm"
+  },
+  {
+    "id": "hand",
+    "name": "Hand"
+  },
+  {
+    "id": "leg",
+    "name": "Leg"
+  },
+  {
+    "id": "foot",
+    "name": "Foot"
+  }
+]

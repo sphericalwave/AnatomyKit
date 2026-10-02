@@ -1,0 +1,62 @@
+[
+  {
+    "id": "superficial_back",
+    "name": "Superficial Back Line",
+    "shortName": "SBL"
+  },
+  {
+    "id": "superficial_front",
+    "name": "Superficial Front Line",
+    "shortName": "SFL"
+  },
+  {
+    "id": "lateral",
+    "name": "Lateral Line",
+    "shortName": "LL"
+  },
+  {
+    "id": "spiral",
+    "name": "Spiral Line",
+    "shortName": "SPL"
+  },
+  {
+    "id": "deep_front",
+    "name": "Deep Front Line",
+    "shortName": "DFL"
+  },
+  {
+    "id": "superficial_back_arm",
+    "name": "Superficial Back Arm Line",
+    "shortName": "SBAL"
+  },
+  {
+    "id": "deep_back_arm",
+    "name": "Deep Back Arm Line",
+    "shortName": "DBAL"
+  },
+  {
+    "id": "superficial_front_arm",
+    "name": "Superficial Front Arm Line",
+    "shortName": "SFAL"
+  },
+  {
+    "id": "deep_front_arm",
+    "name": "Deep Front Arm Line",
+    "shortName": "DFAL"
+  },
+  {
+    "id": "back_functional",
+    "name": "Back Functional Line",
+    "shortName": "BFL"
+  },
+  {
+    "id": "front_functional",
+    "name": "Front Functional Line",
+    "shortName": "FFL"
+  },
+  {
+    "id": "ipsilateral_functional",
+    "name": "Ipsilateral Functional Line",
+    "shortName": "IFL"
+  }
+]

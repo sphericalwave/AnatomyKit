@@ -1,0 +1,399 @@
+[
+  {
+    "id": "temporomandibular",
+    "name": "Jaw (temporomandibular)",
+    "region": "head_neck",
+    "bilateral": false,
+    "dofs": [
+      {
+        "axis": "depression_elevation",
+        "positive": "depression",
+        "negative": "elevation"
+      },
+      {
+        "axis": "protrusion_retrusion",
+        "positive": "protrusion",
+        "negative": "retrusion"
+      },
+      {
+        "axis": "lateral_deviation",
+        "positive": "lateral_deviation"
+      }
+    ],
+    "source": "torque Movement.swift (2026-10)",
+    "reviewed": false
+  },
+  {
+    "id": "cervical_spine",
+    "name": "Neck (cervical spine)",
+    "region": "head_neck",
+    "bilateral": false,
+    "dofs": [
+      {
+        "axis": "flexion_extension",
+        "positive": "flexion",
+        "negative": "extension"
+      },
+      {
+        "axis": "lateral_flexion",
+        "positive": "lateral_flexion"
+      },
+      {
+        "axis": "axial_rotation",
+        "positive": "rotation"
+      },
+      {
+        "axis": "protraction_retraction",
+        "positive": "protraction",
+        "negative": "retraction"
+      }
+    ],
+    "source": "torque Movement.swift (2026-10)",
+    "reviewed": false
+  },
+  {
+    "id": "thoracic_spine",
+    "name": "Mid back (thoracic spine)",
+    "region": "trunk",
+    "bilateral": false,
+    "dofs": [
+      {
+        "axis": "flexion_extension",
+        "positive": "flexion",
+        "negative": "extension"
+      },
+      {
+        "axis": "lateral_flexion",
+        "positive": "lateral_flexion"
+      },
+      {
+        "axis": "axial_rotation",
+        "positive": "rotation"
+      }
+    ],
+    "source": "torque Movement.swift (2026-10)",
+    "reviewed": false
+  },
+  {
+    "id": "lumbar_spine",
+    "name": "Low back (lumbar spine)",
+    "region": "trunk",
+    "bilateral": false,
+    "dofs": [
+      {
+        "axis": "flexion_extension",
+        "positive": "flexion",
+        "negative": "extension"
+      },
+      {
+        "axis": "lateral_flexion",
+        "positive": "lateral_flexion"
+      },
+      {
+        "axis": "axial_rotation",
+        "positive": "rotation"
+      }
+    ],
+    "source": "torque Movement.swift (2026-10)",
+    "reviewed": false
+  },
+  {
+    "id": "sacroiliac",
+    "name": "Sacroiliac",
+    "region": "trunk",
+    "bilateral": true,
+    "dofs": [
+      {
+        "axis": "nutation_counternutation",
+        "positive": "nutation",
+        "negative": "counternutation"
+      }
+    ],
+    "source": "Draft; SI motion per Neumann, Kinesiology of the Musculoskeletal System",
+    "reviewed": false
+  },
+  {
+    "id": "scapulothoracic",
+    "name": "Shoulder blade (scapulothoracic)",
+    "region": "shoulder",
+    "bilateral": true,
+    "dofs": [
+      {
+        "axis": "elevation_depression",
+        "positive": "elevation",
+        "negative": "depression"
+      },
+      {
+        "axis": "protraction_retraction",
+        "positive": "protraction",
+        "negative": "retraction"
+      },
+      {
+        "axis": "upward_downward_rotation",
+        "positive": "upward_rotation",
+        "negative": "downward_rotation"
+      }
+    ],
+    "source": "torque Movement.swift (2026-10)",
+    "reviewed": false
+  },
+  {
+    "id": "glenohumeral",
+    "name": "Shoulder (glenohumeral)",
+    "region": "shoulder",
+    "bilateral": true,
+    "dofs": [
+      {
+        "axis": "flexion_extension",
+        "positive": "flexion",
+        "negative": "extension"
+      },
+      {
+        "axis": "abduction_adduction",
+        "positive": "abduction",
+        "negative": "adduction"
+      },
+      {
+        "axis": "axial_rotation",
+        "positive": "internal_rotation",
+        "negative": "external_rotation"
+      },
+      {
+        "axis": "horizontal_abduction_adduction",
+        "positive": "horizontal_abduction",
+        "negative": "horizontal_adduction"
+      }
+    ],
+    "source": "torque Movement.swift (2026-10)",
+    "reviewed": false
+  },
+  {
+    "id": "elbow",
+    "name": "Elbow",
+    "region": "arm",
+    "bilateral": true,
+    "dofs": [
+      {
+        "axis": "flexion_extension",
+        "positive": "flexion",
+        "negative": "extension"
+      }
+    ],
+    "source": "torque Movement.swift (2026-10)",
+    "reviewed": false
+  },
+  {
+    "id": "radioulnar",
+    "name": "Forearm (radioulnar)",
+    "region": "arm",
+    "bilateral": true,
+    "dofs": [
+      {
+        "axis": "pronation_supination",
+        "positive": "pronation",
+        "negative": "supination"
+      }
+    ],
+    "source": "torque Movement.swift (2026-10)",
+    "reviewed": false
+  },
+  {
+    "id": "wrist",
+    "name": "Wrist",
+    "region": "arm",
+    "bilateral": true,
+    "dofs": [
+      {
+        "axis": "flexion_extension",
+        "positive": "flexion",
+        "negative": "extension"
+      },
+      {
+        "axis": "radial_ulnar_deviation",
+        "positive": "radial_deviation",
+        "negative": "ulnar_deviation"
+      }
+    ],
+    "source": "torque Movement.swift (2026-10)",
+    "reviewed": false
+  },
+  {
+    "id": "finger_mcp",
+    "name": "Finger knuckles (MCP, fingers 2–5)",
+    "region": "hand",
+    "bilateral": true,
+    "dofs": [
+      {
+        "axis": "flexion_extension",
+        "positive": "flexion",
+        "negative": "extension"
+      },
+      {
+        "axis": "abduction_adduction",
+        "positive": "abduction",
+        "negative": "adduction"
+      }
+    ],
+    "source": "torque Movement.swift (2026-10)",
+    "reviewed": false
+  },
+  {
+    "id": "finger_ip",
+    "name": "Finger joints (IP, fingers 2–5)",
+    "region": "hand",
+    "bilateral": true,
+    "dofs": [
+      {
+        "axis": "flexion_extension",
+        "positive": "flexion",
+        "negative": "extension"
+      }
+    ],
+    "source": "torque Movement.swift (2026-10)",
+    "reviewed": false
+  },
+  {
+    "id": "thumb_cmc",
+    "name": "Thumb base (CMC)",
+    "region": "hand",
+    "bilateral": true,
+    "dofs": [
+      {
+        "axis": "flexion_extension",
+        "positive": "flexion",
+        "negative": "extension"
+      },
+      {
+        "axis": "abduction_adduction",
+        "positive": "abduction",
+        "negative": "adduction"
+      },
+      {
+        "axis": "opposition",
+        "positive": "opposition"
+      }
+    ],
+    "source": "torque Movement.swift (2026-10)",
+    "reviewed": false
+  },
+  {
+    "id": "thumb_ip",
+    "name": "Thumb tip (IP)",
+    "region": "hand",
+    "bilateral": true,
+    "dofs": [
+      {
+        "axis": "flexion_extension",
+        "positive": "flexion",
+        "negative": "extension"
+      }
+    ],
+    "source": "torque Movement.swift (2026-10)",
+    "reviewed": false
+  },
+  {
+    "id": "hip",
+    "name": "Hip",
+    "region": "leg",
+    "bilateral": true,
+    "dofs": [
+      {
+        "axis": "flexion_extension",
+        "positive": "flexion",
+        "negative": "extension"
+      },
+      {
+        "axis": "abduction_adduction",
+        "positive": "abduction",
+        "negative": "adduction"
+      },
+      {
+        "axis": "axial_rotation",
+        "positive": "internal_rotation",
+        "negative": "external_rotation"
+      }
+    ],
+    "source": "torque Movement.swift (2026-10)",
+    "reviewed": false
+  },
+  {
+    "id": "knee",
+    "name": "Knee",
+    "region": "leg",
+    "bilateral": true,
+    "dofs": [
+      {
+        "axis": "flexion_extension",
+        "positive": "flexion",
+        "negative": "extension"
+      },
+      {
+        "axis": "axial_rotation",
+        "positive": "internal_rotation",
+        "negative": "external_rotation"
+      }
+    ],
+    "source": "torque Movement.swift (2026-10)",
+    "reviewed": false
+  },
+  {
+    "id": "talocrural",
+    "name": "Ankle (talocrural)",
+    "region": "foot",
+    "bilateral": true,
+    "dofs": [
+      {
+        "axis": "dorsiflexion_plantarflexion",
+        "positive": "dorsiflexion",
+        "negative": "plantarflexion"
+      }
+    ],
+    "source": "torque Movement.swift (2026-10)",
+    "reviewed": false
+  },
+  {
+    "id": "subtalar",
+    "name": "Foot (subtalar)",
+    "region": "foot",
+    "bilateral": true,
+    "dofs": [
+      {
+        "axis": "inversion_eversion",
+        "positive": "inversion",
+        "negative": "eversion"
+      }
+    ],
+    "source": "torque Movement.swift (2026-10)",
+    "reviewed": false
+  },
+  {
+    "id": "hallux_mtp",
+    "name": "Big toe (MTP)",
+    "region": "foot",
+    "bilateral": true,
+    "dofs": [
+      {
+        "axis": "flexion_extension",
+        "positive": "flexion",
+        "negative": "extension"
+      }
+    ],
+    "source": "torque Movement.swift (2026-10)",
+    "reviewed": false
+  },
+  {
+    "id": "toes_mtp",
+    "name": "Toes (MTP, toes 2–5)",
+    "region": "foot",
+    "bilateral": true,
+    "dofs": [
+      {
+        "axis": "flexion_extension",
+        "positive": "flexion",
+        "negative": "extension"
+      }
+    ],
+    "source": "torque Movement.swift (2026-10)",
+    "reviewed": false
+  }
+]

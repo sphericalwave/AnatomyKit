@@ -1,0 +1,132 @@
+{
+  "rig": "mixamo",
+  "source": "Mixamo bone names as used by RigKit.JointKey",
+  "bones": [
+    {
+      "bone": "mixamorig:Spine",
+      "joints": [
+        "lumbar_spine"
+      ]
+    },
+    {
+      "bone": "mixamorig:Spine1",
+      "joints": [
+        "thoracic_spine"
+      ]
+    },
+    {
+      "bone": "mixamorig:Spine2",
+      "joints": [
+        "thoracic_spine"
+      ]
+    },
+    {
+      "bone": "mixamorig:Neck",
+      "joints": [
+        "cervical_spine"
+      ]
+    },
+    {
+      "bone": "mixamorig:LeftShoulder",
+      "side": "left",
+      "joints": [
+        "scapulothoracic"
+      ]
+    },
+    {
+      "bone": "mixamorig:LeftArm",
+      "side": "left",
+      "joints": [
+        "glenohumeral"
+      ]
+    },
+    {
+      "bone": "mixamorig:LeftForeArm",
+      "side": "left",
+      "joints": [
+        "elbow",
+        "radioulnar"
+      ]
+    },
+    {
+      "bone": "mixamorig:LeftHand",
+      "side": "left",
+      "joints": [
+        "wrist"
+      ]
+    },
+    {
+      "bone": "mixamorig:LeftUpLeg",
+      "side": "left",
+      "joints": [
+        "hip"
+      ]
+    },
+    {
+      "bone": "mixamorig:LeftLeg",
+      "side": "left",
+      "joints": [
+        "knee"
+      ]
+    },
+    {
+      "bone": "mixamorig:LeftFoot",
+      "side": "left",
+      "joints": [
+        "talocrural",
+        "subtalar"
+      ]
+    },
+    {
+      "bone": "mixamorig:RightShoulder",
+      "side": "right",
+      "joints": [
+        "scapulothoracic"
+      ]
+    },
+    {
+      "bone": "mixamorig:RightArm",
+      "side": "right",
+      "joints": [
+        "glenohumeral"
+      ]
+    },
+    {
+      "bone": "mixamorig:RightForeArm",
+      "side": "right",
+      "joints": [
+        "elbow",
+        "radioulnar"
+      ]
+    },
+    {
+      "bone": "mixamorig:RightHand",
+      "side": "right",
+      "joints": [
+        "wrist"
+      ]
+    },
+    {
+      "bone": "mixamorig:RightUpLeg",
+      "side": "right",
+      "joints": [
+        "hip"
+      ]
+    },
+    {
+      "bone": "mixamorig:RightLeg",
+      "side": "right",
+      "joints": [
+        "knee"
+      ]
+    },
+    {
+      "bone": "mixamorig:RightFoot",
+      "side": "right",
+      "joints": [
+        "talocrural",
+        "subtalar"
+      ]
+    }
+  ]
+}

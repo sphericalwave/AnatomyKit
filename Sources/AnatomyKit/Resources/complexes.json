@@ -1,0 +1,113 @@
+[
+  {
+    "id": "jaw",
+    "name": "Jaw",
+    "region": "head_neck",
+    "joints": [
+      "temporomandibular"
+    ]
+  },
+  {
+    "id": "neck",
+    "name": "Neck",
+    "region": "head_neck",
+    "joints": [
+      "cervical_spine"
+    ]
+  },
+  {
+    "id": "shoulder",
+    "name": "Shoulder",
+    "region": "shoulder",
+    "joints": [
+      "scapulothoracic",
+      "glenohumeral"
+    ]
+  },
+  {
+    "id": "elbow",
+    "name": "Elbow",
+    "region": "arm",
+    "joints": [
+      "elbow",
+      "radioulnar"
+    ]
+  },
+  {
+    "id": "wrist",
+    "name": "Wrist",
+    "region": "arm",
+    "joints": [
+      "wrist"
+    ]
+  },
+  {
+    "id": "hand",
+    "name": "Hand",
+    "region": "hand",
+    "joints": [
+      "finger_mcp",
+      "finger_ip",
+      "thumb_cmc",
+      "thumb_ip"
+    ]
+  },
+  {
+    "id": "upper_back",
+    "name": "Mid back",
+    "region": "trunk",
+    "joints": [
+      "thoracic_spine"
+    ]
+  },
+  {
+    "id": "lower_back",
+    "name": "Low back",
+    "region": "trunk",
+    "joints": [
+      "lumbar_spine"
+    ]
+  },
+  {
+    "id": "pelvis",
+    "name": "SI joint",
+    "region": "trunk",
+    "joints": [
+      "sacroiliac"
+    ]
+  },
+  {
+    "id": "hip",
+    "name": "Hip",
+    "region": "leg",
+    "joints": [
+      "hip"
+    ]
+  },
+  {
+    "id": "knee",
+    "name": "Knee",
+    "region": "leg",
+    "joints": [
+      "knee"
+    ]
+  },
+  {
+    "id": "ankle",
+    "name": "Ankle",
+    "region": "foot",
+    "joints": [
+      "talocrural"
+    ]
+  },
+  {
+    "id": "foot",
+    "name": "Foot",
+    "region": "foot",
+    "joints": [
+      "subtalar",
+      "hallux_mtp",
+      "toes_mtp"
+    ]
+  }
+]

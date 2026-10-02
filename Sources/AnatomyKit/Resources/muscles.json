@@ -1,0 +1,777 @@
+[
+  {
+    "id": "occipitofrontalis",
+    "name": "Occipitofrontalis",
+    "kind": "muscle",
+    "region": "head_neck",
+    "lines": [
+      "superficial_back"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "sternocleidomastoid",
+    "name": "Sternocleidomastoid",
+    "kind": "muscle",
+    "region": "head_neck",
+    "lines": [
+      "superficial_front",
+      "lateral"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "splenius_capitis",
+    "name": "Splenius Capitis",
+    "kind": "muscle",
+    "region": "head_neck",
+    "lines": [
+      "lateral",
+      "spiral"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "longus_colli",
+    "name": "Longus Colli",
+    "kind": "muscle",
+    "region": "head_neck",
+    "lines": [
+      "deep_front"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "scalenus_anterior",
+    "name": "Anterior Scalene",
+    "kind": "muscle",
+    "region": "head_neck",
+    "lines": [
+      "deep_front"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "digastric",
+    "name": "Digastric",
+    "kind": "muscle",
+    "region": "head_neck",
+    "lines": [
+      "deep_front"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "trapezius",
+    "name": "Trapezius",
+    "kind": "muscle",
+    "region": "shoulder",
+    "lines": [
+      "superficial_back_arm"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "latissimus_dorsi",
+    "name": "Latissimus Dorsi",
+    "kind": "muscle",
+    "region": "trunk",
+    "lines": [
+      "superficial_front_arm",
+      "back_functional",
+      "ipsilateral_functional"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "rhomboid_major",
+    "name": "Rhomboid Major",
+    "kind": "muscle",
+    "region": "shoulder",
+    "lines": [
+      "spiral",
+      "deep_back_arm"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "levator_scapulae",
+    "name": "Levator Scapulae",
+    "kind": "muscle",
+    "region": "shoulder",
+    "lines": [
+      "deep_back_arm"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "serratus_anterior",
+    "name": "Serratus Anterior",
+    "kind": "muscle",
+    "region": "shoulder",
+    "lines": [
+      "spiral"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "erector_spinae",
+    "name": "Erector Spinae",
+    "kind": "muscle",
+    "region": "trunk",
+    "lines": [
+      "superficial_back",
+      "spiral"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "quadratus_lumborum",
+    "name": "Quadratus Lumborum",
+    "kind": "muscle",
+    "region": "trunk",
+    "lines": [
+      "deep_front"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "psoas_major",
+    "name": "Psoas Major",
+    "kind": "muscle",
+    "region": "trunk",
+    "lines": [
+      "deep_front"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "iliacus",
+    "name": "Iliacus",
+    "kind": "muscle",
+    "region": "trunk",
+    "lines": [
+      "deep_front"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "diaphragm",
+    "name": "Diaphragm",
+    "kind": "muscle",
+    "region": "trunk",
+    "lines": [
+      "deep_front"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "transversus_abdominis",
+    "name": "Transversus Abdominis",
+    "kind": "muscle",
+    "region": "trunk",
+    "lines": [
+      "deep_front"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "rectus_abdominis",
+    "name": "Rectus Abdominis",
+    "kind": "muscle",
+    "region": "trunk",
+    "lines": [
+      "superficial_front",
+      "front_functional"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "external_oblique",
+    "name": "External Oblique",
+    "kind": "muscle",
+    "region": "trunk",
+    "lines": [
+      "lateral",
+      "spiral",
+      "ipsilateral_functional"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "internal_oblique",
+    "name": "Internal Oblique",
+    "kind": "muscle",
+    "region": "trunk",
+    "lines": [
+      "lateral",
+      "spiral"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "intercostals",
+    "name": "Intercostals",
+    "kind": "muscle",
+    "region": "trunk",
+    "lines": [
+      "lateral"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "pectoralis_major",
+    "name": "Pectoralis Major",
+    "kind": "muscle",
+    "region": "trunk",
+    "lines": [
+      "superficial_front_arm",
+      "front_functional"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "pectoralis_minor",
+    "name": "Pectoralis Minor",
+    "kind": "muscle",
+    "region": "shoulder",
+    "lines": [
+      "deep_front_arm"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "supraspinatus",
+    "name": "Supraspinatus",
+    "kind": "muscle",
+    "region": "shoulder",
+    "lines": [
+      "deep_back_arm"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "infraspinatus",
+    "name": "Infraspinatus",
+    "kind": "muscle",
+    "region": "shoulder",
+    "lines": [
+      "deep_back_arm"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "teres_minor",
+    "name": "Teres Minor",
+    "kind": "muscle",
+    "region": "shoulder",
+    "lines": [
+      "deep_back_arm"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "teres_major",
+    "name": "Teres Major",
+    "kind": "muscle",
+    "region": "shoulder",
+    "lines": [],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "subscapularis",
+    "name": "Subscapularis",
+    "kind": "muscle",
+    "region": "shoulder",
+    "lines": [],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "levator_ani",
+    "name": "Levator Ani",
+    "kind": "muscle",
+    "region": "trunk",
+    "lines": [
+      "deep_front"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "deltoid",
+    "name": "Deltoid",
+    "kind": "muscle",
+    "region": "shoulder",
+    "lines": [
+      "superficial_back_arm"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "coracobrachialis",
+    "name": "Coracobrachialis",
+    "kind": "muscle",
+    "region": "arm",
+    "lines": [
+      "deep_front_arm"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "biceps_brachii",
+    "name": "Biceps Brachii",
+    "kind": "muscle",
+    "region": "arm",
+    "lines": [
+      "deep_front_arm"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "brachialis",
+    "name": "Brachialis",
+    "kind": "muscle",
+    "region": "arm",
+    "lines": [],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "triceps_brachii",
+    "name": "Triceps Brachii",
+    "kind": "muscle",
+    "region": "arm",
+    "lines": [
+      "deep_back_arm"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "brachioradialis",
+    "name": "Brachioradialis",
+    "kind": "muscle",
+    "region": "arm",
+    "lines": [
+      "deep_front_arm"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "supinator",
+    "name": "Supinator",
+    "kind": "muscle",
+    "region": "arm",
+    "lines": [
+      "deep_front_arm"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "pronator_teres",
+    "name": "Pronator Teres",
+    "kind": "muscle",
+    "region": "arm",
+    "lines": [],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "extensor_carpi_radialis_longus",
+    "name": "Extensor Carpi Radialis Longus",
+    "kind": "muscle",
+    "region": "arm",
+    "lines": [
+      "superficial_back_arm"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "extensor_digitorum",
+    "name": "Extensor Digitorum",
+    "kind": "muscle",
+    "region": "arm",
+    "lines": [
+      "superficial_back_arm"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "flexor_carpi_radialis",
+    "name": "Flexor Carpi Radialis",
+    "kind": "muscle",
+    "region": "arm",
+    "lines": [
+      "superficial_front_arm"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "flexor_digitorum_superficialis",
+    "name": "Flexor Digitorum Superficialis",
+    "kind": "muscle",
+    "region": "arm",
+    "lines": [
+      "superficial_front_arm"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "abductor_pollicis_brevis",
+    "name": "Abductor Pollicis Brevis",
+    "kind": "muscle",
+    "region": "hand",
+    "lines": [
+      "deep_front_arm"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "abductor_digiti_minimi_manus",
+    "name": "Abductor Digiti Minimi (Hand)",
+    "kind": "muscle",
+    "region": "hand",
+    "lines": [
+      "deep_back_arm"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "gluteus_maximus",
+    "name": "Gluteus Maximus",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [
+      "back_functional"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "gluteus_medius",
+    "name": "Gluteus Medius",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [
+      "lateral"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "gluteus_minimus",
+    "name": "Gluteus Minimus",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [
+      "lateral"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "tensor_fasciae_latae",
+    "name": "Tensor Fasciae Latae",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [
+      "lateral",
+      "spiral"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "piriformis",
+    "name": "Piriformis",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "sartorius",
+    "name": "Sartorius",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [
+      "ipsilateral_functional"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "rectus_femoris",
+    "name": "Rectus Femoris",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [
+      "superficial_front"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "vastus_lateralis",
+    "name": "Vastus Lateralis",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [
+      "back_functional"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "vastus_medialis",
+    "name": "Vastus Medialis",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "biceps_femoris",
+    "name": "Biceps Femoris",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [
+      "superficial_back",
+      "spiral"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "semitendinosus",
+    "name": "Semitendinosus",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [
+      "superficial_back"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "semimembranosus",
+    "name": "Semimembranosus",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [
+      "superficial_back"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "adductor_magnus",
+    "name": "Adductor Magnus",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [
+      "deep_front"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "adductor_longus",
+    "name": "Adductor Longus",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [
+      "deep_front",
+      "front_functional"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "adductor_brevis",
+    "name": "Adductor Brevis",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [
+      "deep_front"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "pectineus",
+    "name": "Pectineus",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [
+      "deep_front"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "gracilis",
+    "name": "Gracilis",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [
+      "deep_front"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "popliteus",
+    "name": "Popliteus",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [
+      "deep_front"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "gastrocnemius",
+    "name": "Gastrocnemius",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [
+      "superficial_back"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "soleus",
+    "name": "Soleus",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [
+      "superficial_back"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "tibialis_anterior",
+    "name": "Tibialis Anterior",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [
+      "superficial_front",
+      "spiral"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "tibialis_posterior",
+    "name": "Tibialis Posterior",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [
+      "deep_front"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "fibularis_longus",
+    "name": "Fibularis Longus",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [
+      "lateral",
+      "spiral"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "extensor_digitorum_longus",
+    "name": "Extensor Digitorum Longus",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [
+      "superficial_front"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "flexor_hallucis_longus",
+    "name": "Flexor Hallucis Longus",
+    "kind": "muscle",
+    "region": "leg",
+    "lines": [
+      "deep_front"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "flexor_digitorum_brevis",
+    "name": "Flexor Digitorum Brevis",
+    "kind": "muscle",
+    "region": "foot",
+    "lines": [
+      "superficial_back"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  },
+  {
+    "id": "sacrotuberous_ligament",
+    "name": "Sacrotuberous Ligament",
+    "kind": "ligament",
+    "region": "trunk",
+    "lines": [
+      "superficial_back",
+      "spiral"
+    ],
+    "source": "Myers, Anatomy Trains (line membership via SuitKit StandardAnatomyCatalog)",
+    "reviewed": false
+  }
+]
