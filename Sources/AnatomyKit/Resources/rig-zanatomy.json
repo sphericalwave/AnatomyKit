@@ -1,0 +1,442 @@
+{
+  "rig": "zanatomy",
+  "source": "Z-Biomechanics armature control bones; limits are the rig's LIMIT_ROTATION constraints in bone-local axes (animation limits, not clinical ROM)",
+  "bones": [
+    {
+      "bone": "Hips",
+      "joints": []
+    },
+    {
+      "bone": "LowerBack",
+      "joints": [
+        "lumbar_spine"
+      ],
+      "limitsDegrees": {
+        "x": [
+          -35.0,
+          40.0
+        ],
+        "y": [
+          -5.0,
+          5.0
+        ],
+        "z": [
+          -20.0,
+          20.0
+        ]
+      }
+    },
+    {
+      "bone": "Spine",
+      "joints": [
+        "thoracic_spine"
+      ],
+      "limitsDegrees": {
+        "x": [
+          -12.0,
+          22.0
+        ],
+        "y": [
+          -6.0,
+          6.0
+        ],
+        "z": [
+          -10.0,
+          10.0
+        ]
+      }
+    },
+    {
+      "bone": "Spine1",
+      "joints": [
+        "thoracic_spine"
+      ],
+      "limitsDegrees": {
+        "x": [
+          -12.0,
+          22.0
+        ],
+        "y": [
+          -6.0,
+          6.0
+        ],
+        "z": [
+          -10.0,
+          10.0
+        ]
+      }
+    },
+    {
+      "bone": "Neck1",
+      "joints": [
+        "cervical_spine"
+      ],
+      "limitsDegrees": {
+        "x": [
+          -65.0,
+          30.0
+        ],
+        "y": [
+          -70.0,
+          70.0
+        ],
+        "z": [
+          -40.0,
+          40.0
+        ]
+      }
+    },
+    {
+      "bone": "Head",
+      "joints": [
+        "cervical_spine"
+      ],
+      "limitsDegrees": {
+        "x": [
+          -10.0,
+          10.0
+        ],
+        "y": [
+          -12.0,
+          12.0
+        ],
+        "z": [
+          -3.0,
+          3.0
+        ]
+      }
+    },
+    {
+      "bone": "Mandible",
+      "joints": [
+        "temporomandibular"
+      ],
+      "limitsDegrees": {
+        "x": [
+          0.0,
+          24.0
+        ],
+        "y": [
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "bone": "LeftShoulder",
+      "joints": [
+        "scapulothoracic"
+      ],
+      "side": "left",
+      "limitsDegrees": {
+        "x": [
+          -10.0,
+          55.0
+        ],
+        "y": [
+          -15.0,
+          15.0
+        ],
+        "z": [
+          -30.0,
+          8.0
+        ]
+      }
+    },
+    {
+      "bone": "LeftArm",
+      "joints": [
+        "glenohumeral"
+      ],
+      "side": "left",
+      "limitsDegrees": {
+        "x": [
+          -70.0,
+          180.0
+        ],
+        "y": [
+          -30.0,
+          30.0
+        ],
+        "z": [
+          -90.0,
+          165.0
+        ]
+      }
+    },
+    {
+      "bone": "LeftForeArm",
+      "joints": [
+        "elbow",
+        "radioulnar"
+      ],
+      "side": "left",
+      "limitsDegrees": {
+        "x": [
+          0.0,
+          0.0
+        ],
+        "y": [
+          0.0,
+          180.0
+        ],
+        "z": [
+          -140.0,
+          18.0
+        ]
+      }
+    },
+    {
+      "bone": "LeftHand",
+      "joints": [
+        "wrist"
+      ],
+      "side": "left"
+    },
+    {
+      "bone": "LeftUpLeg",
+      "joints": [
+        "hip"
+      ],
+      "side": "left",
+      "limitsDegrees": {
+        "x": [
+          -30.0,
+          130.0
+        ],
+        "y": [
+          -45.0,
+          30.0
+        ],
+        "z": [
+          -30.0,
+          45.0
+        ]
+      }
+    },
+    {
+      "bone": "LeftLeg",
+      "joints": [
+        "knee"
+      ],
+      "side": "left",
+      "limitsDegrees": {
+        "x": [
+          -165.0,
+          0.0
+        ],
+        "y": [
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "bone": "LeftFoot",
+      "joints": [
+        "talocrural",
+        "subtalar"
+      ],
+      "side": "left",
+      "limitsDegrees": {
+        "x": [
+          -25.0,
+          45.0
+        ],
+        "y": [
+          0.0,
+          0.0
+        ],
+        "z": [
+          -7.0,
+          7.0
+        ]
+      }
+    },
+    {
+      "bone": "LeftToeBase",
+      "joints": [
+        "toes_mtp"
+      ],
+      "side": "left",
+      "limitsDegrees": {
+        "x": [
+          -45.0,
+          30.0
+        ],
+        "y": [
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          5.0
+        ]
+      }
+    },
+    {
+      "bone": "RightShoulder",
+      "joints": [
+        "scapulothoracic"
+      ],
+      "side": "right",
+      "limitsDegrees": {
+        "x": [
+          -10.0,
+          55.0
+        ],
+        "y": [
+          -15.0,
+          15.0
+        ],
+        "z": [
+          -8.0,
+          30.0
+        ]
+      }
+    },
+    {
+      "bone": "RightArm",
+      "joints": [
+        "glenohumeral"
+      ],
+      "side": "right",
+      "limitsDegrees": {
+        "x": [
+          -70.0,
+          180.0
+        ],
+        "y": [
+          -30.0,
+          30.0
+        ],
+        "z": [
+          -165.0,
+          90.0
+        ]
+      }
+    },
+    {
+      "bone": "RightForeArm",
+      "joints": [
+        "elbow",
+        "radioulnar"
+      ],
+      "side": "right",
+      "limitsDegrees": {
+        "x": [
+          0.0,
+          0.0
+        ],
+        "y": [
+          -180.0,
+          0.0
+        ],
+        "z": [
+          -18.0,
+          140.0
+        ]
+      }
+    },
+    {
+      "bone": "RightHand",
+      "joints": [
+        "wrist"
+      ],
+      "side": "right"
+    },
+    {
+      "bone": "RightUpLeg",
+      "joints": [
+        "hip"
+      ],
+      "side": "right",
+      "limitsDegrees": {
+        "x": [
+          -30.0,
+          130.0
+        ],
+        "y": [
+          -30.0,
+          45.0
+        ],
+        "z": [
+          -45.0,
+          30.0
+        ]
+      }
+    },
+    {
+      "bone": "RightLeg",
+      "joints": [
+        "knee"
+      ],
+      "side": "right",
+      "limitsDegrees": {
+        "x": [
+          -165.0,
+          0.0
+        ],
+        "y": [
+          0.0,
+          0.0
+        ],
+        "z": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "bone": "RightFoot",
+      "joints": [
+        "talocrural",
+        "subtalar"
+      ],
+      "side": "right",
+      "limitsDegrees": {
+        "x": [
+          -25.0,
+          45.0
+        ],
+        "y": [
+          0.0,
+          0.0
+        ],
+        "z": [
+          -7.0,
+          7.0
+        ]
+      }
+    },
+    {
+      "bone": "RightToeBase",
+      "joints": [
+        "toes_mtp"
+      ],
+      "side": "right",
+      "limitsDegrees": {
+        "x": [
+          -45.0,
+          30.0
+        ],
+        "y": [
+          0.0,
+          0.0
+        ],
+        "z": [
+          -5.0,
+          0.0
+        ]
+      }
+    }
+  ]
+}

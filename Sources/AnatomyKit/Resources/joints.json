@@ -8,16 +8,36 @@
       {
         "axis": "depression_elevation",
         "positive": "depression",
-        "negative": "elevation"
+        "negative": "elevation",
+        "plane": "sagittal",
+        "rom": {
+          "unit": "mm",
+          "source": "Draft estimate; needs a cited source (interincisal opening)",
+          "positive": 45,
+          "negative": 0
+        }
       },
       {
         "axis": "protrusion_retrusion",
         "positive": "protrusion",
-        "negative": "retrusion"
+        "negative": "retrusion",
+        "plane": "sagittal",
+        "rom": {
+          "unit": "mm",
+          "source": "Draft estimate; needs a cited source",
+          "positive": 8,
+          "negative": 3
+        }
       },
       {
         "axis": "lateral_deviation",
-        "positive": "lateral_deviation"
+        "positive": "lateral_deviation",
+        "plane": "transverse",
+        "rom": {
+          "unit": "mm",
+          "source": "Draft estimate; needs a cited source",
+          "positive": 10
+        }
       }
     ],
     "source": "torque Movement.swift (2026-10)",
@@ -32,20 +52,44 @@
       {
         "axis": "flexion_extension",
         "positive": "flexion",
-        "negative": "extension"
+        "negative": "extension",
+        "plane": "sagittal",
+        "rom": {
+          "unit": "deg",
+          "source": "AAOS normal values (Greene & Heckman 1994), draft",
+          "positive": 45,
+          "negative": 45
+        }
       },
       {
         "axis": "lateral_flexion",
-        "positive": "lateral_flexion"
+        "positive": "lateral_flexion",
+        "plane": "frontal",
+        "rom": {
+          "unit": "deg",
+          "source": "AAOS normal values (Greene & Heckman 1994), draft",
+          "positive": 45
+        }
       },
       {
         "axis": "axial_rotation",
-        "positive": "rotation"
+        "positive": "rotation",
+        "plane": "transverse",
+        "rom": {
+          "unit": "deg",
+          "source": "AAOS normal values (Greene & Heckman 1994), draft",
+          "positive": 60
+        }
       },
       {
         "axis": "protraction_retraction",
         "positive": "protraction",
-        "negative": "retraction"
+        "negative": "retraction",
+        "plane": "sagittal",
+        "rom": {
+          "unit": "mm",
+          "source": "Draft estimate; needs a cited source (translation)"
+        }
       }
     ],
     "source": "torque Movement.swift (2026-10)",
@@ -60,15 +104,34 @@
       {
         "axis": "flexion_extension",
         "positive": "flexion",
-        "negative": "extension"
+        "negative": "extension",
+        "plane": "sagittal",
+        "rom": {
+          "unit": "deg",
+          "source": "Draft estimate; needs a cited source (AAOS gives thoracolumbar combined: 80/25)",
+          "positive": 30,
+          "negative": 20
+        }
       },
       {
         "axis": "lateral_flexion",
-        "positive": "lateral_flexion"
+        "positive": "lateral_flexion",
+        "plane": "frontal",
+        "rom": {
+          "unit": "deg",
+          "source": "Draft estimate; needs a cited source",
+          "positive": 20
+        }
       },
       {
         "axis": "axial_rotation",
-        "positive": "rotation"
+        "positive": "rotation",
+        "plane": "transverse",
+        "rom": {
+          "unit": "deg",
+          "source": "Draft estimate; needs a cited source",
+          "positive": 35
+        }
       }
     ],
     "source": "torque Movement.swift (2026-10)",
@@ -83,15 +146,34 @@
       {
         "axis": "flexion_extension",
         "positive": "flexion",
-        "negative": "extension"
+        "negative": "extension",
+        "plane": "sagittal",
+        "rom": {
+          "unit": "deg",
+          "source": "Draft estimate; needs a cited source (AAOS gives thoracolumbar combined: 80/25)",
+          "positive": 50,
+          "negative": 15
+        }
       },
       {
         "axis": "lateral_flexion",
-        "positive": "lateral_flexion"
+        "positive": "lateral_flexion",
+        "plane": "frontal",
+        "rom": {
+          "unit": "deg",
+          "source": "Draft estimate; needs a cited source",
+          "positive": 20
+        }
       },
       {
         "axis": "axial_rotation",
-        "positive": "rotation"
+        "positive": "rotation",
+        "plane": "transverse",
+        "rom": {
+          "unit": "deg",
+          "source": "Draft estimate; needs a cited source",
+          "positive": 5
+        }
       }
     ],
     "source": "torque Movement.swift (2026-10)",
@@ -106,7 +188,14 @@
       {
         "axis": "nutation_counternutation",
         "positive": "nutation",
-        "negative": "counternutation"
+        "negative": "counternutation",
+        "plane": "sagittal",
+        "rom": {
+          "unit": "deg",
+          "source": "Draft estimate; needs a cited source (SI motion is a few degrees)",
+          "positive": 2,
+          "negative": 2
+        }
       }
     ],
     "source": "Draft; SI motion per Neumann, Kinesiology of the Musculoskeletal System",
@@ -121,17 +210,34 @@
       {
         "axis": "elevation_depression",
         "positive": "elevation",
-        "negative": "depression"
+        "negative": "depression",
+        "plane": "frontal",
+        "rom": {
+          "unit": "mm",
+          "source": "Draft estimate; needs a cited source (translation)"
+        }
       },
       {
         "axis": "protraction_retraction",
         "positive": "protraction",
-        "negative": "retraction"
+        "negative": "retraction",
+        "plane": "transverse",
+        "rom": {
+          "unit": "mm",
+          "source": "Draft estimate; needs a cited source (translation)"
+        }
       },
       {
         "axis": "upward_downward_rotation",
         "positive": "upward_rotation",
-        "negative": "downward_rotation"
+        "negative": "downward_rotation",
+        "plane": "frontal",
+        "rom": {
+          "unit": "deg",
+          "source": "Draft estimate; needs a cited source",
+          "positive": 60,
+          "negative": 10
+        }
       }
     ],
     "source": "torque Movement.swift (2026-10)",
@@ -146,22 +252,50 @@
       {
         "axis": "flexion_extension",
         "positive": "flexion",
-        "negative": "extension"
+        "negative": "extension",
+        "plane": "sagittal",
+        "rom": {
+          "unit": "deg",
+          "source": "AAOS normal values (Greene & Heckman 1994), draft (whole shoulder complex)",
+          "positive": 180,
+          "negative": 60
+        }
       },
       {
         "axis": "abduction_adduction",
         "positive": "abduction",
-        "negative": "adduction"
+        "negative": "adduction",
+        "plane": "frontal",
+        "rom": {
+          "unit": "deg",
+          "source": "AAOS normal values (Greene & Heckman 1994), draft (whole shoulder complex)",
+          "positive": 180,
+          "negative": 0
+        }
       },
       {
         "axis": "axial_rotation",
         "positive": "internal_rotation",
-        "negative": "external_rotation"
+        "negative": "external_rotation",
+        "plane": "transverse",
+        "rom": {
+          "unit": "deg",
+          "source": "AAOS normal values (Greene & Heckman 1994), draft",
+          "positive": 70,
+          "negative": 90
+        }
       },
       {
         "axis": "horizontal_abduction_adduction",
         "positive": "horizontal_abduction",
-        "negative": "horizontal_adduction"
+        "negative": "horizontal_adduction",
+        "plane": "transverse",
+        "rom": {
+          "unit": "deg",
+          "source": "Draft estimate; needs a cited source",
+          "positive": 45,
+          "negative": 135
+        }
       }
     ],
     "source": "torque Movement.swift (2026-10)",
@@ -176,7 +310,14 @@
       {
         "axis": "flexion_extension",
         "positive": "flexion",
-        "negative": "extension"
+        "negative": "extension",
+        "plane": "sagittal",
+        "rom": {
+          "unit": "deg",
+          "source": "AAOS normal values (Greene & Heckman 1994), draft",
+          "positive": 150,
+          "negative": 0
+        }
       }
     ],
     "source": "torque Movement.swift (2026-10)",
@@ -191,7 +332,14 @@
       {
         "axis": "pronation_supination",
         "positive": "pronation",
-        "negative": "supination"
+        "negative": "supination",
+        "plane": "transverse",
+        "rom": {
+          "unit": "deg",
+          "source": "AAOS normal values (Greene & Heckman 1994), draft",
+          "positive": 80,
+          "negative": 80
+        }
       }
     ],
     "source": "torque Movement.swift (2026-10)",
@@ -206,12 +354,26 @@
       {
         "axis": "flexion_extension",
         "positive": "flexion",
-        "negative": "extension"
+        "negative": "extension",
+        "plane": "sagittal",
+        "rom": {
+          "unit": "deg",
+          "source": "AAOS normal values (Greene & Heckman 1994), draft",
+          "positive": 80,
+          "negative": 70
+        }
       },
       {
         "axis": "radial_ulnar_deviation",
         "positive": "radial_deviation",
-        "negative": "ulnar_deviation"
+        "negative": "ulnar_deviation",
+        "plane": "frontal",
+        "rom": {
+          "unit": "deg",
+          "source": "AAOS normal values (Greene & Heckman 1994), draft",
+          "positive": 20,
+          "negative": 30
+        }
       }
     ],
     "source": "torque Movement.swift (2026-10)",
@@ -226,12 +388,26 @@
       {
         "axis": "flexion_extension",
         "positive": "flexion",
-        "negative": "extension"
+        "negative": "extension",
+        "plane": "sagittal",
+        "rom": {
+          "unit": "deg",
+          "source": "AAOS normal values (Greene & Heckman 1994), draft",
+          "positive": 90,
+          "negative": 45
+        }
       },
       {
         "axis": "abduction_adduction",
         "positive": "abduction",
-        "negative": "adduction"
+        "negative": "adduction",
+        "plane": "frontal",
+        "rom": {
+          "unit": "deg",
+          "source": "Draft estimate; needs a cited source",
+          "positive": 20,
+          "negative": 0
+        }
       }
     ],
     "source": "torque Movement.swift (2026-10)",
@@ -246,7 +422,14 @@
       {
         "axis": "flexion_extension",
         "positive": "flexion",
-        "negative": "extension"
+        "negative": "extension",
+        "plane": "sagittal",
+        "rom": {
+          "unit": "deg",
+          "source": "AAOS normal values (Greene & Heckman 1994), draft (PIP)",
+          "positive": 100,
+          "negative": 0
+        }
       }
     ],
     "source": "torque Movement.swift (2026-10)",
@@ -261,16 +444,35 @@
       {
         "axis": "flexion_extension",
         "positive": "flexion",
-        "negative": "extension"
+        "negative": "extension",
+        "plane": "frontal",
+        "rom": {
+          "unit": "deg",
+          "source": "AAOS normal values (Greene & Heckman 1994), draft",
+          "positive": 15,
+          "negative": 20
+        }
       },
       {
         "axis": "abduction_adduction",
         "positive": "abduction",
-        "negative": "adduction"
+        "negative": "adduction",
+        "plane": "sagittal",
+        "rom": {
+          "unit": "deg",
+          "source": "AAOS normal values (Greene & Heckman 1994), draft",
+          "positive": 70,
+          "negative": 0
+        }
       },
       {
         "axis": "opposition",
-        "positive": "opposition"
+        "positive": "opposition",
+        "plane": "transverse",
+        "rom": {
+          "unit": "deg",
+          "source": "Draft estimate; needs a cited source (composite motion; no single angle)"
+        }
       }
     ],
     "source": "torque Movement.swift (2026-10)",
@@ -285,7 +487,14 @@
       {
         "axis": "flexion_extension",
         "positive": "flexion",
-        "negative": "extension"
+        "negative": "extension",
+        "plane": "sagittal",
+        "rom": {
+          "unit": "deg",
+          "source": "AAOS normal values (Greene & Heckman 1994), draft",
+          "positive": 80,
+          "negative": 20
+        }
       }
     ],
     "source": "torque Movement.swift (2026-10)",
@@ -300,17 +509,38 @@
       {
         "axis": "flexion_extension",
         "positive": "flexion",
-        "negative": "extension"
+        "negative": "extension",
+        "plane": "sagittal",
+        "rom": {
+          "unit": "deg",
+          "source": "AAOS normal values (Greene & Heckman 1994), draft",
+          "positive": 120,
+          "negative": 30
+        }
       },
       {
         "axis": "abduction_adduction",
         "positive": "abduction",
-        "negative": "adduction"
+        "negative": "adduction",
+        "plane": "frontal",
+        "rom": {
+          "unit": "deg",
+          "source": "AAOS normal values (Greene & Heckman 1994), draft",
+          "positive": 45,
+          "negative": 30
+        }
       },
       {
         "axis": "axial_rotation",
         "positive": "internal_rotation",
-        "negative": "external_rotation"
+        "negative": "external_rotation",
+        "plane": "transverse",
+        "rom": {
+          "unit": "deg",
+          "source": "AAOS normal values (Greene & Heckman 1994), draft",
+          "positive": 45,
+          "negative": 45
+        }
       }
     ],
     "source": "torque Movement.swift (2026-10)",
@@ -325,12 +555,26 @@
       {
         "axis": "flexion_extension",
         "positive": "flexion",
-        "negative": "extension"
+        "negative": "extension",
+        "plane": "sagittal",
+        "rom": {
+          "unit": "deg",
+          "source": "AAOS normal values (Greene & Heckman 1994), draft",
+          "positive": 135,
+          "negative": 0
+        }
       },
       {
         "axis": "axial_rotation",
         "positive": "internal_rotation",
-        "negative": "external_rotation"
+        "negative": "external_rotation",
+        "plane": "transverse",
+        "rom": {
+          "unit": "deg",
+          "source": "Draft estimate; needs a cited source (measured at 90° knee flexion)",
+          "positive": 20,
+          "negative": 30
+        }
       }
     ],
     "source": "torque Movement.swift (2026-10)",
@@ -345,7 +589,14 @@
       {
         "axis": "dorsiflexion_plantarflexion",
         "positive": "dorsiflexion",
-        "negative": "plantarflexion"
+        "negative": "plantarflexion",
+        "plane": "sagittal",
+        "rom": {
+          "unit": "deg",
+          "source": "AAOS normal values (Greene & Heckman 1994), draft",
+          "positive": 20,
+          "negative": 50
+        }
       }
     ],
     "source": "torque Movement.swift (2026-10)",
@@ -360,7 +611,14 @@
       {
         "axis": "inversion_eversion",
         "positive": "inversion",
-        "negative": "eversion"
+        "negative": "eversion",
+        "plane": "frontal",
+        "rom": {
+          "unit": "deg",
+          "source": "AAOS normal values (Greene & Heckman 1994), draft",
+          "positive": 35,
+          "negative": 15
+        }
       }
     ],
     "source": "torque Movement.swift (2026-10)",
@@ -375,7 +633,14 @@
       {
         "axis": "flexion_extension",
         "positive": "flexion",
-        "negative": "extension"
+        "negative": "extension",
+        "plane": "sagittal",
+        "rom": {
+          "unit": "deg",
+          "source": "AAOS normal values (Greene & Heckman 1994), draft",
+          "positive": 45,
+          "negative": 70
+        }
       }
     ],
     "source": "torque Movement.swift (2026-10)",
@@ -390,7 +655,14 @@
       {
         "axis": "flexion_extension",
         "positive": "flexion",
-        "negative": "extension"
+        "negative": "extension",
+        "plane": "sagittal",
+        "rom": {
+          "unit": "deg",
+          "source": "AAOS normal values (Greene & Heckman 1994), draft",
+          "positive": 40,
+          "negative": 40
+        }
       }
     ],
     "source": "torque Movement.swift (2026-10)",
