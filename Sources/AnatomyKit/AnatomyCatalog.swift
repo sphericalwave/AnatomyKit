@@ -18,6 +18,9 @@ public struct AnatomyCatalog: Sendable {
     public let tissues: [Tissue]
     public let landmarks: [Landmark]
     public let rigBindings: [RigBinding]
+    /// Muscle or tissue ID → Z-Anatomy mesh base names (append `.l` / `.r`
+    /// for a side; midline meshes have no suffix).
+    public let zAnatomyMeshes: [String: [String]]
     let aliases: [LegacyNamespace: [String: String]]
 
     private let jointByID: [JointID: Joint]
@@ -53,6 +56,8 @@ public struct AnatomyCatalog: Sendable {
         tissues = try load("tissues")
         landmarks = try load("landmarks")
         rigBindings = [try load("rig-mixamo"), try load("rig-zanatomy")]
+        struct MeshTable: Decodable { let meshes: [String: [String]] }
+        zAnatomyMeshes = (try load("meshes-zanatomy") as MeshTable).meshes
         let rawAliases: [String: [String: String]] = try load("aliases")
         aliases = Dictionary(uniqueKeysWithValues: rawAliases.compactMap { key, value in
             LegacyNamespace(rawValue: key).map { ($0, value) }
