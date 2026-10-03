@@ -38,6 +38,7 @@ The JSON in `Sources/AnatomyKit/Resources` is the source of truth:
 | `muscles.json` | 75 entries (74 muscles + sacrotuberous ligament), each with the movements it produces (prime or secondary) |
 | `tissues.json` | 17 connective tissues the lines run through (fascia, aponeuroses, ligaments …) |
 | `bones.json` | The 206 adult bones (120 entries; bilateral bones count twice), with region, group and FMA ID where BodyParts3D's names match |
+| `articulations.json` | 86 articulations: which bones meet, the joint type, and the catalog joint each one moves as (the knee is tibiofemoral + patellofemoral). Spinal DOFs in `joints.json` also carry per-segment ranges, so a neck rotation can be spread across C0–T1 |
 | `landmarks.json` | 64 landmarks (`<bone>.<feature>`) the lines attach to, each listing the bone IDs it sits on |
 | `lines.json` | Myers' 12 lines as ordered paths: landmark → muscles/tissue → landmark …, with midline crossings marked. Line membership is derived from these paths |
 | `aliases.json` | Every string torque and suit persisted before AnatomyKit → its new ID |
