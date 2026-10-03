@@ -268,4 +268,14 @@ for layer, obs in layers.items():
     sizes[layer] = os.path.getsize(path)
 json.dump({'license': 'CC BY-SA 4.0', 'detail': RATIO, 'files': sizes, 'prims': manifest},
           open(DST + 'manifest.json', 'w'), indent=1)
+# Structure -> side -> layer files, for AnatomyViewerKit's LayerIndex
+# (copy to AnatomyViewerKit/Sources/AnatomyViewerKit/Resources/).
+table = {}
+for p in manifest:
+    if p['kind'] != 'catalog' or p['layer'] not in ('muscle', 'fascia'): continue
+    layer = 'fascia' if p['layer'] == 'fascia' else 'muscles-' + p['chunk']
+    table.setdefault(p['id'], {}).setdefault(p['side'] or '-', set()).add(layer)
+json.dump({'source': 'anatomy-assets manifest.json: catalog structure -> side (l, r, - for midline) -> the layer files that contain it',
+           'structures': {k: {s: sorted(v) for s, v in sides.items()} for k, sides in sorted(table.items())}},
+          open(DST + 'structure-layers.json', 'w'), indent=1)
 print('USDZ', json.dumps(sizes))
