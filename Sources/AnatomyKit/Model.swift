@@ -302,3 +302,37 @@ public struct ZAnatomyBonePart: Hashable, Sendable, Codable {
     public let meshes: [String]
     public let rigBone: String
 }
+
+/// Left or right of the body. Midline structures have no side.
+public enum BodySide: String, Hashable, Sendable, Codable, CaseIterable {
+    case left, right
+
+    public var opposite: BodySide { self == .left ? .right : .left }
+}
+
+extension TrainLine {
+    /// One track of a line, on the side of the body it runs on.
+    public struct SidedTrack: Hashable, Sendable {
+        /// Muscle or tissue IDs.
+        public let structures: [String]
+        public let side: BodySide
+    }
+
+    /// The tracks of each path, starting on `side`. Every crossing station
+    /// flips the side for the tracks after it, so the left Spiral Line runs
+    /// left neck → right shoulder blade and ribs → left hip and leg.
+    public func tracks(startingOn side: BodySide) -> [[SidedTrack]] {
+        paths.map { path in
+            var current = side
+            return path.steps.compactMap { step in
+                switch step {
+                case let .station(_, crosses):
+                    if crosses { current = current.opposite }
+                    return nil
+                case let .track(ids):
+                    return SidedTrack(structures: ids, side: current)
+                }
+            }
+        }
+    }
+}
