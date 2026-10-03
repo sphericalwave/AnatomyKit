@@ -199,11 +199,19 @@ def pose(deltas):
     hips = P['Hips']; hips.matrix = Matrix.Translation(REST_FEET - feet()) @ hips.matrix; upd()
 
 def interp(t):
+    """Pose at descent fraction t. At t = 0 the arms hang at the sides, so the
+    first frame (what RealityKit shows while paused) is the standing figure;
+    they rise forward over the first third of the descent."""
     for (t0, a_), (t1, b_) in zip(KF, KF[1:]):
         if t <= t1:
             u = (t - t0) / (t1 - t0); keys = set(a_) | set(b_)
-            return {k: a_.get(k, Quaternion()).slerp(b_.get(k, Quaternion()), u) for k in keys}
-    return KF[-1][1]
+            pose_ = {k: a_.get(k, Quaternion()).slerp(b_.get(k, Quaternion()), u) for k in keys}
+            break
+    else:
+        pose_ = dict(KF[-1][1])
+    raise_ = min(1.0, t / 0.33); raise_ = raise_ * raise_ * (3 - 2 * raise_)
+    for k in fwd: pose_[k] = Quaternion().slerp(pose_[k], raise_)
+    return pose_
 
 # Down in 24 frames, back up in 24, at 24 fps: a 2 s rep. Key the visual
 # (constraint-evaluated) matrix of every bone, then drop the constraints so the
@@ -260,4 +268,14 @@ for layer, obs in layers.items():
     sizes[layer] = os.path.getsize(path)
 json.dump({'license': 'CC BY-SA 4.0', 'detail': RATIO, 'files': sizes, 'prims': manifest},
           open(DST + 'manifest.json', 'w'), indent=1)
+# Structure -> side -> layer files, for AnatomyViewerKit's LayerIndex
+# (copy to AnatomyViewerKit/Sources/AnatomyViewerKit/Resources/).
+table = {}
+for p in manifest:
+    if p['kind'] != 'catalog' or p['layer'] not in ('muscle', 'fascia'): continue
+    layer = 'fascia' if p['layer'] == 'fascia' else 'muscles-' + p['chunk']
+    table.setdefault(p['id'], {}).setdefault(p['side'] or '-', set()).add(layer)
+json.dump({'source': 'anatomy-assets manifest.json: catalog structure -> side (l, r, - for midline) -> the layer files that contain it',
+           'structures': {k: {s: sorted(v) for s, v in sides.items()} for k, sides in sorted(table.items())}},
+          open(DST + 'structure-layers.json', 'w'), indent=1)
 print('USDZ', json.dumps(sizes))
