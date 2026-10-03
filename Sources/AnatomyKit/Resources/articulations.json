@@ -1,0 +1,1156 @@
+[
+  {
+    "id": "atlanto_occipital",
+    "name": "Atlanto-occipital",
+    "bones": [
+      "occipital",
+      "vertebra_c1"
+    ],
+    "kind": "condyloid",
+    "joint": "cervical_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "atlanto_axial",
+    "name": "Atlanto-axial",
+    "bones": [
+      "vertebra_c1",
+      "vertebra_c2"
+    ],
+    "kind": "pivot",
+    "joint": "cervical_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "c2_c3",
+    "name": "C2–C3 motion segment",
+    "bones": [
+      "vertebra_c2",
+      "vertebra_c3"
+    ],
+    "kind": "intervertebral",
+    "joint": "cervical_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "c3_c4",
+    "name": "C3–C4 motion segment",
+    "bones": [
+      "vertebra_c3",
+      "vertebra_c4"
+    ],
+    "kind": "intervertebral",
+    "joint": "cervical_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "c4_c5",
+    "name": "C4–C5 motion segment",
+    "bones": [
+      "vertebra_c4",
+      "vertebra_c5"
+    ],
+    "kind": "intervertebral",
+    "joint": "cervical_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "c5_c6",
+    "name": "C5–C6 motion segment",
+    "bones": [
+      "vertebra_c5",
+      "vertebra_c6"
+    ],
+    "kind": "intervertebral",
+    "joint": "cervical_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "c6_c7",
+    "name": "C6–C7 motion segment",
+    "bones": [
+      "vertebra_c6",
+      "vertebra_c7"
+    ],
+    "kind": "intervertebral",
+    "joint": "cervical_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "c7_t1",
+    "name": "C7–T1 motion segment",
+    "bones": [
+      "vertebra_c7",
+      "vertebra_t1"
+    ],
+    "kind": "intervertebral",
+    "joint": "cervical_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "t1_t2",
+    "name": "T1–T2 motion segment",
+    "bones": [
+      "vertebra_t1",
+      "vertebra_t2"
+    ],
+    "kind": "intervertebral",
+    "joint": "thoracic_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "t2_t3",
+    "name": "T2–T3 motion segment",
+    "bones": [
+      "vertebra_t2",
+      "vertebra_t3"
+    ],
+    "kind": "intervertebral",
+    "joint": "thoracic_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "t3_t4",
+    "name": "T3–T4 motion segment",
+    "bones": [
+      "vertebra_t3",
+      "vertebra_t4"
+    ],
+    "kind": "intervertebral",
+    "joint": "thoracic_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "t4_t5",
+    "name": "T4–T5 motion segment",
+    "bones": [
+      "vertebra_t4",
+      "vertebra_t5"
+    ],
+    "kind": "intervertebral",
+    "joint": "thoracic_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "t5_t6",
+    "name": "T5–T6 motion segment",
+    "bones": [
+      "vertebra_t5",
+      "vertebra_t6"
+    ],
+    "kind": "intervertebral",
+    "joint": "thoracic_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "t6_t7",
+    "name": "T6–T7 motion segment",
+    "bones": [
+      "vertebra_t6",
+      "vertebra_t7"
+    ],
+    "kind": "intervertebral",
+    "joint": "thoracic_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "t7_t8",
+    "name": "T7–T8 motion segment",
+    "bones": [
+      "vertebra_t7",
+      "vertebra_t8"
+    ],
+    "kind": "intervertebral",
+    "joint": "thoracic_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "t8_t9",
+    "name": "T8–T9 motion segment",
+    "bones": [
+      "vertebra_t8",
+      "vertebra_t9"
+    ],
+    "kind": "intervertebral",
+    "joint": "thoracic_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "t9_t10",
+    "name": "T9–T10 motion segment",
+    "bones": [
+      "vertebra_t9",
+      "vertebra_t10"
+    ],
+    "kind": "intervertebral",
+    "joint": "thoracic_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "t10_t11",
+    "name": "T10–T11 motion segment",
+    "bones": [
+      "vertebra_t10",
+      "vertebra_t11"
+    ],
+    "kind": "intervertebral",
+    "joint": "thoracic_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "t11_t12",
+    "name": "T11–T12 motion segment",
+    "bones": [
+      "vertebra_t11",
+      "vertebra_t12"
+    ],
+    "kind": "intervertebral",
+    "joint": "thoracic_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "t12_l1",
+    "name": "T12–L1 motion segment",
+    "bones": [
+      "vertebra_t12",
+      "vertebra_l1"
+    ],
+    "kind": "intervertebral",
+    "joint": "thoracic_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "l1_l2",
+    "name": "L1–L2 motion segment",
+    "bones": [
+      "vertebra_l1",
+      "vertebra_l2"
+    ],
+    "kind": "intervertebral",
+    "joint": "lumbar_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "l2_l3",
+    "name": "L2–L3 motion segment",
+    "bones": [
+      "vertebra_l2",
+      "vertebra_l3"
+    ],
+    "kind": "intervertebral",
+    "joint": "lumbar_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "l3_l4",
+    "name": "L3–L4 motion segment",
+    "bones": [
+      "vertebra_l3",
+      "vertebra_l4"
+    ],
+    "kind": "intervertebral",
+    "joint": "lumbar_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "l4_l5",
+    "name": "L4–L5 motion segment",
+    "bones": [
+      "vertebra_l4",
+      "vertebra_l5"
+    ],
+    "kind": "intervertebral",
+    "joint": "lumbar_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "l5_s1",
+    "name": "L5–S1 motion segment",
+    "bones": [
+      "vertebra_l5",
+      "sacrum"
+    ],
+    "kind": "intervertebral",
+    "joint": "lumbar_spine",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "sacrococcygeal",
+    "name": "Sacrococcygeal",
+    "bones": [
+      "sacrum",
+      "coccyx"
+    ],
+    "kind": "symphysis",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "sacroiliac",
+    "name": "Sacroiliac",
+    "bones": [
+      "sacrum",
+      "hip_bone"
+    ],
+    "kind": "plane",
+    "joint": "sacroiliac",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "pubic_symphysis",
+    "name": "Pubic symphysis",
+    "bones": [
+      "hip_bone"
+    ],
+    "kind": "symphysis",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "temporomandibular",
+    "name": "Temporomandibular",
+    "bones": [
+      "temporal",
+      "mandible"
+    ],
+    "kind": "condyloid",
+    "joint": "temporomandibular",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "cranial_sutures",
+    "name": "Cranial sutures",
+    "bones": [
+      "frontal",
+      "parietal",
+      "temporal",
+      "occipital",
+      "sphenoid",
+      "ethmoid"
+    ],
+    "kind": "suture",
+    "bilateral": false,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "incudomallear",
+    "name": "Incudomallear",
+    "bones": [
+      "incus",
+      "malleus"
+    ],
+    "kind": "saddle",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "incudostapedial",
+    "name": "Incudostapedial",
+    "bones": [
+      "incus",
+      "stapes"
+    ],
+    "kind": "ball_and_socket",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "costovertebral",
+    "name": "Costovertebral and costotransverse",
+    "bones": [
+      "rib_1",
+      "rib_2",
+      "rib_3",
+      "rib_4",
+      "rib_5",
+      "rib_6",
+      "rib_7",
+      "rib_8",
+      "rib_9",
+      "rib_10",
+      "rib_11",
+      "rib_12",
+      "vertebra_t1",
+      "vertebra_t2",
+      "vertebra_t3",
+      "vertebra_t4",
+      "vertebra_t5",
+      "vertebra_t6",
+      "vertebra_t7",
+      "vertebra_t8",
+      "vertebra_t9",
+      "vertebra_t10",
+      "vertebra_t11",
+      "vertebra_t12"
+    ],
+    "kind": "plane",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "sternocostal",
+    "name": "Sternocostal",
+    "bones": [
+      "sternum",
+      "rib_1",
+      "rib_2",
+      "rib_3",
+      "rib_4",
+      "rib_5",
+      "rib_6",
+      "rib_7"
+    ],
+    "kind": "plane",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "sternoclavicular",
+    "name": "Sternoclavicular",
+    "bones": [
+      "sternum",
+      "clavicle"
+    ],
+    "kind": "saddle",
+    "joint": "scapulothoracic",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "acromioclavicular",
+    "name": "Acromioclavicular",
+    "bones": [
+      "clavicle",
+      "scapula"
+    ],
+    "kind": "plane",
+    "joint": "scapulothoracic",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "scapulothoracic",
+    "name": "Scapulothoracic (functional)",
+    "bones": [
+      "scapula",
+      "rib_2",
+      "rib_3",
+      "rib_4",
+      "rib_5",
+      "rib_6",
+      "rib_7"
+    ],
+    "kind": "functional",
+    "joint": "scapulothoracic",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "glenohumeral",
+    "name": "Glenohumeral",
+    "bones": [
+      "scapula",
+      "humerus"
+    ],
+    "kind": "ball_and_socket",
+    "joint": "glenohumeral",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "humeroulnar",
+    "name": "Humeroulnar",
+    "bones": [
+      "humerus",
+      "ulna"
+    ],
+    "kind": "hinge",
+    "joint": "elbow",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "humeroradial",
+    "name": "Humeroradial",
+    "bones": [
+      "humerus",
+      "radius"
+    ],
+    "kind": "ball_and_socket",
+    "joint": "elbow",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "proximal_radioulnar",
+    "name": "Proximal radioulnar",
+    "bones": [
+      "radius",
+      "ulna"
+    ],
+    "kind": "pivot",
+    "joint": "radioulnar",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "distal_radioulnar",
+    "name": "Distal radioulnar",
+    "bones": [
+      "radius",
+      "ulna"
+    ],
+    "kind": "pivot",
+    "joint": "radioulnar",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "radiocarpal",
+    "name": "Radiocarpal",
+    "bones": [
+      "radius",
+      "scaphoid",
+      "lunate",
+      "triquetrum"
+    ],
+    "kind": "condyloid",
+    "joint": "wrist",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "midcarpal",
+    "name": "Midcarpal",
+    "bones": [
+      "scaphoid",
+      "lunate",
+      "triquetrum",
+      "trapezium",
+      "trapezoid",
+      "capitate",
+      "hamate"
+    ],
+    "kind": "plane",
+    "joint": "wrist",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "pisotriquetral",
+    "name": "Pisotriquetral",
+    "bones": [
+      "pisiform",
+      "triquetrum"
+    ],
+    "kind": "plane",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "cmc_thumb",
+    "name": "Carpometacarpal of thumb",
+    "bones": [
+      "trapezium",
+      "metacarpal_1"
+    ],
+    "kind": "saddle",
+    "joint": "thumb_cmc",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "cmc_fingers",
+    "name": "Carpometacarpal, fingers 2–5",
+    "bones": [
+      "trapezoid",
+      "capitate",
+      "hamate",
+      "metacarpal_2",
+      "metacarpal_3",
+      "metacarpal_4",
+      "metacarpal_5"
+    ],
+    "kind": "plane",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "mcp_thumb",
+    "name": "Metacarpophalangeal of thumb",
+    "bones": [
+      "metacarpal_1",
+      "proximal_phalanx_thumb"
+    ],
+    "kind": "hinge",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "ip_thumb",
+    "name": "Interphalangeal of thumb",
+    "bones": [
+      "proximal_phalanx_thumb",
+      "distal_phalanx_thumb"
+    ],
+    "kind": "hinge",
+    "joint": "thumb_ip",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "mcp_index",
+    "name": "Metacarpophalangeal of index finger",
+    "bones": [
+      "metacarpal_2",
+      "proximal_phalanx_index"
+    ],
+    "kind": "condyloid",
+    "joint": "finger_mcp",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "pip_index",
+    "name": "Proximal interphalangeal of index finger",
+    "bones": [
+      "proximal_phalanx_index",
+      "middle_phalanx_index"
+    ],
+    "kind": "hinge",
+    "joint": "finger_ip",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "dip_index",
+    "name": "Distal interphalangeal of index finger",
+    "bones": [
+      "middle_phalanx_index",
+      "distal_phalanx_index"
+    ],
+    "kind": "hinge",
+    "joint": "finger_ip",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "mcp_middle",
+    "name": "Metacarpophalangeal of middle finger",
+    "bones": [
+      "metacarpal_3",
+      "proximal_phalanx_middle"
+    ],
+    "kind": "condyloid",
+    "joint": "finger_mcp",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "pip_middle",
+    "name": "Proximal interphalangeal of middle finger",
+    "bones": [
+      "proximal_phalanx_middle",
+      "middle_phalanx_middle"
+    ],
+    "kind": "hinge",
+    "joint": "finger_ip",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "dip_middle",
+    "name": "Distal interphalangeal of middle finger",
+    "bones": [
+      "middle_phalanx_middle",
+      "distal_phalanx_middle"
+    ],
+    "kind": "hinge",
+    "joint": "finger_ip",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "mcp_ring",
+    "name": "Metacarpophalangeal of ring finger",
+    "bones": [
+      "metacarpal_4",
+      "proximal_phalanx_ring"
+    ],
+    "kind": "condyloid",
+    "joint": "finger_mcp",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "pip_ring",
+    "name": "Proximal interphalangeal of ring finger",
+    "bones": [
+      "proximal_phalanx_ring",
+      "middle_phalanx_ring"
+    ],
+    "kind": "hinge",
+    "joint": "finger_ip",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "dip_ring",
+    "name": "Distal interphalangeal of ring finger",
+    "bones": [
+      "middle_phalanx_ring",
+      "distal_phalanx_ring"
+    ],
+    "kind": "hinge",
+    "joint": "finger_ip",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "mcp_little",
+    "name": "Metacarpophalangeal of little finger",
+    "bones": [
+      "metacarpal_5",
+      "proximal_phalanx_little"
+    ],
+    "kind": "condyloid",
+    "joint": "finger_mcp",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "pip_little",
+    "name": "Proximal interphalangeal of little finger",
+    "bones": [
+      "proximal_phalanx_little",
+      "middle_phalanx_little"
+    ],
+    "kind": "hinge",
+    "joint": "finger_ip",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "dip_little",
+    "name": "Distal interphalangeal of little finger",
+    "bones": [
+      "middle_phalanx_little",
+      "distal_phalanx_little"
+    ],
+    "kind": "hinge",
+    "joint": "finger_ip",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "hip",
+    "name": "Hip (acetabulofemoral)",
+    "bones": [
+      "hip_bone",
+      "femur"
+    ],
+    "kind": "ball_and_socket",
+    "joint": "hip",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "tibiofemoral",
+    "name": "Tibiofemoral",
+    "bones": [
+      "femur",
+      "tibia"
+    ],
+    "kind": "bicondylar",
+    "joint": "knee",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "patellofemoral",
+    "name": "Patellofemoral",
+    "bones": [
+      "femur",
+      "patella"
+    ],
+    "kind": "plane",
+    "joint": "knee",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "proximal_tibiofibular",
+    "name": "Proximal tibiofibular",
+    "bones": [
+      "tibia",
+      "fibula"
+    ],
+    "kind": "plane",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "distal_tibiofibular",
+    "name": "Distal tibiofibular",
+    "bones": [
+      "tibia",
+      "fibula"
+    ],
+    "kind": "syndesmosis",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "talocrural",
+    "name": "Talocrural",
+    "bones": [
+      "tibia",
+      "fibula",
+      "talus"
+    ],
+    "kind": "hinge",
+    "joint": "talocrural",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "subtalar",
+    "name": "Subtalar (talocalcaneal)",
+    "bones": [
+      "talus",
+      "calcaneus"
+    ],
+    "kind": "plane",
+    "joint": "subtalar",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "talocalcaneonavicular",
+    "name": "Talocalcaneonavicular",
+    "bones": [
+      "talus",
+      "calcaneus",
+      "navicular"
+    ],
+    "kind": "ball_and_socket",
+    "joint": "subtalar",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "calcaneocuboid",
+    "name": "Calcaneocuboid",
+    "bones": [
+      "calcaneus",
+      "cuboid"
+    ],
+    "kind": "saddle",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "cuneonavicular",
+    "name": "Cuneonavicular and intercuneiform",
+    "bones": [
+      "navicular",
+      "medial_cuneiform",
+      "intermediate_cuneiform",
+      "lateral_cuneiform",
+      "cuboid"
+    ],
+    "kind": "plane",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "tarsometatarsal",
+    "name": "Tarsometatarsal",
+    "bones": [
+      "medial_cuneiform",
+      "intermediate_cuneiform",
+      "lateral_cuneiform",
+      "cuboid",
+      "metatarsal_1",
+      "metatarsal_2",
+      "metatarsal_3",
+      "metatarsal_4",
+      "metatarsal_5"
+    ],
+    "kind": "plane",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "mtp_hallux",
+    "name": "Metatarsophalangeal of big toe",
+    "bones": [
+      "metatarsal_1",
+      "proximal_phalanx_hallux"
+    ],
+    "kind": "condyloid",
+    "joint": "hallux_mtp",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "ip_hallux",
+    "name": "Interphalangeal of big toe",
+    "bones": [
+      "proximal_phalanx_hallux",
+      "distal_phalanx_hallux"
+    ],
+    "kind": "hinge",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "mtp_toe_2",
+    "name": "Metatarsophalangeal of toe 2",
+    "bones": [
+      "metatarsal_2",
+      "proximal_phalanx_toe_2"
+    ],
+    "kind": "condyloid",
+    "joint": "toes_mtp",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "pip_toe_2",
+    "name": "Proximal interphalangeal of toe 2",
+    "bones": [
+      "proximal_phalanx_toe_2",
+      "middle_phalanx_toe_2"
+    ],
+    "kind": "hinge",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "dip_toe_2",
+    "name": "Distal interphalangeal of toe 2",
+    "bones": [
+      "middle_phalanx_toe_2",
+      "distal_phalanx_toe_2"
+    ],
+    "kind": "hinge",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "mtp_toe_3",
+    "name": "Metatarsophalangeal of toe 3",
+    "bones": [
+      "metatarsal_3",
+      "proximal_phalanx_toe_3"
+    ],
+    "kind": "condyloid",
+    "joint": "toes_mtp",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "pip_toe_3",
+    "name": "Proximal interphalangeal of toe 3",
+    "bones": [
+      "proximal_phalanx_toe_3",
+      "middle_phalanx_toe_3"
+    ],
+    "kind": "hinge",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "dip_toe_3",
+    "name": "Distal interphalangeal of toe 3",
+    "bones": [
+      "middle_phalanx_toe_3",
+      "distal_phalanx_toe_3"
+    ],
+    "kind": "hinge",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "mtp_toe_4",
+    "name": "Metatarsophalangeal of toe 4",
+    "bones": [
+      "metatarsal_4",
+      "proximal_phalanx_toe_4"
+    ],
+    "kind": "condyloid",
+    "joint": "toes_mtp",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "pip_toe_4",
+    "name": "Proximal interphalangeal of toe 4",
+    "bones": [
+      "proximal_phalanx_toe_4",
+      "middle_phalanx_toe_4"
+    ],
+    "kind": "hinge",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "dip_toe_4",
+    "name": "Distal interphalangeal of toe 4",
+    "bones": [
+      "middle_phalanx_toe_4",
+      "distal_phalanx_toe_4"
+    ],
+    "kind": "hinge",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "mtp_toe_5",
+    "name": "Metatarsophalangeal of toe 5",
+    "bones": [
+      "metatarsal_5",
+      "proximal_phalanx_toe_5"
+    ],
+    "kind": "condyloid",
+    "joint": "toes_mtp",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "pip_toe_5",
+    "name": "Proximal interphalangeal of toe 5",
+    "bones": [
+      "proximal_phalanx_toe_5",
+      "middle_phalanx_toe_5"
+    ],
+    "kind": "hinge",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  },
+  {
+    "id": "dip_toe_5",
+    "name": "Distal interphalangeal of toe 5",
+    "bones": [
+      "middle_phalanx_toe_5",
+      "distal_phalanx_toe_5"
+    ],
+    "kind": "hinge",
+    "bilateral": true,
+    "source": "Draft from standard anatomy texts (Gray's; Neumann)",
+    "reviewed": false
+  }
+]

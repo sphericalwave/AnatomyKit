@@ -18,6 +18,7 @@ public struct AnatomyCatalog: Sendable {
     public let tissues: [Tissue]
     public let landmarks: [Landmark]
     public let bones: [Bone]
+    public let articulations: [Articulation]
     public let rigBindings: [RigBinding]
     /// Muscle or tissue ID → Z-Anatomy mesh base names (append `.l` / `.r`
     /// for a side; midline meshes have no suffix).
@@ -37,6 +38,7 @@ public struct AnatomyCatalog: Sendable {
     private let tissueByID: [TissueID: Tissue]
     private let landmarkByID: [LandmarkID: Landmark]
     private let boneByID: [BoneID: Bone]
+    private let articulationByID: [ArticulationID: Articulation]
 
     /// Tests validate every file, so a load failure here is a packaging bug.
     public static let standard: AnatomyCatalog = {
@@ -63,6 +65,7 @@ public struct AnatomyCatalog: Sendable {
         tissues = try load("tissues")
         landmarks = try load("landmarks")
         bones = try load("bones")
+        articulations = try load("articulations")
         rigBindings = [try load("rig-mixamo"), try load("rig-zanatomy")]
         struct MeshTable: Decodable { let meshes: [String: [String]] }
         zAnatomyMeshes = (try load("meshes-zanatomy") as MeshTable).meshes
@@ -83,6 +86,7 @@ public struct AnatomyCatalog: Sendable {
         tissueByID = Dictionary(tissues.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
         landmarkByID = Dictionary(landmarks.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
         boneByID = Dictionary(bones.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
+        articulationByID = Dictionary(articulations.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
     }
 
     public var directions: [Direction] { joints.flatMap(\.directions) }
@@ -95,6 +99,12 @@ public struct AnatomyCatalog: Sendable {
     public func tissue(_ id: TissueID) -> Tissue? { tissueByID[id] }
     public func landmark(_ id: LandmarkID) -> Landmark? { landmarkByID[id] }
     public func bone(_ id: BoneID) -> Bone? { boneByID[id] }
+    public func articulation(_ id: ArticulationID) -> Articulation? { articulationByID[id] }
+
+    /// The articulations whose motion a joint's DOFs describe.
+    public func articulations(of joint: JointID) -> [Articulation] {
+        articulations.filter { $0.joint == joint }
+    }
 
     /// Adult bone count: bilateral bones count twice. 206 for a complete catalog.
     public var boneCount: Int { bones.reduce(0) { $0 + ($1.bilateral ? 2 : 1) } }

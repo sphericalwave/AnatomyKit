@@ -68,6 +68,24 @@ public struct DOF: Hashable, Sendable, Codable {
     /// The plane the motion happens in, from anatomical position.
     public let plane: Plane
     public let rom: ROM
+    /// For spinal DOFs: typical range at each motion segment, so a whole-region
+    /// motion can be spread across vertebrae. Nil for other joints.
+    public let segments: Segments?
+
+    public struct Segments: Hashable, Sendable, Codable {
+        public let source: String
+        /// How to read `degrees` (combined both-direction range, or one side).
+        public let note: String
+        /// Articulation ID → degrees at that segment.
+        public let degrees: [String: Double]
+
+        /// Each segment's fraction of the region's motion, summing to 1.
+        public var shares: [ArticulationID: Double] {
+            let total = degrees.values.reduce(0, +)
+            guard total > 0 else { return [:] }
+            return Dictionary(uniqueKeysWithValues: degrees.map { (ArticulationID($0.key), $0.value / total) })
+        }
+    }
 }
 
 /// One way a joint moves: what torque tags an exercise with.
@@ -156,6 +174,30 @@ public struct Bone: Identifiable, Hashable, Sendable, Codable {
     public let bilateral: Bool
     /// Foundational Model of Anatomy class, e.g. `"FMA9611"` for the femur.
     public let fmaID: String?
+    public let source: String
+    public let reviewed: Bool
+}
+
+/// Where bones meet. Each articulation lists the bones it joins and, if it
+/// moves meaningfully, the catalog joint whose DOFs describe that motion
+/// (the knee joint is the tibiofemoral and patellofemoral articulations).
+public struct Articulation: Identifiable, Hashable, Sendable, Codable {
+    public enum Kind: String, Hashable, Sendable, Codable {
+        case hinge, pivot, condyloid, saddle, plane, bicondylar
+        case ballAndSocket = "ball_and_socket"
+        /// A vertebral motion segment: disc plus facet joints.
+        case intervertebral
+        case symphysis, suture, syndesmosis
+        /// Not a true joint, but moves like one (scapulothoracic).
+        case functional
+    }
+
+    public let id: ArticulationID
+    public let name: String
+    public let bones: [BoneID]
+    public let kind: Kind
+    public let joint: JointID?
+    public let bilateral: Bool
     public let source: String
     public let reviewed: Bool
 }

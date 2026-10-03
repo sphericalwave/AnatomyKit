@@ -59,6 +59,20 @@
           "source": "AAOS normal values (Greene & Heckman 1994), draft",
           "positive": 45,
           "negative": 45
+        },
+        "segments": {
+          "source": "White & Panjabi, Clinical Biomechanics of the Spine (2nd ed.), representative segmental values; draft",
+          "note": "Flexion_extension is the combined range across both directions; lateral flexion and rotation are one side.",
+          "degrees": {
+            "atlanto_occipital": 25,
+            "atlanto_axial": 20,
+            "c2_c3": 10,
+            "c3_c4": 15,
+            "c4_c5": 20,
+            "c5_c6": 20,
+            "c6_c7": 17,
+            "c7_t1": 9
+          }
         }
       },
       {
@@ -69,6 +83,20 @@
           "unit": "deg",
           "source": "AAOS normal values (Greene & Heckman 1994), draft",
           "positive": 45
+        },
+        "segments": {
+          "source": "White & Panjabi, Clinical Biomechanics of the Spine (2nd ed.), representative segmental values; draft",
+          "note": "Flexion_extension is the combined range across both directions; lateral flexion and rotation are one side.",
+          "degrees": {
+            "atlanto_occipital": 5,
+            "atlanto_axial": 5,
+            "c2_c3": 10,
+            "c3_c4": 11,
+            "c4_c5": 11,
+            "c5_c6": 8,
+            "c6_c7": 7,
+            "c7_t1": 4
+          }
         }
       },
       {
@@ -79,6 +107,20 @@
           "unit": "deg",
           "source": "AAOS normal values (Greene & Heckman 1994), draft",
           "positive": 60
+        },
+        "segments": {
+          "source": "White & Panjabi, Clinical Biomechanics of the Spine (2nd ed.), representative segmental values; draft",
+          "note": "Flexion_extension is the combined range across both directions; lateral flexion and rotation are one side.",
+          "degrees": {
+            "atlanto_occipital": 5,
+            "atlanto_axial": 40,
+            "c2_c3": 3,
+            "c3_c4": 7,
+            "c4_c5": 7,
+            "c5_c6": 7,
+            "c6_c7": 6,
+            "c7_t1": 2
+          }
         }
       },
       {
@@ -111,6 +153,24 @@
           "source": "Draft estimate; needs a cited source (AAOS gives thoracolumbar combined: 80/25)",
           "positive": 30,
           "negative": 20
+        },
+        "segments": {
+          "source": "White & Panjabi, Clinical Biomechanics of the Spine (2nd ed.), representative segmental values; draft",
+          "note": "Flexion_extension is the combined range across both directions; lateral flexion and rotation are one side.",
+          "degrees": {
+            "t1_t2": 4,
+            "t2_t3": 4,
+            "t3_t4": 4,
+            "t4_t5": 4,
+            "t5_t6": 4,
+            "t6_t7": 5,
+            "t7_t8": 6,
+            "t8_t9": 6,
+            "t9_t10": 6,
+            "t10_t11": 9,
+            "t11_t12": 12,
+            "t12_l1": 12
+          }
         }
       },
       {
@@ -121,6 +181,24 @@
           "unit": "deg",
           "source": "Draft estimate; needs a cited source",
           "positive": 20
+        },
+        "segments": {
+          "source": "White & Panjabi, Clinical Biomechanics of the Spine (2nd ed.), representative segmental values; draft",
+          "note": "Flexion_extension is the combined range across both directions; lateral flexion and rotation are one side.",
+          "degrees": {
+            "t1_t2": 6,
+            "t2_t3": 6,
+            "t3_t4": 6,
+            "t4_t5": 6,
+            "t5_t6": 6,
+            "t6_t7": 6,
+            "t7_t8": 6,
+            "t8_t9": 6,
+            "t9_t10": 6,
+            "t10_t11": 7,
+            "t11_t12": 9,
+            "t12_l1": 8
+          }
         }
       },
       {
@@ -131,6 +209,24 @@
           "unit": "deg",
           "source": "Draft estimate; needs a cited source",
           "positive": 35
+        },
+        "segments": {
+          "source": "White & Panjabi, Clinical Biomechanics of the Spine (2nd ed.), representative segmental values; draft",
+          "note": "Flexion_extension is the combined range across both directions; lateral flexion and rotation are one side.",
+          "degrees": {
+            "t1_t2": 9,
+            "t2_t3": 8,
+            "t3_t4": 8,
+            "t4_t5": 8,
+            "t5_t6": 8,
+            "t6_t7": 8,
+            "t7_t8": 8,
+            "t8_t9": 7,
+            "t9_t10": 4,
+            "t10_t11": 2,
+            "t11_t12": 2,
+            "t12_l1": 2
+          }
         }
       }
     ],
@@ -153,6 +249,17 @@
           "source": "Draft estimate; needs a cited source (AAOS gives thoracolumbar combined: 80/25)",
           "positive": 50,
           "negative": 15
+        },
+        "segments": {
+          "source": "White & Panjabi, Clinical Biomechanics of the Spine (2nd ed.), representative segmental values; draft",
+          "note": "Flexion_extension is the combined range across both directions; lateral flexion and rotation are one side.",
+          "degrees": {
+            "l1_l2": 12,
+            "l2_l3": 14,
+            "l3_l4": 15,
+            "l4_l5": 16,
+            "l5_s1": 17
+          }
         }
       },
       {
@@ -163,6 +270,17 @@
           "unit": "deg",
           "source": "Draft estimate; needs a cited source",
           "positive": 20
+        },
+        "segments": {
+          "source": "White & Panjabi, Clinical Biomechanics of the Spine (2nd ed.), representative segmental values; draft",
+          "note": "Flexion_extension is the combined range across both directions; lateral flexion and rotation are one side.",
+          "degrees": {
+            "l1_l2": 6,
+            "l2_l3": 6,
+            "l3_l4": 8,
+            "l4_l5": 6,
+            "l5_s1": 3
+          }
         }
       },
       {
@@ -173,6 +291,17 @@
           "unit": "deg",
           "source": "Draft estimate; needs a cited source",
           "positive": 5
+        },
+        "segments": {
+          "source": "White & Panjabi, Clinical Biomechanics of the Spine (2nd ed.), representative segmental values; draft",
+          "note": "Flexion_extension is the combined range across both directions; lateral flexion and rotation are one side.",
+          "degrees": {
+            "l1_l2": 2,
+            "l2_l3": 2,
+            "l3_l4": 2,
+            "l4_l5": 2,
+            "l5_s1": 1
+          }
         }
       }
     ],
