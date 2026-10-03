@@ -68,6 +68,10 @@ def bake_mesh(src, name):
     md = src.modifiers.new('dec', 'DECIMATE'); md.ratio = RATIO
     upd(); dg = bpy.context.evaluated_depsgraph_get()
     me = bpy.data.meshes.new_from_object(src.evaluated_get(dg))
+    # RealityKit merges every skinned mesh under the SkelRoot into one model and
+    # keys each part by its mesh prim's name, so the mesh data carries the
+    # catalog name too.
+    me.name = name
     src.modifiers.remove(md)
     me.transform(src.matrix_world)
     bm = bmesh.new(); bm.from_mesh(me); bmesh.ops.triangulate(bm, faces=bm.faces[:]); bm.to_mesh(me); bm.free()
