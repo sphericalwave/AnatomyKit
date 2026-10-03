@@ -38,6 +38,9 @@ YBOT_USDZ=YBot.usdz $B -b --python export_skeleton.py -- ybot out_ybot.bin 60000
 $B -b $ZB --python squat_bake.py           # rigid-bone squat for the comparison page
 
 python3 build_pages.py                     # → myofascial-lines.html, skeleton-compare.html
+
+# Rigged USDZ layers for the apps (published at github.com/sphericalwave/anatomy-assets):
+ZANATOMY_BLEND=$ZA $B -b $ZB --python export_usdz.py   # → usdz/*.usdz + manifest.json
 $B -b $ZA --python usdsize.py              # optional: USDZ size per layer at 100/25/10%
 ```
 
