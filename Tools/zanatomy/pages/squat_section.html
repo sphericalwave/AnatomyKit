@@ -1,0 +1,22 @@
+  <section style="display:grid;gap:12px" id="squat">
+    <h2>Squat test on the Z-Anatomy rig</h2>
+    <p class="lede">The back squat already in RigKit, mapped onto Z-Anatomy's own 237-bone rig. Only the 15 Mixamo-style control bones are posed. Vertebrae, ribs, kneecaps and foot bones follow through the rig's constraints, and the knee stays inside the rig's 0–165° limit. Bones only: muscles and fascia aren't rigged yet.</p>
+    <div class="controls">
+      <div class="group" role="group" aria-label="Playback">
+        <button class="chip" id="sq-play" aria-pressed="true">Pause</button>
+        <label class="toggle" for="sq-t" style="gap:10px"><span class="lbl" style="font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)">Depth</span>
+          <input type="range" id="sq-t" min="0" max="1000" value="0" style="width:min(260px,50vw)"></label>
+      </div>
+      <div class="group" role="group" aria-label="Squat view">
+        <span class="lbl">View</span>
+        <button class="chip" data-sqview="front" aria-pressed="false">Front</button>
+        <button class="chip" data-sqview="side" aria-pressed="true">Side</button>
+        <button class="chip" data-sqview="back" aria-pressed="false">Back</button>
+      </div>
+    </div>
+    <div class="stage" id="sq-stage">
+      <canvas id="sq-gl" aria-label="Animated Z-Anatomy skeleton squatting" style="height:min(70vh,640px)"></canvas>
+      <div class="pane-foot" id="sq-foot" style="position:absolute"></div>
+    </div>
+  </section>
+
