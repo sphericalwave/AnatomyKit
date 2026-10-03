@@ -1,0 +1,1483 @@
+{
+  "source": "Z-Anatomy / Z-Biomechanics mesh and armature bone names, by side",
+  "bones": {
+    "ethmoid": {
+      "midline": {
+        "meshes": [
+          "Ethmoid bone"
+        ],
+        "rigBone": "Head"
+      }
+    },
+    "frontal": {
+      "midline": {
+        "meshes": [
+          "Frontal bone"
+        ],
+        "rigBone": "Head"
+      }
+    },
+    "occipital": {
+      "midline": {
+        "meshes": [
+          "Occipital bone"
+        ],
+        "rigBone": "Head"
+      }
+    },
+    "parietal": {
+      "left": {
+        "meshes": [
+          "Parietal bone.l"
+        ],
+        "rigBone": "Head"
+      },
+      "right": {
+        "meshes": [
+          "Parietal bone.r"
+        ],
+        "rigBone": "Head"
+      }
+    },
+    "sphenoid": {
+      "midline": {
+        "meshes": [
+          "Sphenoid bone"
+        ],
+        "rigBone": "Head"
+      }
+    },
+    "temporal": {
+      "left": {
+        "meshes": [
+          "Temporal bone.l"
+        ],
+        "rigBone": "Head"
+      },
+      "right": {
+        "meshes": [
+          "Temporal bone.r"
+        ],
+        "rigBone": "Head"
+      }
+    },
+    "inferior_nasal_concha": {
+      "left": {
+        "meshes": [
+          "Inferior nasal concha bone.l"
+        ],
+        "rigBone": "Head"
+      },
+      "right": {
+        "meshes": [
+          "Inferior nasal concha bone.r"
+        ],
+        "rigBone": "Head"
+      }
+    },
+    "lacrimal": {
+      "left": {
+        "meshes": [
+          "Lacrimal bone.l"
+        ],
+        "rigBone": "Head"
+      },
+      "right": {
+        "meshes": [
+          "Lacrimal bone.r"
+        ],
+        "rigBone": "Head"
+      }
+    },
+    "mandible": {
+      "midline": {
+        "meshes": [
+          "Mandible"
+        ],
+        "rigBone": "Mandible"
+      }
+    },
+    "maxilla": {
+      "left": {
+        "meshes": [
+          "Maxilla.l"
+        ],
+        "rigBone": "Head"
+      },
+      "right": {
+        "meshes": [
+          "Maxilla.r"
+        ],
+        "rigBone": "Head"
+      }
+    },
+    "nasal": {
+      "left": {
+        "meshes": [
+          "Nasal bone.l"
+        ],
+        "rigBone": "Head"
+      },
+      "right": {
+        "meshes": [
+          "Nasal bone.r"
+        ],
+        "rigBone": "Head"
+      }
+    },
+    "palatine": {
+      "left": {
+        "meshes": [
+          "Palatine bone.l"
+        ],
+        "rigBone": "Head"
+      },
+      "right": {
+        "meshes": [
+          "Palatine bone.r"
+        ],
+        "rigBone": "Head"
+      }
+    },
+    "vomer": {
+      "midline": {
+        "meshes": [
+          "Vomer"
+        ],
+        "rigBone": "Head"
+      }
+    },
+    "zygomatic": {
+      "left": {
+        "meshes": [
+          "Zygomatic bone.l"
+        ],
+        "rigBone": "Head"
+      },
+      "right": {
+        "meshes": [
+          "Zygomatic bone.r"
+        ],
+        "rigBone": "Head"
+      }
+    },
+    "hyoid": {
+      "midline": {
+        "meshes": [
+          "Hyoid bone"
+        ],
+        "rigBone": "Hyoid"
+      }
+    },
+    "incus": {
+      "left": {
+        "meshes": [
+          "Incus.l"
+        ],
+        "rigBone": "Head"
+      },
+      "right": {
+        "meshes": [
+          "Incus.r"
+        ],
+        "rigBone": "Head"
+      }
+    },
+    "malleus": {
+      "left": {
+        "meshes": [
+          "Malleus.l"
+        ],
+        "rigBone": "Head"
+      },
+      "right": {
+        "meshes": [
+          "Malleus.r"
+        ],
+        "rigBone": "Head"
+      }
+    },
+    "stapes": {
+      "left": {
+        "meshes": [
+          "Stapes.l"
+        ],
+        "rigBone": "Head"
+      },
+      "right": {
+        "meshes": [
+          "Stapes.r"
+        ],
+        "rigBone": "Head"
+      }
+    },
+    "vertebra_c1": {
+      "midline": {
+        "meshes": [
+          "Atlas (C1)"
+        ],
+        "rigBone": "C1"
+      }
+    },
+    "vertebra_c2": {
+      "midline": {
+        "meshes": [
+          "Axis (C2)"
+        ],
+        "rigBone": "C2"
+      }
+    },
+    "vertebra_c3": {
+      "midline": {
+        "meshes": [
+          "Vertebra C3"
+        ],
+        "rigBone": "C3"
+      }
+    },
+    "vertebra_c4": {
+      "midline": {
+        "meshes": [
+          "Vertebra C4"
+        ],
+        "rigBone": "C4"
+      }
+    },
+    "vertebra_c5": {
+      "midline": {
+        "meshes": [
+          "Vertebra C5"
+        ],
+        "rigBone": "C5"
+      }
+    },
+    "vertebra_c6": {
+      "midline": {
+        "meshes": [
+          "Vertebra C6"
+        ],
+        "rigBone": "C6"
+      }
+    },
+    "vertebra_c7": {
+      "midline": {
+        "meshes": [
+          "Vertebra C7"
+        ],
+        "rigBone": "C7"
+      }
+    },
+    "hip_bone": {
+      "left": {
+        "meshes": [
+          "Hip bone.l"
+        ],
+        "rigBone": "LHipJoint"
+      },
+      "right": {
+        "meshes": [
+          "Hip bone.r"
+        ],
+        "rigBone": "RHipJoint"
+      }
+    },
+    "rib_1": {
+      "left": {
+        "meshes": [
+          "First rib.l"
+        ],
+        "rigBone": "Rib1-Start.l"
+      },
+      "right": {
+        "meshes": [
+          "First rib.r"
+        ],
+        "rigBone": "Rib1-Start.r"
+      }
+    },
+    "rib_10": {
+      "left": {
+        "meshes": [
+          "Tenth rib.l"
+        ],
+        "rigBone": "Rib10-Start.l"
+      },
+      "right": {
+        "meshes": [
+          "Tenth rib.r"
+        ],
+        "rigBone": "Rib10-Start.r"
+      }
+    },
+    "rib_11": {
+      "left": {
+        "meshes": [
+          "Eleventh rib.l"
+        ],
+        "rigBone": "T11"
+      },
+      "right": {
+        "meshes": [
+          "Eleventh rib.r"
+        ],
+        "rigBone": "T11"
+      }
+    },
+    "rib_12": {
+      "left": {
+        "meshes": [
+          "Twelfth rib.l"
+        ],
+        "rigBone": "T12"
+      },
+      "right": {
+        "meshes": [
+          "Twelfth rib.r"
+        ],
+        "rigBone": "T12"
+      }
+    },
+    "rib_2": {
+      "left": {
+        "meshes": [
+          "Second rib.l"
+        ],
+        "rigBone": "Rib2-Start.l"
+      },
+      "right": {
+        "meshes": [
+          "Second rib.r"
+        ],
+        "rigBone": "Rib2-Start.r"
+      }
+    },
+    "rib_3": {
+      "left": {
+        "meshes": [
+          "Third rib.l"
+        ],
+        "rigBone": "Rib3-Start.l"
+      },
+      "right": {
+        "meshes": [
+          "Third rib.r"
+        ],
+        "rigBone": "Rib3-Start.r"
+      }
+    },
+    "rib_4": {
+      "left": {
+        "meshes": [
+          "Fourth rib.l"
+        ],
+        "rigBone": "Rib4-Start.l"
+      },
+      "right": {
+        "meshes": [
+          "Fourth rib.r"
+        ],
+        "rigBone": "Rib4-Start.r"
+      }
+    },
+    "rib_5": {
+      "left": {
+        "meshes": [
+          "Fifth rib.l"
+        ],
+        "rigBone": "Rib5-Start.l"
+      },
+      "right": {
+        "meshes": [
+          "Fifth rib.r"
+        ],
+        "rigBone": "Rib5-Start.r"
+      }
+    },
+    "rib_6": {
+      "left": {
+        "meshes": [
+          "Sixth rib.l"
+        ],
+        "rigBone": "Rib6-Start.l"
+      },
+      "right": {
+        "meshes": [
+          "Sixth rib.r"
+        ],
+        "rigBone": "Rib6-Start.r"
+      }
+    },
+    "rib_7": {
+      "left": {
+        "meshes": [
+          "Seventh rib.l"
+        ],
+        "rigBone": "Rib7-Start.l"
+      },
+      "right": {
+        "meshes": [
+          "Seventh rib.r"
+        ],
+        "rigBone": "Rib7-Start.r"
+      }
+    },
+    "rib_8": {
+      "left": {
+        "meshes": [
+          "Heighth rib.l"
+        ],
+        "rigBone": "Rib8-Start.l"
+      },
+      "right": {
+        "meshes": [
+          "Heighth rib.r"
+        ],
+        "rigBone": "Rib8-Start.r"
+      }
+    },
+    "rib_9": {
+      "left": {
+        "meshes": [
+          "Ninth rib.l"
+        ],
+        "rigBone": "Rib9-Start.l"
+      },
+      "right": {
+        "meshes": [
+          "Ninth rib.r"
+        ],
+        "rigBone": "Rib9-Start.r"
+      }
+    },
+    "sternum": {
+      "midline": {
+        "meshes": [
+          "Manubrium of sternum",
+          "Sternum",
+          "Xiphoid process"
+        ],
+        "rigBone": "Sternum-Offset"
+      }
+    },
+    "coccyx": {
+      "midline": {
+        "meshes": [
+          "Coccyx"
+        ],
+        "rigBone": "Hips"
+      }
+    },
+    "sacrum": {
+      "midline": {
+        "meshes": [
+          "Sacrum"
+        ],
+        "rigBone": "Hips"
+      }
+    },
+    "vertebra_l1": {
+      "midline": {
+        "meshes": [
+          "Vertebra L1"
+        ],
+        "rigBone": "L1"
+      }
+    },
+    "vertebra_l2": {
+      "midline": {
+        "meshes": [
+          "Vertebra L2"
+        ],
+        "rigBone": "L2"
+      }
+    },
+    "vertebra_l3": {
+      "midline": {
+        "meshes": [
+          "Vertebra L3"
+        ],
+        "rigBone": "L3"
+      }
+    },
+    "vertebra_l4": {
+      "midline": {
+        "meshes": [
+          "Vertebra L4"
+        ],
+        "rigBone": "L4"
+      }
+    },
+    "vertebra_l5": {
+      "midline": {
+        "meshes": [
+          "Vertebra L5"
+        ],
+        "rigBone": "L5"
+      }
+    },
+    "vertebra_t1": {
+      "midline": {
+        "meshes": [
+          "Vertebra T1"
+        ],
+        "rigBone": "T1"
+      }
+    },
+    "vertebra_t10": {
+      "midline": {
+        "meshes": [
+          "Vertebra T10"
+        ],
+        "rigBone": "T10"
+      }
+    },
+    "vertebra_t11": {
+      "midline": {
+        "meshes": [
+          "Vertebra T11"
+        ],
+        "rigBone": "T11"
+      }
+    },
+    "vertebra_t12": {
+      "midline": {
+        "meshes": [
+          "Vertebra T12"
+        ],
+        "rigBone": "T12"
+      }
+    },
+    "vertebra_t2": {
+      "midline": {
+        "meshes": [
+          "Vertebra T2"
+        ],
+        "rigBone": "T2"
+      }
+    },
+    "vertebra_t3": {
+      "midline": {
+        "meshes": [
+          "Vertebra T3"
+        ],
+        "rigBone": "T3"
+      }
+    },
+    "vertebra_t4": {
+      "midline": {
+        "meshes": [
+          "Vertebra T4"
+        ],
+        "rigBone": "T4"
+      }
+    },
+    "vertebra_t5": {
+      "midline": {
+        "meshes": [
+          "Vertebra T5"
+        ],
+        "rigBone": "T5"
+      }
+    },
+    "vertebra_t6": {
+      "midline": {
+        "meshes": [
+          "Vertebra T6"
+        ],
+        "rigBone": "T6"
+      }
+    },
+    "vertebra_t7": {
+      "midline": {
+        "meshes": [
+          "Vertebra T7"
+        ],
+        "rigBone": "T7"
+      }
+    },
+    "vertebra_t8": {
+      "midline": {
+        "meshes": [
+          "Vertebra T8"
+        ],
+        "rigBone": "T8"
+      }
+    },
+    "vertebra_t9": {
+      "midline": {
+        "meshes": [
+          "Vertebra T9"
+        ],
+        "rigBone": "T9"
+      }
+    },
+    "clavicle": {
+      "left": {
+        "meshes": [
+          "Clavicle.l"
+        ],
+        "rigBone": "Clavicle-X.l"
+      },
+      "right": {
+        "meshes": [
+          "Clavicle.r"
+        ],
+        "rigBone": "Clavicle-X.r"
+      }
+    },
+    "scapula": {
+      "left": {
+        "meshes": [
+          "Scapula.l"
+        ],
+        "rigBone": "Scapula.l"
+      },
+      "right": {
+        "meshes": [
+          "Scapula.r"
+        ],
+        "rigBone": "Scapula.r"
+      }
+    },
+    "humerus": {
+      "left": {
+        "meshes": [
+          "Humerus.l"
+        ],
+        "rigBone": "LeftArm"
+      },
+      "right": {
+        "meshes": [
+          "Humerus.r"
+        ],
+        "rigBone": "RightArm"
+      }
+    },
+    "radius": {
+      "left": {
+        "meshes": [
+          "Radius.l"
+        ],
+        "rigBone": "Radius.l"
+      },
+      "right": {
+        "meshes": [
+          "Radius.r"
+        ],
+        "rigBone": "Radius.r"
+      }
+    },
+    "ulna": {
+      "left": {
+        "meshes": [
+          "Ulna.l"
+        ],
+        "rigBone": "Ulna.l"
+      },
+      "right": {
+        "meshes": [
+          "Ulna.r"
+        ],
+        "rigBone": "Ulna.r"
+      }
+    },
+    "capitate": {
+      "left": {
+        "meshes": [
+          "Capitate bone.l"
+        ],
+        "rigBone": "Distal carpal bones.l"
+      },
+      "right": {
+        "meshes": [
+          "Capitate bone.r"
+        ],
+        "rigBone": "Distal carpal bones.r"
+      }
+    },
+    "hamate": {
+      "left": {
+        "meshes": [
+          "Hamate bone.l"
+        ],
+        "rigBone": "Distal carpal bones.l"
+      },
+      "right": {
+        "meshes": [
+          "Hamate bone.r"
+        ],
+        "rigBone": "Distal carpal bones.r"
+      }
+    },
+    "lunate": {
+      "left": {
+        "meshes": [
+          "Lunate bone.l"
+        ],
+        "rigBone": "Proximal carpal bones-abduction.l"
+      },
+      "right": {
+        "meshes": [
+          "Lunate bone.r"
+        ],
+        "rigBone": "Proximal carpal bones-abduction.r"
+      }
+    },
+    "pisiform": {
+      "left": {
+        "meshes": [
+          "Pisiform bone.l"
+        ],
+        "rigBone": "Proximal carpal bones-abduction.l"
+      },
+      "right": {
+        "meshes": [
+          "Pisiform bone.r"
+        ],
+        "rigBone": "Proximal carpal bones-abduction.r"
+      }
+    },
+    "scaphoid": {
+      "left": {
+        "meshes": [
+          "Scaphoid bone"
+        ],
+        "rigBone": "Proximal carpal bones-abduction.l"
+      },
+      "right": {
+        "meshes": [
+          "Scaphoid bone.001"
+        ],
+        "rigBone": "Proximal carpal bones-abduction.r"
+      }
+    },
+    "trapezium": {
+      "left": {
+        "meshes": [
+          "Trapezium bone.l"
+        ],
+        "rigBone": "Distal carpal bones.l"
+      },
+      "right": {
+        "meshes": [
+          "Trapezium bone.r"
+        ],
+        "rigBone": "Distal carpal bones.r"
+      }
+    },
+    "trapezoid": {
+      "left": {
+        "meshes": [
+          "Trapezoid bone"
+        ],
+        "rigBone": "Distal carpal bones.l"
+      },
+      "right": {
+        "meshes": [
+          "Trapezoid bone.001"
+        ],
+        "rigBone": "Distal carpal bones.r"
+      }
+    },
+    "triquetrum": {
+      "left": {
+        "meshes": [
+          "Triquetrum bone.l"
+        ],
+        "rigBone": "Proximal carpal bones-abduction.l"
+      },
+      "right": {
+        "meshes": [
+          "Triquetrum bone.r"
+        ],
+        "rigBone": "Proximal carpal bones-abduction.r"
+      }
+    },
+    "metacarpal_1": {
+      "right": {
+        "meshes": [
+          "First metacarpal bone"
+        ],
+        "rigBone": "RightThumb"
+      },
+      "left": {
+        "meshes": [
+          "First metacarpal bone.001"
+        ],
+        "rigBone": "LeftThumb"
+      }
+    },
+    "metacarpal_2": {
+      "left": {
+        "meshes": [
+          "Second metacarpal bone.l"
+        ],
+        "rigBone": "Metacarpal bone-2nd finger.l"
+      },
+      "right": {
+        "meshes": [
+          "Second metacarpal bone.r"
+        ],
+        "rigBone": "Metacarpal bone-2nd finger.r"
+      }
+    },
+    "metacarpal_3": {
+      "left": {
+        "meshes": [
+          "Third metacarpal bone"
+        ],
+        "rigBone": "Metacarpal bone-3rd finger.l"
+      },
+      "right": {
+        "meshes": [
+          "Third metacarpal bone.l"
+        ],
+        "rigBone": "Metacarpal bone-3rd finger.r"
+      }
+    },
+    "metacarpal_4": {
+      "right": {
+        "meshes": [
+          "Fourth metacarpal bone"
+        ],
+        "rigBone": "Metacarpal bone-4th finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Fourth metacarpal bone.001"
+        ],
+        "rigBone": "Metacarpal bone-4th finger.l"
+      }
+    },
+    "metacarpal_5": {
+      "left": {
+        "meshes": [
+          "Fifth metacarpal bone.l"
+        ],
+        "rigBone": "Metacarpal bone-5th finger.l"
+      },
+      "right": {
+        "meshes": [
+          "Fifth metacarpal bone.r"
+        ],
+        "rigBone": "Metacarpal bone-5th finger.r"
+      }
+    },
+    "distal_phalanx_index": {
+      "right": {
+        "meshes": [
+          "Distal phalanx of second finger of hand"
+        ],
+        "rigBone": "Distal phalanx of hand-2nd finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Distal phalanx of second finger of hand.001"
+        ],
+        "rigBone": "Distal phalanx of hand-2nd finger.l"
+      }
+    },
+    "distal_phalanx_little": {
+      "right": {
+        "meshes": [
+          "Distal phalanx of fifth finger of hand"
+        ],
+        "rigBone": "Distal phalanx of hand-5th finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Distal phalanx of fifth finger of hand.001"
+        ],
+        "rigBone": "Distal phalanx of hand-5th finger.l"
+      }
+    },
+    "distal_phalanx_middle": {
+      "right": {
+        "meshes": [
+          "Distal phalanx of third finger of hand"
+        ],
+        "rigBone": "Distal phalanx of hand-3rd finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Distal phalanx of third finger of hand.001"
+        ],
+        "rigBone": "Distal phalanx of hand-3rd finger.l"
+      }
+    },
+    "distal_phalanx_ring": {
+      "right": {
+        "meshes": [
+          "Distal phalanx of fourth finger of hand"
+        ],
+        "rigBone": "Distal phalanx of hand-4th finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Distal phalanx of fourth finger of hand.001"
+        ],
+        "rigBone": "Distal phalanx of hand-4th finger.l"
+      }
+    },
+    "distal_phalanx_thumb": {
+      "left": {
+        "meshes": [
+          "Distal phalanx of first finger of hand.l"
+        ],
+        "rigBone": "Distal phalanx of hand-1st finger.l"
+      },
+      "right": {
+        "meshes": [
+          "Distal phalanx of first finger of hand.r"
+        ],
+        "rigBone": "Distal phalanx of hand-1st finger.r"
+      }
+    },
+    "middle_phalanx_index": {
+      "right": {
+        "meshes": [
+          "Middle phalanx of second finger of hand"
+        ],
+        "rigBone": "Middle phalanx of hand-2nd finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Middle phalanx of second finger of hand.001"
+        ],
+        "rigBone": "Middle phalanx of hand-2nd finger.l"
+      }
+    },
+    "middle_phalanx_little": {
+      "right": {
+        "meshes": [
+          "Middle phalanx of fifth finger of hand"
+        ],
+        "rigBone": "Middle phalanx of hand-5th finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Middle phalanx of fifth finger of hand.001"
+        ],
+        "rigBone": "Middle phalanx of hand-5th finger.l"
+      }
+    },
+    "middle_phalanx_middle": {
+      "right": {
+        "meshes": [
+          "Middle phalanx of third finger of hand"
+        ],
+        "rigBone": "Middle phalanx of hand-3rd finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Middle phalanx of third finger of hand.001"
+        ],
+        "rigBone": "Middle phalanx of hand-3rd finger.l"
+      }
+    },
+    "middle_phalanx_ring": {
+      "right": {
+        "meshes": [
+          "Middle phalanx of fourth finger of hand"
+        ],
+        "rigBone": "Middle phalanx of hand-4th finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Middle phalanx of fourth finger of hand.001"
+        ],
+        "rigBone": "Middle phalanx of hand-4th finger.l"
+      }
+    },
+    "proximal_phalanx_index": {
+      "right": {
+        "meshes": [
+          "Proximal phalanx of second finger of hand"
+        ],
+        "rigBone": "Proximal phalanx of hand-2nd finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Proximal phalanx of second finger of hand.001"
+        ],
+        "rigBone": "Proximal phalanx of hand-2nd finger.l"
+      }
+    },
+    "proximal_phalanx_little": {
+      "right": {
+        "meshes": [
+          "Proximal phalanx of fifth finger of hand"
+        ],
+        "rigBone": "Proximal phalanx of hand-5th finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Proximal phalanx of fifth finger of hand.001"
+        ],
+        "rigBone": "Proximal phalanx of hand-5th finger.l"
+      }
+    },
+    "proximal_phalanx_middle": {
+      "right": {
+        "meshes": [
+          "Proximal phalanx of third finger of hand"
+        ],
+        "rigBone": "RightFingerBase"
+      },
+      "left": {
+        "meshes": [
+          "Proximal phalanx of third finger of hand.001"
+        ],
+        "rigBone": "LeftFingerBase"
+      }
+    },
+    "proximal_phalanx_ring": {
+      "right": {
+        "meshes": [
+          "Proximal phalanx of fourth finger of hand"
+        ],
+        "rigBone": "Proximal phalanx of hand-4th finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Proximal phalanx of fourth finger of hand.001"
+        ],
+        "rigBone": "Proximal phalanx of hand-4th finger.l"
+      }
+    },
+    "proximal_phalanx_thumb": {
+      "right": {
+        "meshes": [
+          "Proximal phalanx of first finger of hand"
+        ],
+        "rigBone": "Proximal phalanx of hand-1st finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Proximal phalanx of first finger of hand.001"
+        ],
+        "rigBone": "Proximal phalanx of hand-1st finger.l"
+      }
+    },
+    "femur": {
+      "left": {
+        "meshes": [
+          "Femur.l"
+        ],
+        "rigBone": "LeftUpLeg"
+      },
+      "right": {
+        "meshes": [
+          "Femur.r"
+        ],
+        "rigBone": "RightUpLeg"
+      }
+    },
+    "fibula": {
+      "left": {
+        "meshes": [
+          "Fibula.l"
+        ],
+        "rigBone": "Tibia.l"
+      },
+      "right": {
+        "meshes": [
+          "Fibula.r"
+        ],
+        "rigBone": "Tibia.r"
+      }
+    },
+    "patella": {
+      "left": {
+        "meshes": [
+          "Patella.l"
+        ],
+        "rigBone": "Patella.l"
+      },
+      "right": {
+        "meshes": [
+          "Patella.r"
+        ],
+        "rigBone": "Patella.l.001"
+      }
+    },
+    "tibia": {
+      "left": {
+        "meshes": [
+          "Tibia.l"
+        ],
+        "rigBone": "Tibia.l"
+      },
+      "right": {
+        "meshes": [
+          "Tibia.r"
+        ],
+        "rigBone": "Tibia.r"
+      }
+    },
+    "metatarsal_1": {
+      "left": {
+        "meshes": [
+          "First metatarsal bone.l"
+        ],
+        "rigBone": "Metatarsal bone-1st finger.l"
+      },
+      "right": {
+        "meshes": [
+          "First metatarsal bone.r"
+        ],
+        "rigBone": "Metatarsal bone-1st finger.r"
+      }
+    },
+    "metatarsal_2": {
+      "left": {
+        "meshes": [
+          "Second metatarsal bone.l"
+        ],
+        "rigBone": "Metatarsal bone-2d finger.l"
+      },
+      "right": {
+        "meshes": [
+          "Second metatarsal bone.r"
+        ],
+        "rigBone": "Metatarsal bone-2d finger.r"
+      }
+    },
+    "metatarsal_3": {
+      "left": {
+        "meshes": [
+          "Third metatarsal bone.l"
+        ],
+        "rigBone": "Metatarsal bone-3d finger.l"
+      },
+      "right": {
+        "meshes": [
+          "Third metatarsal bone.r"
+        ],
+        "rigBone": "Metatarsal bone-3d finger.r"
+      }
+    },
+    "metatarsal_4": {
+      "left": {
+        "meshes": [
+          "Fourth metatarsal bone.l"
+        ],
+        "rigBone": "Metatarsal bone-4th finger.l"
+      },
+      "right": {
+        "meshes": [
+          "Fourth metatarsal bone.r"
+        ],
+        "rigBone": "Metatarsal bone-4th finger.r"
+      }
+    },
+    "metatarsal_5": {
+      "left": {
+        "meshes": [
+          "Fifth metatarsal bone.l"
+        ],
+        "rigBone": "Metatarsal bone-5th finger.l"
+      },
+      "right": {
+        "meshes": [
+          "Fifth metatarsal bone.r"
+        ],
+        "rigBone": "Metatarsal bone-5th finger.r"
+      }
+    },
+    "distal_phalanx_hallux": {
+      "right": {
+        "meshes": [
+          "Distal phalanx of first finger of foot"
+        ],
+        "rigBone": "Distal phalanx of foot-1st finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Distal phalanx of first finger of foot.001"
+        ],
+        "rigBone": "Distal phalanx of foot-1st finger.l"
+      }
+    },
+    "distal_phalanx_toe_2": {
+      "right": {
+        "meshes": [
+          "Distal phalanx of second finger of foot"
+        ],
+        "rigBone": "Distal phalanx of foot-2d finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Distal phalanx of second finger of foot.001"
+        ],
+        "rigBone": "Distal phalanx of foot-2d finger.l"
+      }
+    },
+    "distal_phalanx_toe_3": {
+      "right": {
+        "meshes": [
+          "Distal phalanx of third finger of foot"
+        ],
+        "rigBone": "Distal phalanx of foot-3d finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Distal phalanx of third finger of foot.001"
+        ],
+        "rigBone": "Distal phalanx of foot-3d finger.l"
+      }
+    },
+    "distal_phalanx_toe_4": {
+      "right": {
+        "meshes": [
+          "Distal phalanx of fourth finger of foot"
+        ],
+        "rigBone": "Distal phalanx of foot-4th finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Distal phalanx of fourth finger of foot.001"
+        ],
+        "rigBone": "Distal phalanx of foot-4th finger.l"
+      }
+    },
+    "distal_phalanx_toe_5": {
+      "right": {
+        "meshes": [
+          "Distal phalanx of fifth finger of foot"
+        ],
+        "rigBone": "Distal phalanx of foot-5th finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Distal phalanx of fifth finger of foot.001"
+        ],
+        "rigBone": "Distal phalanx of foot-5th finger.l"
+      }
+    },
+    "middle_phalanx_toe_2": {
+      "right": {
+        "meshes": [
+          "Middle phalanx of second finger of foot"
+        ],
+        "rigBone": "Middle phalanx of foot-2d finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Middle phalanx of second finger of foot.001"
+        ],
+        "rigBone": "Middle phalanx of foot-2d finger.l"
+      }
+    },
+    "middle_phalanx_toe_3": {
+      "right": {
+        "meshes": [
+          "Middle phalanx of third finger of foot"
+        ],
+        "rigBone": "Middle phalanx of foot-3d finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Middle phalanx of third finger of foot.001"
+        ],
+        "rigBone": "Middle phalanx of foot-3d finger.l"
+      }
+    },
+    "middle_phalanx_toe_4": {
+      "right": {
+        "meshes": [
+          "Middle phalanx of fourth finger of foot"
+        ],
+        "rigBone": "Middle phalanx of foot-4th finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Middle phalanx of fourth finger of foot.001"
+        ],
+        "rigBone": "Middle phalanx of foot-4th finger.l"
+      }
+    },
+    "middle_phalanx_toe_5": {
+      "right": {
+        "meshes": [
+          "Middle phalanx of fifth finger of foot"
+        ],
+        "rigBone": "Middle phalanx of foot-5th finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Middle phalanx of fifth finger of foot.001"
+        ],
+        "rigBone": "Middle phalanx of foot-5th finger.l"
+      }
+    },
+    "proximal_phalanx_hallux": {
+      "right": {
+        "meshes": [
+          "Proximal phalanx of first finger of foot"
+        ],
+        "rigBone": "Proximal phalanx of foot-1st finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Proximal phalanx of first finger of foot.001"
+        ],
+        "rigBone": "Proximal phalanx of foot-1st finger.l"
+      }
+    },
+    "proximal_phalanx_toe_2": {
+      "right": {
+        "meshes": [
+          "Proximal phalanx of second finger of foot"
+        ],
+        "rigBone": "RightToeBase"
+      },
+      "left": {
+        "meshes": [
+          "Proximal phalanx of second finger of foot.001"
+        ],
+        "rigBone": "LeftToeBase"
+      }
+    },
+    "proximal_phalanx_toe_3": {
+      "right": {
+        "meshes": [
+          "Proximal phalanx of third finger of foot"
+        ],
+        "rigBone": "Proximal phalanx of foot-3d finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Proximal phalanx of third finger of foot.001"
+        ],
+        "rigBone": "Proximal phalanx of foot-3d finger.l"
+      }
+    },
+    "proximal_phalanx_toe_4": {
+      "right": {
+        "meshes": [
+          "Proximal phalanx of fourth finger of foot"
+        ],
+        "rigBone": "Proximal phalanx of foot-4t finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Proximal phalanx of fourth finger of foot.001"
+        ],
+        "rigBone": "Proximal phalanx of foot-4t finger.l"
+      }
+    },
+    "proximal_phalanx_toe_5": {
+      "right": {
+        "meshes": [
+          "Proximal phalanx of fifth finger of foot"
+        ],
+        "rigBone": "Proximal phalanx of foot-5th finger.r"
+      },
+      "left": {
+        "meshes": [
+          "Proximal phalanx of fifth finger of foot.001"
+        ],
+        "rigBone": "Proximal phalanx of foot-5th finger.l"
+      }
+    },
+    "calcaneus": {
+      "left": {
+        "meshes": [
+          "Calcaneus.l"
+        ],
+        "rigBone": "Calcaneus.l"
+      },
+      "right": {
+        "meshes": [
+          "Calcaneus.r"
+        ],
+        "rigBone": "Calcaneus.r"
+      }
+    },
+    "cuboid": {
+      "left": {
+        "meshes": [
+          "Cuboid bone.l"
+        ],
+        "rigBone": "Cuboid bone.l"
+      },
+      "right": {
+        "meshes": [
+          "Cuboid bone.r"
+        ],
+        "rigBone": "Cuboid bone.r"
+      }
+    },
+    "intermediate_cuneiform": {
+      "left": {
+        "meshes": [
+          "Intermediate cuneiform bone.l"
+        ],
+        "rigBone": "Cuneiform bones.l"
+      },
+      "right": {
+        "meshes": [
+          "Intermediate cuneiform bone.r"
+        ],
+        "rigBone": "Cuneiform bones.r"
+      }
+    },
+    "lateral_cuneiform": {
+      "left": {
+        "meshes": [
+          "Lateral cuneiform bone.l"
+        ],
+        "rigBone": "Cuneiform bones.l"
+      },
+      "right": {
+        "meshes": [
+          "Lateral cuneiform bone.r"
+        ],
+        "rigBone": "Cuneiform bones.r"
+      }
+    },
+    "medial_cuneiform": {
+      "left": {
+        "meshes": [
+          "Medial cuneiform bone.l"
+        ],
+        "rigBone": "Cuneiform bones.l"
+      },
+      "right": {
+        "meshes": [
+          "Medial cuneiform bone.r"
+        ],
+        "rigBone": "Cuneiform bones.r"
+      }
+    },
+    "navicular": {
+      "left": {
+        "meshes": [
+          "Navicular bone.l"
+        ],
+        "rigBone": "Navicular bone.l"
+      },
+      "right": {
+        "meshes": [
+          "Navicular bone.r"
+        ],
+        "rigBone": "Navicular bone.r"
+      }
+    },
+    "talus": {
+      "left": {
+        "meshes": [
+          "Talus.l"
+        ],
+        "rigBone": "LeftFoot"
+      },
+      "right": {
+        "meshes": [
+          "Talus.r"
+        ],
+        "rigBone": "RightFoot"
+      }
+    }
+  }
+}

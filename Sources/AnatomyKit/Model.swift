@@ -138,12 +138,35 @@ public struct Tissue: Identifiable, Hashable, Sendable, Codable {
     public let reviewed: Bool
 }
 
-/// A named spot on a bone, e.g. `"ischium.ischial_tuberosity"`. `bone` is a
-/// plain name until the bone catalog lands (plan phase P2).
+/// One of the 206 adult bones. Bilateral bones have one entry for both sides.
+public struct Bone: Identifiable, Hashable, Sendable, Codable {
+    public enum Group: String, Hashable, Sendable, Codable, CaseIterable {
+        case cranium, face, ossicle, hyoid, vertebra, rib, sternum
+        case shoulderGirdle = "shoulder_girdle"
+        case arm, carpal, metacarpal
+        case phalanxHand = "phalanx_hand"
+        case pelvis, leg, tarsal, metatarsal
+        case phalanxFoot = "phalanx_foot"
+    }
+
+    public let id: BoneID
+    public let name: String
+    public let region: RegionID
+    public let group: Group
+    public let bilateral: Bool
+    /// Foundational Model of Anatomy class, e.g. `"FMA9611"` for the femur.
+    public let fmaID: String?
+    public let source: String
+    public let reviewed: Bool
+}
+
+/// A named spot, e.g. `"ischium.ischial_tuberosity"`, on one or more bones
+/// (`"thoracic_vertebrae.upper_spinous_processes"` spans C7–T5). Soft-tissue
+/// stations like the linea alba have no bones.
 public struct Landmark: Identifiable, Hashable, Sendable, Codable {
     public let id: LandmarkID
     public let name: String
-    public let bone: String
+    public let bones: [BoneID]
     /// True on the body's midline, where left and right meet.
     public let midline: Bool?
 }
@@ -222,4 +245,18 @@ public struct RigBinding: Hashable, Sendable, Codable {
     public let rig: String
     public let source: String
     public let bones: [Bone]
+}
+
+/// Where something sits on one specific 3D model, per side. Midline things
+/// have only `midline`; bilateral ones have `left` and `right`.
+public struct Sided<Value: Hashable & Sendable & Codable>: Hashable, Sendable, Codable {
+    public let left: Value?
+    public let right: Value?
+    public let midline: Value?
+}
+
+/// A bone's meshes and driving rig bone in the Z-Anatomy model, on one side.
+public struct ZAnatomyBonePart: Hashable, Sendable, Codable {
+    public let meshes: [String]
+    public let rigBone: String
 }

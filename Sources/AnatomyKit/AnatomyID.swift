@@ -38,6 +38,7 @@ public enum MuscleKind {}
 public enum TrainLineKind {}
 public enum TissueKind {}
 public enum LandmarkKind {}
+public enum BoneKind {}
 
 public typealias RegionID = AnatomyID<RegionKind>
 public typealias JointID = AnatomyID<JointKind>
@@ -49,3 +50,5 @@ public typealias TrainLineID = AnatomyID<TrainLineKind>
 public typealias TissueID = AnatomyID<TissueKind>
 /// `"<bone>.<feature>"`, e.g. `"ischium.ischial_tuberosity"`.
 public typealias LandmarkID = AnatomyID<LandmarkKind>
+/// e.g. `"femur"`, `"vertebra_t7"`, `"proximal_phalanx_thumb"`. One ID per bone, both sides.
+public typealias BoneID = AnatomyID<BoneKind>

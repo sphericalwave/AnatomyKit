@@ -1,0 +1,1171 @@
+[
+  {
+    "id": "ethmoid",
+    "name": "Ethmoid bone",
+    "region": "head_neck",
+    "group": "cranium",
+    "bilateral": false,
+    "fmaID": "FMA52740",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "frontal",
+    "name": "Frontal bone",
+    "region": "head_neck",
+    "group": "cranium",
+    "bilateral": false,
+    "fmaID": "FMA52734",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "occipital",
+    "name": "Occipital bone",
+    "region": "head_neck",
+    "group": "cranium",
+    "bilateral": false,
+    "fmaID": "FMA52735",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "parietal",
+    "name": "Parietal bone",
+    "region": "head_neck",
+    "group": "cranium",
+    "bilateral": true,
+    "fmaID": "FMA9613",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "sphenoid",
+    "name": "Sphenoid bone",
+    "region": "head_neck",
+    "group": "cranium",
+    "bilateral": false,
+    "fmaID": "FMA52736",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "temporal",
+    "name": "Temporal bone",
+    "region": "head_neck",
+    "group": "cranium",
+    "bilateral": true,
+    "fmaID": "FMA52737",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "inferior_nasal_concha",
+    "name": "Inferior nasal concha",
+    "region": "head_neck",
+    "group": "face",
+    "bilateral": true,
+    "fmaID": "FMA54736",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "lacrimal",
+    "name": "Lacrimal bone",
+    "region": "head_neck",
+    "group": "face",
+    "bilateral": true,
+    "fmaID": "FMA52741",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "mandible",
+    "name": "Mandible",
+    "region": "head_neck",
+    "group": "face",
+    "bilateral": false,
+    "fmaID": "FMA52748",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "maxilla",
+    "name": "Maxilla",
+    "region": "head_neck",
+    "group": "face",
+    "bilateral": true,
+    "fmaID": "FMA9711",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "nasal",
+    "name": "Nasal bone",
+    "region": "head_neck",
+    "group": "face",
+    "bilateral": true,
+    "fmaID": "FMA52745",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "palatine",
+    "name": "Palatine bone",
+    "region": "head_neck",
+    "group": "face",
+    "bilateral": true,
+    "fmaID": "FMA52746",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vomer",
+    "name": "Vomer",
+    "region": "head_neck",
+    "group": "face",
+    "bilateral": false,
+    "fmaID": "FMA9710",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "zygomatic",
+    "name": "Zygomatic bone",
+    "region": "head_neck",
+    "group": "face",
+    "bilateral": true,
+    "fmaID": "FMA52747",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "hyoid",
+    "name": "Hyoid",
+    "region": "head_neck",
+    "group": "hyoid",
+    "bilateral": false,
+    "fmaID": "FMA52749",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "incus",
+    "name": "Incus",
+    "region": "head_neck",
+    "group": "ossicle",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "malleus",
+    "name": "Malleus",
+    "region": "head_neck",
+    "group": "ossicle",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "stapes",
+    "name": "Stapes",
+    "region": "head_neck",
+    "group": "ossicle",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_c1",
+    "name": "Atlas (C1)",
+    "region": "head_neck",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA12519",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_c2",
+    "name": "Axis (C2)",
+    "region": "head_neck",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA12520",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_c3",
+    "name": "C3 vertebra",
+    "region": "head_neck",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA12521",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_c4",
+    "name": "C4 vertebra",
+    "region": "head_neck",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA12522",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_c5",
+    "name": "C5 vertebra",
+    "region": "head_neck",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA12523",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_c6",
+    "name": "C6 vertebra",
+    "region": "head_neck",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA12524",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_c7",
+    "name": "C7 vertebra",
+    "region": "head_neck",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA12525",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "hip_bone",
+    "name": "Hip bone",
+    "region": "trunk",
+    "group": "pelvis",
+    "bilateral": true,
+    "fmaID": "FMA16585",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "rib_1",
+    "name": "Rib 1",
+    "region": "trunk",
+    "group": "rib",
+    "bilateral": true,
+    "fmaID": "FMA7597",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "rib_10",
+    "name": "Rib 10",
+    "region": "trunk",
+    "group": "rib",
+    "bilateral": true,
+    "fmaID": "FMA8418",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "rib_11",
+    "name": "Rib 11",
+    "region": "trunk",
+    "group": "rib",
+    "bilateral": true,
+    "fmaID": "FMA8499",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "rib_12",
+    "name": "Rib 12",
+    "region": "trunk",
+    "group": "rib",
+    "bilateral": true,
+    "fmaID": "FMA8515",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "rib_2",
+    "name": "Rib 2",
+    "region": "trunk",
+    "group": "rib",
+    "bilateral": true,
+    "fmaID": "FMA7620",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "rib_3",
+    "name": "Rib 3",
+    "region": "trunk",
+    "group": "rib",
+    "bilateral": true,
+    "fmaID": "FMA7638",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "rib_4",
+    "name": "Rib 4",
+    "region": "trunk",
+    "group": "rib",
+    "bilateral": true,
+    "fmaID": "FMA7749",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "rib_5",
+    "name": "Rib 5",
+    "region": "trunk",
+    "group": "rib",
+    "bilateral": true,
+    "fmaID": "FMA7776",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "rib_6",
+    "name": "Rib 6",
+    "region": "trunk",
+    "group": "rib",
+    "bilateral": true,
+    "fmaID": "FMA8147",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "rib_7",
+    "name": "Rib 7",
+    "region": "trunk",
+    "group": "rib",
+    "bilateral": true,
+    "fmaID": "FMA7830",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "rib_8",
+    "name": "Rib 8",
+    "region": "trunk",
+    "group": "rib",
+    "bilateral": true,
+    "fmaID": "FMA8120",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "rib_9",
+    "name": "Rib 9",
+    "region": "trunk",
+    "group": "rib",
+    "bilateral": true,
+    "fmaID": "FMA8337",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "sternum",
+    "name": "Sternum",
+    "region": "trunk",
+    "group": "sternum",
+    "bilateral": false,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "coccyx",
+    "name": "Coccyx",
+    "region": "trunk",
+    "group": "vertebra",
+    "bilateral": false,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "sacrum",
+    "name": "Sacrum",
+    "region": "trunk",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA16202",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_l1",
+    "name": "L1 vertebra",
+    "region": "trunk",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA13072",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_l2",
+    "name": "L2 vertebra",
+    "region": "trunk",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA13073",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_l3",
+    "name": "L3 vertebra",
+    "region": "trunk",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA13074",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_l4",
+    "name": "L4 vertebra",
+    "region": "trunk",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA13075",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_l5",
+    "name": "L5 vertebra",
+    "region": "trunk",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA13076",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_t1",
+    "name": "T1 vertebra",
+    "region": "trunk",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA9165",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_t10",
+    "name": "T10 vertebra",
+    "region": "trunk",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA10037",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_t11",
+    "name": "T11 vertebra",
+    "region": "trunk",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA10059",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_t12",
+    "name": "T12 vertebra",
+    "region": "trunk",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA10081",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_t2",
+    "name": "T2 vertebra",
+    "region": "trunk",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA9187",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_t3",
+    "name": "T3 vertebra",
+    "region": "trunk",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA9209",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_t4",
+    "name": "T4 vertebra",
+    "region": "trunk",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA9248",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_t5",
+    "name": "T5 vertebra",
+    "region": "trunk",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA9922",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_t6",
+    "name": "T6 vertebra",
+    "region": "trunk",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA9945",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_t7",
+    "name": "T7 vertebra",
+    "region": "trunk",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA9968",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_t8",
+    "name": "T8 vertebra",
+    "region": "trunk",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA9991",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "vertebra_t9",
+    "name": "T9 vertebra",
+    "region": "trunk",
+    "group": "vertebra",
+    "bilateral": false,
+    "fmaID": "FMA10014",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "clavicle",
+    "name": "Clavicle",
+    "region": "shoulder",
+    "group": "shoulder_girdle",
+    "bilateral": true,
+    "fmaID": "FMA13321",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "scapula",
+    "name": "Scapula",
+    "region": "shoulder",
+    "group": "shoulder_girdle",
+    "bilateral": true,
+    "fmaID": "FMA13394",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "humerus",
+    "name": "Humerus",
+    "region": "arm",
+    "group": "arm",
+    "bilateral": true,
+    "fmaID": "FMA13303",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "radius",
+    "name": "Radius",
+    "region": "arm",
+    "group": "arm",
+    "bilateral": true,
+    "fmaID": "FMA23463",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "ulna",
+    "name": "Ulna",
+    "region": "arm",
+    "group": "arm",
+    "bilateral": true,
+    "fmaID": "FMA23466",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "capitate",
+    "name": "Capitate",
+    "region": "hand",
+    "group": "carpal",
+    "bilateral": true,
+    "fmaID": "FMA23727",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "hamate",
+    "name": "Hamate",
+    "region": "hand",
+    "group": "carpal",
+    "bilateral": true,
+    "fmaID": "FMA23730",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "lunate",
+    "name": "Lunate",
+    "region": "hand",
+    "group": "carpal",
+    "bilateral": true,
+    "fmaID": "FMA23712",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "pisiform",
+    "name": "Pisiform",
+    "region": "hand",
+    "group": "carpal",
+    "bilateral": true,
+    "fmaID": "FMA23718",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "scaphoid",
+    "name": "Scaphoid",
+    "region": "hand",
+    "group": "carpal",
+    "bilateral": true,
+    "fmaID": "FMA23709",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "trapezium",
+    "name": "Trapezium",
+    "region": "hand",
+    "group": "carpal",
+    "bilateral": true,
+    "fmaID": "FMA23721",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "trapezoid",
+    "name": "Trapezoid",
+    "region": "hand",
+    "group": "carpal",
+    "bilateral": true,
+    "fmaID": "FMA23724",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "triquetrum",
+    "name": "Triquetrum",
+    "region": "hand",
+    "group": "carpal",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "metacarpal_1",
+    "name": "Metacarpal 1",
+    "region": "hand",
+    "group": "metacarpal",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "metacarpal_2",
+    "name": "Metacarpal 2",
+    "region": "hand",
+    "group": "metacarpal",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "metacarpal_3",
+    "name": "Metacarpal 3",
+    "region": "hand",
+    "group": "metacarpal",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "metacarpal_4",
+    "name": "Metacarpal 4",
+    "region": "hand",
+    "group": "metacarpal",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "metacarpal_5",
+    "name": "Metacarpal 5",
+    "region": "hand",
+    "group": "metacarpal",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "distal_phalanx_index",
+    "name": "Distal phalanx of index finger",
+    "region": "hand",
+    "group": "phalanx_hand",
+    "bilateral": true,
+    "fmaID": "FMA23946",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "distal_phalanx_little",
+    "name": "Distal phalanx of little finger",
+    "region": "hand",
+    "group": "phalanx_hand",
+    "bilateral": true,
+    "fmaID": "FMA23949",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "distal_phalanx_middle",
+    "name": "Distal phalanx of middle finger",
+    "region": "hand",
+    "group": "phalanx_hand",
+    "bilateral": true,
+    "fmaID": "FMA23947",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "distal_phalanx_ring",
+    "name": "Distal phalanx of ring finger",
+    "region": "hand",
+    "group": "phalanx_hand",
+    "bilateral": true,
+    "fmaID": "FMA23948",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "distal_phalanx_thumb",
+    "name": "Distal phalanx of thumb",
+    "region": "hand",
+    "group": "phalanx_hand",
+    "bilateral": true,
+    "fmaID": "FMA23945",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "middle_phalanx_index",
+    "name": "Middle phalanx of index finger",
+    "region": "hand",
+    "group": "phalanx_hand",
+    "bilateral": true,
+    "fmaID": "FMA23933",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "middle_phalanx_little",
+    "name": "Middle phalanx of little finger",
+    "region": "hand",
+    "group": "phalanx_hand",
+    "bilateral": true,
+    "fmaID": "FMA23936",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "middle_phalanx_middle",
+    "name": "Middle phalanx of middle finger",
+    "region": "hand",
+    "group": "phalanx_hand",
+    "bilateral": true,
+    "fmaID": "FMA23934",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "middle_phalanx_ring",
+    "name": "Middle phalanx of ring finger",
+    "region": "hand",
+    "group": "phalanx_hand",
+    "bilateral": true,
+    "fmaID": "FMA23935",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "proximal_phalanx_index",
+    "name": "Proximal phalanx of index finger",
+    "region": "hand",
+    "group": "phalanx_hand",
+    "bilateral": true,
+    "fmaID": "FMA23919",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "proximal_phalanx_little",
+    "name": "Proximal phalanx of little finger",
+    "region": "hand",
+    "group": "phalanx_hand",
+    "bilateral": true,
+    "fmaID": "FMA23922",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "proximal_phalanx_middle",
+    "name": "Proximal phalanx of middle finger",
+    "region": "hand",
+    "group": "phalanx_hand",
+    "bilateral": true,
+    "fmaID": "FMA23920",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "proximal_phalanx_ring",
+    "name": "Proximal phalanx of ring finger",
+    "region": "hand",
+    "group": "phalanx_hand",
+    "bilateral": true,
+    "fmaID": "FMA23921",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "proximal_phalanx_thumb",
+    "name": "Proximal phalanx of thumb",
+    "region": "hand",
+    "group": "phalanx_hand",
+    "bilateral": true,
+    "fmaID": "FMA23918",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "femur",
+    "name": "Femur",
+    "region": "leg",
+    "group": "leg",
+    "bilateral": true,
+    "fmaID": "FMA9611",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "fibula",
+    "name": "Fibula",
+    "region": "leg",
+    "group": "leg",
+    "bilateral": true,
+    "fmaID": "FMA24479",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "patella",
+    "name": "Patella",
+    "region": "leg",
+    "group": "leg",
+    "bilateral": true,
+    "fmaID": "FMA24485",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "tibia",
+    "name": "Tibia",
+    "region": "leg",
+    "group": "leg",
+    "bilateral": true,
+    "fmaID": "FMA24476",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "metatarsal_1",
+    "name": "Metatarsal 1",
+    "region": "foot",
+    "group": "metatarsal",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "metatarsal_2",
+    "name": "Metatarsal 2",
+    "region": "foot",
+    "group": "metatarsal",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "metatarsal_3",
+    "name": "Metatarsal 3",
+    "region": "foot",
+    "group": "metatarsal",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "metatarsal_4",
+    "name": "Metatarsal 4",
+    "region": "foot",
+    "group": "metatarsal",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "metatarsal_5",
+    "name": "Metatarsal 5",
+    "region": "foot",
+    "group": "metatarsal",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "distal_phalanx_hallux",
+    "name": "Distal phalanx of big toe",
+    "region": "foot",
+    "group": "phalanx_foot",
+    "bilateral": true,
+    "fmaID": "FMA32627",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "distal_phalanx_toe_2",
+    "name": "Distal phalanx of toe 2",
+    "region": "foot",
+    "group": "phalanx_foot",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "distal_phalanx_toe_3",
+    "name": "Distal phalanx of toe 3",
+    "region": "foot",
+    "group": "phalanx_foot",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "distal_phalanx_toe_4",
+    "name": "Distal phalanx of toe 4",
+    "region": "foot",
+    "group": "phalanx_foot",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "distal_phalanx_toe_5",
+    "name": "Distal phalanx of toe 5",
+    "region": "foot",
+    "group": "phalanx_foot",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "middle_phalanx_toe_2",
+    "name": "Middle phalanx of toe 2",
+    "region": "foot",
+    "group": "phalanx_foot",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "middle_phalanx_toe_3",
+    "name": "Middle phalanx of toe 3",
+    "region": "foot",
+    "group": "phalanx_foot",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "middle_phalanx_toe_4",
+    "name": "Middle phalanx of toe 4",
+    "region": "foot",
+    "group": "phalanx_foot",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "middle_phalanx_toe_5",
+    "name": "Middle phalanx of toe 5",
+    "region": "foot",
+    "group": "phalanx_foot",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "proximal_phalanx_hallux",
+    "name": "Proximal phalanx of big toe",
+    "region": "foot",
+    "group": "phalanx_foot",
+    "bilateral": true,
+    "fmaID": "FMA43252",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "proximal_phalanx_toe_2",
+    "name": "Proximal phalanx of toe 2",
+    "region": "foot",
+    "group": "phalanx_foot",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "proximal_phalanx_toe_3",
+    "name": "Proximal phalanx of toe 3",
+    "region": "foot",
+    "group": "phalanx_foot",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "proximal_phalanx_toe_4",
+    "name": "Proximal phalanx of toe 4",
+    "region": "foot",
+    "group": "phalanx_foot",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "proximal_phalanx_toe_5",
+    "name": "Proximal phalanx of toe 5",
+    "region": "foot",
+    "group": "phalanx_foot",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "calcaneus",
+    "name": "Calcaneus",
+    "region": "foot",
+    "group": "tarsal",
+    "bilateral": true,
+    "fmaID": "FMA24496",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "cuboid",
+    "name": "Cuboid",
+    "region": "foot",
+    "group": "tarsal",
+    "bilateral": true,
+    "fmaID": "FMA24527",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "intermediate_cuneiform",
+    "name": "Intermediate cuneiform",
+    "region": "foot",
+    "group": "tarsal",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "lateral_cuneiform",
+    "name": "Lateral cuneiform",
+    "region": "foot",
+    "group": "tarsal",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "medial_cuneiform",
+    "name": "Medial cuneiform",
+    "region": "foot",
+    "group": "tarsal",
+    "bilateral": true,
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "navicular",
+    "name": "Navicular",
+    "region": "foot",
+    "group": "tarsal",
+    "bilateral": true,
+    "fmaID": "FMA24499",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  },
+  {
+    "id": "talus",
+    "name": "Talus",
+    "region": "foot",
+    "group": "tarsal",
+    "bilateral": true,
+    "fmaID": "FMA9708",
+    "source": "Z-Anatomy bone meshes; FMA ID from BodyParts3D class names where they match",
+    "reviewed": false
+  }
+]

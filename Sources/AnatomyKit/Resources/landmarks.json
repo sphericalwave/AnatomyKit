@@ -2,333 +2,530 @@
   {
     "id": "calcaneus.plantar_surface",
     "name": "Plantar surface of calcaneus",
-    "bone": "calcaneus"
+    "bones": [
+      "calcaneus"
+    ]
   },
   {
     "id": "carpals.scaphoid_trapezium",
     "name": "Scaphoid and trapezium",
-    "bone": "carpals"
+    "bones": [
+      "scaphoid",
+      "trapezium"
+    ]
   },
   {
     "id": "carpals.triquetrum",
     "name": "Triquetrum",
-    "bone": "carpals"
+    "bones": [
+      "triquetrum"
+    ]
   },
   {
     "id": "cervical_vertebrae.transverse_processes",
     "name": "Cervical transverse processes",
-    "bone": "cervical_vertebrae"
+    "bones": [
+      "vertebra_c3",
+      "vertebra_c4",
+      "vertebra_c5",
+      "vertebra_c6"
+    ]
   },
   {
     "id": "clavicle.medial_third",
     "name": "Medial third of clavicle",
-    "bone": "clavicle"
+    "bones": [
+      "clavicle"
+    ]
   },
   {
     "id": "coccyx",
     "name": "Coccyx",
-    "bone": "coccyx",
-    "midline": true
+    "midline": true,
+    "bones": [
+      "coccyx"
+    ]
   },
   {
     "id": "femur.gluteal_tuberosity",
     "name": "Gluteal tuberosity",
-    "bone": "femur"
+    "bones": [
+      "femur"
+    ]
   },
   {
     "id": "femur.lesser_trochanter",
     "name": "Lesser trochanter",
-    "bone": "femur"
+    "bones": [
+      "femur"
+    ]
   },
   {
     "id": "femur.linea_aspera",
     "name": "Linea aspera",
-    "bone": "femur"
+    "bones": [
+      "femur"
+    ]
   },
   {
     "id": "femur.medial_epicondyle",
     "name": "Medial femoral epicondyle",
-    "bone": "femur"
+    "bones": [
+      "femur"
+    ]
   },
   {
     "id": "femur.posterior_condyles",
     "name": "Posterior femoral condyles",
-    "bone": "femur"
+    "bones": [
+      "femur"
+    ]
   },
   {
     "id": "fibula.head",
     "name": "Fibular head",
-    "bone": "fibula"
+    "bones": [
+      "fibula"
+    ]
   },
   {
     "id": "fifth_finger.proximal_phalanx",
     "name": "Little finger",
-    "bone": "finger_phalanges"
+    "bones": [
+      "proximal_phalanx_little"
+    ]
   },
   {
     "id": "fifth_metatarsal.base",
     "name": "Base of 5th metatarsal",
-    "bone": "fifth_metatarsal"
+    "bones": [
+      "metatarsal_5"
+    ]
   },
   {
     "id": "finger_phalanges.dorsal_surface",
     "name": "Dorsal surface of finger phalanges",
-    "bone": "finger_phalanges"
+    "bones": [
+      "distal_phalanx_index",
+      "distal_phalanx_little",
+      "distal_phalanx_middle",
+      "distal_phalanx_ring",
+      "middle_phalanx_index",
+      "middle_phalanx_little",
+      "middle_phalanx_middle",
+      "middle_phalanx_ring",
+      "proximal_phalanx_index",
+      "proximal_phalanx_little",
+      "proximal_phalanx_middle",
+      "proximal_phalanx_ring"
+    ]
   },
   {
     "id": "finger_phalanges.palmar_surface",
     "name": "Palmar surface of finger phalanges",
-    "bone": "finger_phalanges"
+    "bones": [
+      "distal_phalanx_index",
+      "distal_phalanx_little",
+      "distal_phalanx_middle",
+      "distal_phalanx_ring",
+      "middle_phalanx_index",
+      "middle_phalanx_little",
+      "middle_phalanx_middle",
+      "middle_phalanx_ring",
+      "proximal_phalanx_index",
+      "proximal_phalanx_little",
+      "proximal_phalanx_middle",
+      "proximal_phalanx_ring"
+    ]
   },
   {
     "id": "first_metatarsal.base",
     "name": "Base of 1st metatarsal",
-    "bone": "first_metatarsal"
+    "bones": [
+      "metatarsal_1"
+    ]
   },
   {
     "id": "frontal.supraorbital_ridge",
     "name": "Supraorbital (brow) ridge",
-    "bone": "frontal",
-    "midline": true
+    "midline": true,
+    "bones": [
+      "frontal"
+    ]
   },
   {
     "id": "humerus.deltoid_tuberosity",
     "name": "Deltoid tuberosity",
-    "bone": "humerus"
+    "bones": [
+      "humerus"
+    ]
   },
   {
     "id": "humerus.greater_tubercle",
     "name": "Greater tubercle",
-    "bone": "humerus"
+    "bones": [
+      "humerus"
+    ]
   },
   {
     "id": "humerus.intertubercular_groove",
     "name": "Intertubercular groove",
-    "bone": "humerus"
+    "bones": [
+      "humerus"
+    ]
   },
   {
     "id": "humerus.lateral_epicondyle",
     "name": "Lateral epicondyle",
-    "bone": "humerus"
+    "bones": [
+      "humerus"
+    ]
   },
   {
     "id": "humerus.medial_epicondyle",
     "name": "Medial epicondyle",
-    "bone": "humerus"
+    "bones": [
+      "humerus"
+    ]
   },
   {
     "id": "hyoid.body",
     "name": "Hyoid",
-    "bone": "hyoid",
-    "midline": true
+    "midline": true,
+    "bones": [
+      "hyoid"
+    ]
   },
   {
     "id": "ilium.aiis",
     "name": "Anterior inferior iliac spine",
-    "bone": "ilium"
+    "bones": [
+      "hip_bone"
+    ]
   },
   {
     "id": "ilium.asis",
     "name": "Anterior superior iliac spine",
-    "bone": "ilium"
+    "bones": [
+      "hip_bone"
+    ]
   },
   {
     "id": "ilium.iliac_crest",
     "name": "Iliac crest",
-    "bone": "ilium"
+    "bones": [
+      "hip_bone"
+    ]
   },
   {
     "id": "ischium.ischial_ramus",
     "name": "Ischial ramus",
-    "bone": "ischium"
+    "bones": [
+      "hip_bone"
+    ]
   },
   {
     "id": "ischium.ischial_tuberosity",
     "name": "Ischial tuberosity",
-    "bone": "ischium"
+    "bones": [
+      "hip_bone"
+    ]
   },
   {
     "id": "linea_alba",
     "name": "Linea alba",
-    "bone": "abdominal_wall",
-    "midline": true
+    "midline": true,
+    "bones": []
   },
   {
     "id": "lumbar_vertebrae.bodies",
     "name": "Lumbar vertebral bodies",
-    "bone": "lumbar_vertebrae",
-    "midline": true
+    "midline": true,
+    "bones": [
+      "vertebra_l1",
+      "vertebra_l2",
+      "vertebra_l3",
+      "vertebra_l4",
+      "vertebra_l5"
+    ]
   },
   {
     "id": "mandible.digastric_fossa",
     "name": "Digastric fossa of mandible",
-    "bone": "mandible"
+    "bones": [
+      "mandible"
+    ]
   },
   {
     "id": "occipital.basilar_part",
     "name": "Basilar part of occiput",
-    "bone": "occipital",
-    "midline": true
+    "midline": true,
+    "bones": [
+      "occipital"
+    ]
   },
   {
     "id": "occipital.occipital_ridge",
     "name": "Occipital ridge",
-    "bone": "occipital",
-    "midline": true
+    "midline": true,
+    "bones": [
+      "occipital"
+    ]
   },
   {
     "id": "patella.apex",
     "name": "Patella",
-    "bone": "patella"
+    "bones": [
+      "patella"
+    ]
   },
   {
     "id": "pubis.pubic_symphysis",
     "name": "Pubic symphysis",
-    "bone": "pubis",
-    "midline": true
+    "midline": true,
+    "bones": [
+      "hip_bone"
+    ]
   },
   {
     "id": "pubis.pubic_tubercle",
     "name": "Pubic tubercle",
-    "bone": "pubis"
+    "bones": [
+      "hip_bone"
+    ]
   },
   {
     "id": "pubis.superior_ramus",
     "name": "Superior pubic ramus",
-    "bone": "pubis"
+    "bones": [
+      "hip_bone"
+    ]
   },
   {
     "id": "radius.radial_tuberosity",
     "name": "Radial tuberosity",
-    "bone": "radius"
+    "bones": [
+      "radius"
+    ]
   },
   {
     "id": "radius.styloid_process",
     "name": "Radial styloid",
-    "bone": "radius"
+    "bones": [
+      "radius"
+    ]
   },
   {
     "id": "rib1.superior_surface",
     "name": "1st rib",
-    "bone": "rib1"
+    "bones": [
+      "rib_1"
+    ]
   },
   {
     "id": "rib12.inferior_border",
     "name": "12th rib",
-    "bone": "rib12"
+    "bones": [
+      "rib_12"
+    ]
   },
   {
     "id": "rib5.costal_cartilage",
     "name": "5th costal cartilage",
-    "bone": "rib5"
+    "bones": [
+      "rib_5"
+    ]
   },
   {
     "id": "ribs.lateral",
     "name": "Lateral ribs",
-    "bone": "ribs"
+    "bones": [
+      "rib_6",
+      "rib_7",
+      "rib_8"
+    ]
   },
   {
     "id": "ribs.lower_lateral",
     "name": "Lateral lower ribs",
-    "bone": "ribs"
+    "bones": [
+      "rib_10",
+      "rib_8",
+      "rib_9"
+    ]
   },
   {
     "id": "ribs.third_to_fifth",
     "name": "Ribs 3–5",
-    "bone": "ribs"
+    "bones": [
+      "rib_3",
+      "rib_4",
+      "rib_5"
+    ]
   },
   {
     "id": "sacrum.dorsal_surface",
     "name": "Dorsal surface of sacrum",
-    "bone": "sacrum",
-    "midline": true
+    "midline": true,
+    "bones": [
+      "sacrum"
+    ]
   },
   {
     "id": "scapula.coracoid_process",
     "name": "Coracoid process",
-    "bone": "scapula"
+    "bones": [
+      "scapula"
+    ]
   },
   {
     "id": "scapula.medial_border",
     "name": "Medial border of scapula",
-    "bone": "scapula"
+    "bones": [
+      "scapula"
+    ]
   },
   {
     "id": "scapula.spine",
     "name": "Spine of scapula",
-    "bone": "scapula"
+    "bones": [
+      "scapula"
+    ]
   },
   {
     "id": "sternum.manubrium",
     "name": "Manubrium",
-    "bone": "sternum",
-    "midline": true
+    "midline": true,
+    "bones": [
+      "sternum"
+    ]
   },
   {
     "id": "sternum.xiphoid_process",
     "name": "Xiphoid process",
-    "bone": "sternum",
-    "midline": true
+    "midline": true,
+    "bones": [
+      "sternum"
+    ]
   },
   {
     "id": "tarsals.plantar_surface",
     "name": "Plantar tarsal bones",
-    "bone": "tarsals"
+    "bones": [
+      "cuboid",
+      "intermediate_cuneiform",
+      "lateral_cuneiform",
+      "medial_cuneiform",
+      "navicular"
+    ]
   },
   {
     "id": "temporal.mastoid_process",
     "name": "Mastoid process",
-    "bone": "temporal"
+    "bones": [
+      "temporal"
+    ]
   },
   {
     "id": "thoracic_vertebrae.upper_spinous_processes",
     "name": "Spinous processes C7–T5",
-    "bone": "thoracic_vertebrae",
-    "midline": true
+    "midline": true,
+    "bones": [
+      "vertebra_c7",
+      "vertebra_t1",
+      "vertebra_t2",
+      "vertebra_t3",
+      "vertebra_t4",
+      "vertebra_t5"
+    ]
   },
   {
     "id": "thumb.proximal_phalanx",
     "name": "Thumb",
-    "bone": "thumb_phalanges"
+    "bones": [
+      "proximal_phalanx_thumb"
+    ]
   },
   {
     "id": "tibia.lateral_condyle",
     "name": "Lateral tibial condyle",
-    "bone": "tibia"
+    "bones": [
+      "tibia"
+    ]
   },
   {
     "id": "tibia.pes_anserinus",
     "name": "Pes anserinus (medial tibia)",
-    "bone": "tibia"
+    "bones": [
+      "tibia"
+    ]
   },
   {
     "id": "tibia.posterior_upper",
     "name": "Upper posterior tibia",
-    "bone": "tibia"
+    "bones": [
+      "tibia"
+    ]
   },
   {
     "id": "tibia.tibial_tuberosity",
     "name": "Tibial tuberosity",
-    "bone": "tibia"
+    "bones": [
+      "tibia"
+    ]
   },
   {
     "id": "toe_phalanges.dorsal_surface",
     "name": "Dorsal surface of toe phalanges",
-    "bone": "toe_phalanges"
+    "bones": [
+      "distal_phalanx_hallux",
+      "distal_phalanx_toe_2",
+      "distal_phalanx_toe_3",
+      "distal_phalanx_toe_4",
+      "distal_phalanx_toe_5",
+      "middle_phalanx_toe_2",
+      "middle_phalanx_toe_3",
+      "middle_phalanx_toe_4",
+      "middle_phalanx_toe_5",
+      "proximal_phalanx_hallux",
+      "proximal_phalanx_toe_2",
+      "proximal_phalanx_toe_3",
+      "proximal_phalanx_toe_4",
+      "proximal_phalanx_toe_5"
+    ]
   },
   {
     "id": "toe_phalanges.plantar_surface",
     "name": "Plantar surface of toe phalanges",
-    "bone": "toe_phalanges"
+    "bones": [
+      "distal_phalanx_hallux",
+      "distal_phalanx_toe_2",
+      "distal_phalanx_toe_3",
+      "distal_phalanx_toe_4",
+      "distal_phalanx_toe_5",
+      "middle_phalanx_toe_2",
+      "middle_phalanx_toe_3",
+      "middle_phalanx_toe_4",
+      "middle_phalanx_toe_5",
+      "proximal_phalanx_hallux",
+      "proximal_phalanx_toe_2",
+      "proximal_phalanx_toe_3",
+      "proximal_phalanx_toe_4",
+      "proximal_phalanx_toe_5"
+    ]
   },
   {
     "id": "ulna.olecranon",
     "name": "Olecranon",
-    "bone": "ulna"
+    "bones": [
+      "ulna"
+    ]
   },
   {
     "id": "ulna.styloid_process",
     "name": "Ulnar styloid",
-    "bone": "ulna"
+    "bones": [
+      "ulna"
+    ]
   }
 ]
