@@ -12,7 +12,7 @@ import XCTest
 
 final class IDLockTests: XCTestCase {
     private struct Lock: Decodable {
-        let regions, joints, directions, complexes, lines, muscles, tissues, landmarks, bones, articulations: [String]
+        let regions, joints, directions, complexes, lines, muscles, tissues, landmarks, bones, articulations, sorenessAreas: [String]
     }
 
     func testNoLockedIDWasRemoved() throws {
@@ -29,6 +29,7 @@ final class IDLockTests: XCTestCase {
         assertKept(lock.landmarks, Set(c.landmarks.map(\.id.rawValue)), "landmark")
         assertKept(lock.bones, Set(c.bones.map(\.id.rawValue)), "bone")
         assertKept(lock.articulations, Set(c.articulations.map(\.id.rawValue)), "articulation")
+        assertKept(lock.sorenessAreas, Set(c.sorenessAreas.map(\.id.rawValue)), "soreness area")
     }
 
     private func assertKept(_ locked: [String], _ current: Set<String>, _ what: String) {

@@ -210,7 +210,8 @@
     "longus_capitis",
     "rhomboid_minor",
     "fibularis_brevis",
-    "flexor_digitorum_longus"
+    "flexor_digitorum_longus",
+    "multifidus"
   ],
   "tissues": [
     "plantar_aponeurosis",
@@ -506,5 +507,27 @@
     "mtp_toe_5",
     "pip_toe_5",
     "dip_toe_5"
+  ],
+  "sorenessAreas": [
+    "neck",
+    "traps",
+    "upper_back",
+    "lats",
+    "low_back",
+    "chest",
+    "abs",
+    "obliques",
+    "shoulders",
+    "biceps",
+    "triceps",
+    "forearms",
+    "glutes",
+    "hip_flexors",
+    "adductors",
+    "quads",
+    "hamstrings",
+    "calves",
+    "shins",
+    "feet"
   ]
 }
