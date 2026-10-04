@@ -1,0 +1,195 @@
+<title>Exercise Animation Styles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: two stages side by side (offline render | live), same exercise, then notes. */
+:root {
+  --bg: #f2f3f5; --surface: #ffffff; --fg: #1b2230; --muted: #5b6475; --line: #d9dde5; --accent: #2f4ea3;
+  --display: "Newsreader", Georgia, serif; --body: "Public Sans", system-ui, sans-serif; --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #12151b; --surface: #181c24; --fg: #e7eaf0; --muted: #9aa3b5; --line: #2a303b; --accent: #8ea6ff; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #12151b; --surface: #181c24; --fg: #e7eaf0; --muted: #9aa3b5; --line: #2a303b; --accent: #8ea6ff; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 15px/1.55 var(--body); }
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: 16px; padding-block: 24px 48px; display: grid; gap: 20px; }
+h1 { font: 600 clamp(1.6rem, 3vw, 2.2rem)/1.15 var(--display); margin: 0; text-wrap: balance; }
+p { margin: 0; max-width: 72ch; }
+.lede { color: var(--muted); }
+.eyebrow { font: 500 11px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.pair { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+@media (max-width: 760px) { .pair { grid-template-columns: 1fr; } }
+figure { margin: 0; display: grid; gap: 8px; min-width: 0; }
+.stage { position: relative; background: #ffffff; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; aspect-ratio: 1; max-width: 100%; }
+.stage video, .stage canvas { display: block; width: 100%; height: 100%; object-fit: contain; touch-action: none; }
+figcaption { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 14px; }
+figcaption b { font-weight: 600; }
+figcaption span { color: var(--muted); font-size: 13px; }
+.controls { display: flex; gap: 8px; flex-wrap: wrap; }
+button.chip { font: 500 13px/1 var(--body); color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 9px 14px; min-height: 36px; cursor: pointer; }
+button.chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.loading { position: absolute; inset: 0; display: grid; place-items: center; color: #5b6475; font: 13px var(--mono); }
+.loading[hidden] { display: none; }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 13px; color: var(--muted); align-items: center; }
+.sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; border: 1px solid rgba(0,0,0,.2); }
+.notes { display: grid; gap: 6px; font-size: 13px; color: var(--muted); }
+.notes p { max-width: 100ch; }
+</style>
+
+<div class="wrap">
+  <header style="display:grid;gap:10px">
+    <span class="eyebrow">Exercise animation · style prototype</span>
+    <h1 id="title">Single-arm low-cable lateral raise</h1>
+    <p class="lede">The same exercise, rig and muscle data, drawn two ways. Left: rendered offline in Blender, then looped as video. Right: drawn live in the browser, the way the app's viewer would. Drag the live figure to turn it.</p>
+    <div class="legend"><span><i class="sw" style="background:#db4d38"></i>Prime movers</span><span><i class="sw" style="background:#f09e8a"></i>Assisting</span><span id="targets"></span></div>
+  </header>
+
+  <div class="pair">
+    <figure>
+      <div class="stage"><video id="render" autoplay muted loop playsinline aria-label="Blender render of the exercise, looping"></video></div>
+      <figcaption><b>A · Blender render</b><span>Workbench: matte grey, cavity shading, outlines · 720 px · fixed camera</span></figcaption>
+      <div class="controls" aria-hidden="true" style="visibility:hidden"><button class="chip" tabindex="-1">Pause</button></div>
+    </figure>
+    <figure>
+      <div class="stage" id="live-stage"><canvas id="live" aria-label="Live 3D figure performing the exercise"></canvas><div class="loading" id="loading">Unpacking model…</div></div>
+      <figcaption><b>B · Live (three.js)</b><span>Matte shading, outlines on bones and equipment · drag to orbit</span></figcaption>
+      <div class="controls"><button class="chip" id="play">Pause</button><button class="chip" id="reset">Reset view</button></div>
+    </figure>
+  </div>
+
+  <div class="notes">
+    <p>Both come from one spec (<code>exercises/cable_lateral_raise.json</code>): poses, timing, equipment, camera, and the movement directions to colour. Colours come from AnatomyKit: muscles that are prime movers for shoulder abduction are red; muscles acting in the shoulder blade's upward rotation and elevation are light red. Only the working side is coloured.</p>
+    <p>Body: Z-Anatomy muscles and bones (CC BY-SA 4.0, Gauthier Kervyn and contributors; built on BodyParts3D, © DBCLS, CC BY 4.0), skinned to the Z-Anatomy rig. First pass: muscles follow their nearest bones, so they stretch but don't bulge; the scapula doesn't rotate yet.</p>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/effects/OutlineEffect.js"></script>
+__DATA__
+<script>
+(async function () {
+  const E = __JSON__;
+  document.getElementById("title").textContent = E.name;
+  document.getElementById("targets").textContent = "Prime: " + Object.entries(E.targets).filter(([, v]) => v === "prime").map(([k]) => k.replace(/_/g, " ")).join(", ");
+  document.getElementById("render").src = document.getElementById("d-mp4").textContent.trim();
+  const loading = document.getElementById("loading"), canvas = document.getElementById("live"), stage = document.getElementById("live-stage");
+  if (!window.THREE || !THREE.OrbitControls || !THREE.OutlineEffect) { loading.textContent = "The 3D library didn't load. Reload to try again."; return; }
+
+  async function gunzip(id) {
+    const bin = Uint8Array.from(atob(document.getElementById(id).textContent.trim()), c => c.charCodeAt(0));
+    return new Response(new Blob([bin]).stream().pipeThrough(new DecompressionStream("gzip"))).arrayBuffer();
+  }
+  function geo(buf, m) {
+    const q = new Uint16Array(buf, 0, m.verts * 3), pos = new Float32Array(m.verts * 3);
+    for (let i = 0; i < m.verts; i++) for (let k = 0; k < 3; k++) pos[i * 3 + k] = m.lo[k] + q[i * 3 + k] / 65535 * (m.hi[k] - m.lo[k]);
+    const g = new THREE.BufferGeometry();
+    g.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+    g.setIndex(new THREE.BufferAttribute(new Uint32Array(buf.slice(m.verts * 6, m.verts * 6 + m.tris * 12)), 1));
+    g.computeVertexNormals();
+    return g;
+  }
+  let sg, mg, sBone, wIdx, wVal, frames;
+  try {
+    sg = geo(await gunzip("d-skel"), E.skeleton); sBone = new Uint8Array(await gunzip("d-skelbones"));
+    mg = geo(await gunzip("d-muscles"), E.muscles);
+    const wb = new Uint8Array(await gunzip("d-weights")), n = E.muscles.verts * 4;
+    wIdx = wb.subarray(0, n); wVal = wb.subarray(n, 2 * n);
+    frames = new Float32Array(await gunzip("d-frames"));
+  } catch (e) { loading.textContent = "This browser couldn't unpack the model. Try current Safari or Chrome."; return; }
+
+  // Tints per vertex, from each muscle object's tint class.
+  const TINT = [new THREE.Color(0.80, 0.80, 0.80), new THREE.Color(0.94, 0.62, 0.54), new THREE.Color(0.86, 0.30, 0.22)];
+  const col = new Float32Array(E.muscles.verts * 3).fill(0.8), idx = mg.index.array;
+  for (const [, start, count, tint] of E.muscles.ranges) {
+    if (!tint) continue;
+    for (let i = start; i < start + count; i++) { const v = idx[i]; col[v * 3] = TINT[tint].r; col[v * 3 + 1] = TINT[tint].g; col[v * 3 + 2] = TINT[tint].b; }
+  }
+  mg.setAttribute("color", new THREE.BufferAttribute(col, 3));
+
+  const scene = new THREE.Scene(); scene.background = new THREE.Color(0xffffff);
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x9aa0aa, 0.75));
+  const key = new THREE.DirectionalLight(0xffffff, 0.55); key.position.set(-1.5, 3, 3); scene.add(key);
+  const fill = new THREE.DirectionalLight(0xffffff, 0.25); fill.position.set(2, 1, -2); scene.add(fill);
+  const clay = new THREE.MeshLambertMaterial({ color: 0xcccccc });
+  // Muscle sheets are open meshes: draw both sides, and keep them out of the
+  // outline pass (its inverted hull shows through open sheets as black patches).
+  const muscleMat = new THREE.MeshLambertMaterial({ vertexColors: true, side: THREE.DoubleSide });
+  muscleMat.userData.outlineParameters = { visible: false };
+  scene.add(new THREE.Mesh(sg, clay), new THREE.Mesh(mg, muscleMat));
+  for (const b of E.equipment) {
+    const size = b.hi.map((h, i) => h - b.lo[i]), c = b.hi.map((h, i) => (h + b.lo[i]) / 2);
+    const mat = new THREE.MeshLambertMaterial({ color: b.dark ? 0x1c1c1c : 0xb8b8bc });
+    const g = b.round ? new THREE.CylinderGeometry(Math.max(size[1], size[2]) / 2, Math.max(size[1], size[2]) / 2, size[0], 24).rotateZ(Math.PI / 2) : new THREE.BoxGeometry(...size);
+    const m = new THREE.Mesh(g, mat); m.position.set(...c); scene.add(m);
+  }
+  const cable = new THREE.Mesh(new THREE.CylinderGeometry(0.006, 0.006, 1, 8), new THREE.MeshBasicMaterial({ color: 0x141414 }));
+  scene.add(cable);
+  const pulley = new THREE.Vector3(...E.pulley), up = new THREE.Vector3(0, 1, 0);
+  function placeCable(g) {
+    const d = new THREE.Vector3().subVectors(g, pulley), len = d.length();
+    cable.position.copy(pulley).addScaledVector(d, 0.5); cable.scale.set(1, len, 1);
+    cable.quaternion.setFromUnitVectors(up, d.normalize());
+  }
+
+  // Skinning: skeleton vertices follow one bone; muscle vertices blend four.
+  const NB = E.bones, NF = E.frames, Rm = new Float32Array(NB * 9), Tv = new Float32Array(NB * 3);
+  const sRest = sg.attributes.position.array.slice(), sRestN = sg.attributes.normal.array.slice();
+  const mRest = mg.attributes.position.array.slice(), mRestN = mg.attributes.normal.array.slice();
+  const qa = new THREE.Quaternion(), qb = new THREE.Quaternion(), m4 = new THREE.Matrix4(), ga = new THREE.Vector3(), gb = new THREE.Vector3();
+  function apply(t) {
+    const f = t * NF, f0 = Math.floor(f) % NF, f1 = (f0 + 1) % NF, u = f - Math.floor(f);
+    for (let b = 0; b < NB; b++) {
+      const a = (f0 * NB + b) * 7, c = (f1 * NB + b) * 7;
+      for (let k = 0; k < 3; k++) Tv[b * 3 + k] = frames[a + k] * (1 - u) + frames[c + k] * u;
+      qa.set(frames[a + 3], frames[a + 4], frames[a + 5], frames[a + 6]); qb.set(frames[c + 3], frames[c + 4], frames[c + 5], frames[c + 6]); qa.slerp(qb, u);
+      const e = m4.makeRotationFromQuaternion(qa).elements; Rm.set([e[0], e[1], e[2], e[4], e[5], e[6], e[8], e[9], e[10]], b * 9);
+    }
+    const sp = sg.attributes.position.array, sn = sg.attributes.normal.array;
+    for (let i = 0; i < sBone.length; i++) {
+      const b = sBone[i], r = b * 9, o = i * 3, x = sRest[o], y = sRest[o + 1], z = sRest[o + 2], nx = sRestN[o], ny = sRestN[o + 1], nz = sRestN[o + 2];
+      sp[o] = Rm[r] * x + Rm[r + 3] * y + Rm[r + 6] * z + Tv[b * 3]; sp[o + 1] = Rm[r + 1] * x + Rm[r + 4] * y + Rm[r + 7] * z + Tv[b * 3 + 1]; sp[o + 2] = Rm[r + 2] * x + Rm[r + 5] * y + Rm[r + 8] * z + Tv[b * 3 + 2];
+      sn[o] = Rm[r] * nx + Rm[r + 3] * ny + Rm[r + 6] * nz; sn[o + 1] = Rm[r + 1] * nx + Rm[r + 4] * ny + Rm[r + 7] * nz; sn[o + 2] = Rm[r + 2] * nx + Rm[r + 5] * ny + Rm[r + 8] * nz;
+    }
+    sg.attributes.position.needsUpdate = sg.attributes.normal.needsUpdate = true;
+    const mp = mg.attributes.position.array, mn = mg.attributes.normal.array;
+    for (let i = 0; i < E.muscles.verts; i++) {
+      const o = i * 3, x = mRest[o], y = mRest[o + 1], z = mRest[o + 2], nx = mRestN[o], ny = mRestN[o + 1], nz = mRestN[o + 2];
+      let px = 0, py = 0, pz = 0, qx = 0, qy = 0, qz = 0;
+      for (let k = 0; k < 4; k++) {
+        const w = wVal[i * 4 + k] / 255; if (!w) continue;
+        const b = wIdx[i * 4 + k], r = b * 9;
+        px += w * (Rm[r] * x + Rm[r + 3] * y + Rm[r + 6] * z + Tv[b * 3]); py += w * (Rm[r + 1] * x + Rm[r + 4] * y + Rm[r + 7] * z + Tv[b * 3 + 1]); pz += w * (Rm[r + 2] * x + Rm[r + 5] * y + Rm[r + 8] * z + Tv[b * 3 + 2]);
+        qx += w * (Rm[r] * nx + Rm[r + 3] * ny + Rm[r + 6] * nz); qy += w * (Rm[r + 1] * nx + Rm[r + 4] * ny + Rm[r + 7] * nz); qz += w * (Rm[r + 2] * nx + Rm[r + 5] * ny + Rm[r + 8] * nz);
+      }
+      mp[o] = px; mp[o + 1] = py; mp[o + 2] = pz; mn[o] = qx; mn[o + 1] = qy; mn[o + 2] = qz;
+    }
+    mg.attributes.position.needsUpdate = mg.attributes.normal.needsUpdate = true;
+    ga.fromArray(E.grips[f0]); gb.fromArray(E.grips[f1]); placeCable(ga.lerp(gb, u));
+  }
+
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  const effect = new THREE.OutlineEffect(renderer, { defaultThickness: 0.0035, defaultColor: [0.05, 0.05, 0.05] });
+  const camera = new THREE.PerspectiveCamera(39.6, 1, 0.05, 50);
+  const controls = new THREE.OrbitControls(camera, canvas); controls.enableDamping = true;
+  function resetView() { camera.position.fromArray(E.camera.position); controls.target.fromArray(E.camera.target); controls.update(); }
+  resetView();
+  function size() { const r = canvas.getBoundingClientRect(); renderer.setSize(r.width, r.height, false); camera.aspect = r.width / r.height; camera.updateProjectionMatrix(); }
+  new ResizeObserver(size).observe(stage); size();
+
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let playing = !reduce, t = 0, last = performance.now();
+  const playBtn = document.getElementById("play");
+  const sync = () => { playBtn.textContent = playing ? "Pause" : "Play"; };
+  sync();
+  playBtn.addEventListener("click", () => { playing = !playing; sync(); const v = document.getElementById("render"); playing ? v.play() : v.pause(); });
+  document.getElementById("reset").addEventListener("click", resetView);
+  apply(0); loading.hidden = true;
+  (function loop(now) {
+    const dt = (now - last) / 1000; last = now;
+    if (playing) { t = (t + dt * E.fps / NF) % 1; apply(t); }
+    controls.update(); effect.render(scene, camera);
+    requestAnimationFrame(loop);
+  })(last);
+})();
+</script>
