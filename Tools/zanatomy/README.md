@@ -62,6 +62,11 @@ PREVIEW=1 …                                      # three frames only, to check
   `secondary` directions, and helpers of the prime ones, are light red. Working side only.
 - **Muscles:** Z-Anatomy's sheets (fascia, aponeuroses, retinacula) are left out. They
   hide the tinted muscles and tear at the joints.
+- **Live look:** each vertex gets a baked crease value (how far its neighbours rise above
+  its tangent plane). The page darkens grooves and lightens ridges with it, standing in
+  for cavity shading. A screen-space pass draws outlines where depth jumps (the
+  silhouette) or surface direction jumps (borders between muscles). `WEB_ONLY=1` skips
+  the render and re-exports just the web data.
 - **Shoulder:** `shoulderElevate` lifts the shoulder girdle with the arm (scapulohumeral
   rhythm), which keeps the deltoid from tearing at the top of a raise.
 

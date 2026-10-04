@@ -238,7 +238,8 @@ for pb in P: pb.matrix_basis = Matrix.Identity(4)
 upd(); rest = {b: arm.matrix_world @ P[b].matrix for b in deform}
 frames_out = []; grips = []
 # PREVIEW=1 renders three frames (bottom, middle, top) to check the look quickly.
-render_frames = {0, hb + move // 2, hb + move} if os.environ.get('PREVIEW') else set(range(N))
+render_frames = (set() if os.environ.get('WEB_ONLY') else
+                 {0, hb + move // 2, hb + move} if os.environ.get('PREVIEW') else set(range(N)))
 for f in range(N):
     pose(lerp_pose(SPEC['poses']['bottom'], SPEC['poses']['top'], u_at(f)))
     g = grip(SPEC['working_side'])
@@ -255,9 +256,10 @@ print('RENDERED', len(render_frames))
 if os.environ.get('PREVIEW'): raise SystemExit(0)
 
 fps = L['fps']
-subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-framerate', str(fps), '-i', OUT + 'frames/%04d.png',
+if not os.environ.get('WEB_ONLY'):
+  subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-framerate', str(fps), '-i', OUT + 'frames/%04d.png',
                 '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '18', OUT + SPEC['id'] + '.mp4'], check=True)
-subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-framerate', str(fps), '-i', OUT + 'frames/%04d.png', '-vf',
+  subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-framerate', str(fps), '-i', OUT + 'frames/%04d.png', '-vf',
                 'scale=480:-1:flags=lanczos,split[a][b];[a]palettegen=max_colors=64[p];[b][p]paletteuse=dither=bayer:bayer_scale=4',
                 '-loop', '0', OUT + SPEC['id'] + '.gif'], check=True)
 
@@ -278,11 +280,23 @@ def pack(objs, ratio, per_vertex):
         world = [o.matrix_world @ v.co for v in me.vertices]
         for v in world: p = C @ v; pos += [p.x, p.y, p.z]
         for fc in me.polygons: idx += [base + i for i in fc.vertices]
-        extra.append(per_vertex(o, world))
+        extra.append((per_vertex(o, world), cavity(me, world, o.matrix_world.to_3x3().inverted().transposed())))
         ranges.append([o.name, i0, len(idx) - i0, int(o.get('tint', 0))])
         o.evaluated_get(dg).to_mesh_clear(); o.modifiers.remove(md)
         for m in mods: m.show_viewport = True
     return pos, idx, ranges, extra
+
+def cavity(me, world, nmat):
+    """Per-vertex crease value: mean of how far neighbours rise above the tangent
+    plane. Positive in grooves (darken), negative on ridges (lighten)."""
+    nv = len(me.vertices)
+    P = np.array([tuple(v) for v in world]); Nn = np.array([tuple((nmat @ v.normal).normalized()) for v in me.vertices])
+    e = np.zeros(len(me.edges) * 2, int); me.edges.foreach_get('vertices', e); e = e.reshape(-1, 2)
+    d = P[e[:, 1]] - P[e[:, 0]]; L = np.linalg.norm(d, axis=1, keepdims=True) + 1e-9; d /= L
+    acc = np.zeros(nv); cnt = np.zeros(nv)
+    np.add.at(acc, e[:, 0], (Nn[e[:, 0]] * d).sum(1)); np.add.at(acc, e[:, 1], -(Nn[e[:, 1]] * d).sum(1))
+    np.add.at(cnt, e[:, 0], 1); np.add.at(cnt, e[:, 1], 1)
+    return np.clip(acc / np.maximum(cnt, 1) * 300, -127, 127).astype(np.int8)
 
 def write_geo(path, pos, idx):
     lo = [min(pos[i::3]) for i in range(3)]; hi = [max(pos[i::3]) for i in range(3)]
@@ -291,10 +305,15 @@ def write_geo(path, pos, idx):
     return lo, hi
 
 bidx = {b: i for i, b in enumerate(deform)}
-spos, sidx, sranges, sbones = pack(bone_objs, 0.25, lambda o, w: [bidx[o.parent_bone]] * len(w))
+spos, sidx, sranges, sx = pack(bone_objs, 0.25, lambda o, w: [bidx[o.parent_bone]] * len(w))
 slo, shi = write_geo(OUT + 'web/skeleton.bin', spos, sidx)
-open(OUT + 'web/skeleton_bones.bin', 'wb').write(gzip.compress(bytes([b for chunk in sbones for b in chunk]), 9))
-mpos, midx, mranges, mweights = pack(muscle_objs, 0.4, lambda o, w: nearest_bones(np.array([tuple(v) for v in w]), bool(o.get('is_arm'))))
+open(OUT + 'web/skeleton_bones.bin', 'wb').write(gzip.compress(bytes([b for chunk, _ in sx for b in chunk]), 9))
+open(OUT + 'web/skeleton_cavity.bin', 'wb').write(gzip.compress(np.concatenate([c for _, c in sx]).tobytes(), 9))
+# Web detail is 0.6 x the render detail: lower and the surface muscles shrink
+# enough for deeper ones to speckle through.
+mpos, midx, mranges, mx = pack(muscle_objs, 0.6, lambda o, w: nearest_bones(np.array([tuple(v) for v in w]), bool(o.get('is_arm'))))
+mweights = [w for w, _ in mx]
+open(OUT + 'web/muscles_cavity.bin', 'wb').write(gzip.compress(np.concatenate([c for _, c in mx]).tobytes(), 9))
 mlo, mhi = write_geo(OUT + 'web/muscles.bin', mpos, midx)
 nn = np.concatenate([a for a, _ in mweights]).astype(np.uint8)
 wq = np.concatenate([w for _, w in mweights]); wq = np.round(wq * 255).astype(int); wq[:, 0] += 255 - wq.sum(1)

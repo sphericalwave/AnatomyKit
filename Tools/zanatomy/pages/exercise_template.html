@@ -51,7 +51,7 @@ button.chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2p
     </figure>
     <figure>
       <div class="stage" id="live-stage"><canvas id="live" aria-label="Live 3D figure performing the exercise"></canvas><div class="loading" id="loading">Unpacking model…</div></div>
-      <figcaption><b>B · Live (three.js)</b><span>Matte shading, outlines on bones and equipment · drag to orbit</span></figcaption>
+      <figcaption><b>B · Live (three.js)</b><span>Matte shading, baked creases, screen-space outlines · drag to orbit</span></figcaption>
       <div class="controls"><button class="chip" id="play">Pause</button><button class="chip" id="reset">Reset view</button></div>
     </figure>
   </div>
@@ -64,7 +64,6 @@ button.chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2p
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/effects/OutlineEffect.js"></script>
 __DATA__
 <script>
 (async function () {
@@ -73,7 +72,7 @@ __DATA__
   document.getElementById("targets").textContent = "Prime: " + Object.entries(E.targets).filter(([, v]) => v === "prime").map(([k]) => k.replace(/_/g, " ")).join(", ");
   document.getElementById("render").src = document.getElementById("d-mp4").textContent.trim();
   const loading = document.getElementById("loading"), canvas = document.getElementById("live"), stage = document.getElementById("live-stage");
-  if (!window.THREE || !THREE.OrbitControls || !THREE.OutlineEffect) { loading.textContent = "The 3D library didn't load. Reload to try again."; return; }
+  if (!window.THREE || !THREE.OrbitControls) { loading.textContent = "The 3D library didn't load. Reload to try again."; return; }
 
   async function gunzip(id) {
     const bin = Uint8Array.from(atob(document.getElementById(id).textContent.trim()), c => c.charCodeAt(0));
@@ -88,34 +87,40 @@ __DATA__
     g.computeVertexNormals();
     return g;
   }
-  let sg, mg, sBone, wIdx, wVal, frames;
+  let sg, mg, sBone, wIdx, wVal, frames, sCav, mCav;
   try {
     sg = geo(await gunzip("d-skel"), E.skeleton); sBone = new Uint8Array(await gunzip("d-skelbones"));
     mg = geo(await gunzip("d-muscles"), E.muscles);
     const wb = new Uint8Array(await gunzip("d-weights")), n = E.muscles.verts * 4;
     wIdx = wb.subarray(0, n); wVal = wb.subarray(n, 2 * n);
     frames = new Float32Array(await gunzip("d-frames"));
+    sCav = new Int8Array(await gunzip("d-skelcav")); mCav = new Int8Array(await gunzip("d-musclecav"));
   } catch (e) { loading.textContent = "This browser couldn't unpack the model. Try current Safari or Chrome."; return; }
 
-  // Tints per vertex, from each muscle object's tint class.
-  const TINT = [new THREE.Color(0.80, 0.80, 0.80), new THREE.Color(0.94, 0.62, 0.54), new THREE.Color(0.86, 0.30, 0.22)];
-  const col = new Float32Array(E.muscles.verts * 3).fill(0.8), idx = mg.index.array;
-  for (const [, start, count, tint] of E.muscles.ranges) {
-    if (!tint) continue;
-    for (let i = start; i < start + count; i++) { const v = idx[i]; col[v * 3] = TINT[tint].r; col[v * 3 + 1] = TINT[tint].g; col[v * 3 + 2] = TINT[tint].b; }
+  // Vertex colours: the muscle's tint, darkened in grooves and lightened on
+  // ridges by the crease values baked in Blender (stands in for cavity shading).
+  const TINT = [[0.84, 0.84, 0.84], [0.95, 0.64, 0.56], [0.88, 0.32, 0.24]];
+  const shade = c => c > 0 ? 1 - 0.6 * Math.min(1, c / 60) : 1 + 0.15 * Math.min(1, -c / 60);
+  function colours(verts, cav, tintOf) {
+    const col = new Float32Array(verts * 3);
+    for (let v = 0; v < verts; v++) {
+      const t = TINT[tintOf[v]], k = shade(cav[v]);
+      col[v * 3] = Math.min(1, t[0] * k); col[v * 3 + 1] = Math.min(1, t[1] * k); col[v * 3 + 2] = Math.min(1, t[2] * k);
+    }
+    return new THREE.BufferAttribute(col, 3);
   }
-  mg.setAttribute("color", new THREE.BufferAttribute(col, 3));
+  const mTint = new Uint8Array(E.muscles.verts), idx = mg.index.array;
+  for (const [, start, count, tint] of E.muscles.ranges) for (let i = start; i < start + count; i++) mTint[idx[i]] = tint;
+  mg.setAttribute("color", colours(E.muscles.verts, mCav, mTint));
+  sg.setAttribute("color", colours(E.skeleton.verts, sCav, new Uint8Array(E.skeleton.verts)));
 
   const scene = new THREE.Scene(); scene.background = new THREE.Color(0xffffff);
-  scene.add(new THREE.HemisphereLight(0xffffff, 0x9aa0aa, 0.75));
-  const key = new THREE.DirectionalLight(0xffffff, 0.55); key.position.set(-1.5, 3, 3); scene.add(key);
-  const fill = new THREE.DirectionalLight(0xffffff, 0.25); fill.position.set(2, 1, -2); scene.add(fill);
-  const clay = new THREE.MeshLambertMaterial({ color: 0xcccccc });
-  // Muscle sheets are open meshes: draw both sides, and keep them out of the
-  // outline pass (its inverted hull shows through open sheets as black patches).
-  const muscleMat = new THREE.MeshLambertMaterial({ vertexColors: true, side: THREE.DoubleSide });
-  muscleMat.userData.outlineParameters = { visible: false };
-  scene.add(new THREE.Mesh(sg, clay), new THREE.Mesh(mg, muscleMat));
+  scene.add(new THREE.HemisphereLight(0xffffff, 0xa4a9b2, 0.8));
+  const key = new THREE.DirectionalLight(0xffffff, 0.5); key.position.set(-1.5, 3, 3); scene.add(key);
+  const fill = new THREE.DirectionalLight(0xffffff, 0.2); fill.position.set(2, 1, -2); scene.add(fill);
+  // Muscle sheets are open meshes, so both sides are drawn.
+  const clay = new THREE.MeshLambertMaterial({ vertexColors: true, side: THREE.DoubleSide });
+  scene.add(new THREE.Mesh(sg, clay), new THREE.Mesh(mg, clay));
   for (const b of E.equipment) {
     const size = b.hi.map((h, i) => h - b.lo[i]), c = b.hi.map((h, i) => (h + b.lo[i]) / 2);
     const mat = new THREE.MeshLambertMaterial({ color: b.dark ? 0x1c1c1c : 0xb8b8bc });
@@ -169,12 +174,49 @@ __DATA__
 
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
   renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
-  const effect = new THREE.OutlineEffect(renderer, { defaultThickness: 0.0035, defaultColor: [0.05, 0.05, 0.05] });
+
+  // Outlines: render normals + depth, then darken pixels where either jumps.
+  // Depth jumps give the silhouette; normal jumps give the borders between
+  // muscles, like the line work in the reference illustrations.
+  const normalRT = new THREE.WebGLRenderTarget(1, 1);
+  normalRT.depthTexture = new THREE.DepthTexture(); normalRT.depthTexture.type = THREE.UnsignedIntType;
+  const normalMat = new THREE.MeshNormalMaterial({ side: THREE.DoubleSide });
+  const edgeMat = new THREE.ShaderMaterial({
+    uniforms: { tNormal: { value: normalRT.texture }, tDepth: { value: normalRT.depthTexture }, texel: { value: new THREE.Vector2() },
+                near: { value: 0.05 }, far: { value: 50 } },
+    vertexShader: "varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, 0.0, 1.0); }",
+    fragmentShader: `uniform sampler2D tNormal; uniform sampler2D tDepth; uniform vec2 texel; uniform float near; uniform float far; varying vec2 vUv;
+      float lin(vec2 uv){ float z = texture2D(tDepth, uv).x * 2.0 - 1.0; return 2.0 * near * far / (far + near - z * (far - near)); }
+      void main(){
+        vec3 n0 = texture2D(tNormal, vUv).xyz; float d0 = lin(vUv); float en = 0.0; float ed = 0.0;
+        vec2 o[4]; o[0] = vec2(texel.x, 0.0); o[1] = vec2(-texel.x, 0.0); o[2] = vec2(0.0, texel.y); o[3] = vec2(0.0, -texel.y);
+        for (int i = 0; i < 4; i++) { en = max(en, distance(texture2D(tNormal, vUv + o[i]).xyz, n0)); float d = lin(vUv + o[i]); ed = max(ed, abs(d - d0) / min(d, d0)); }
+        float edge = max(smoothstep(0.55, 0.95, en) * 0.55, smoothstep(0.04, 0.12, ed));
+        gl_FragColor = vec4(vec3(0.07), edge * 0.85);
+      }`,
+    transparent: true, depthTest: false, depthWrite: false
+  });
+  const edgeScene = new THREE.Scene(), edgeCam = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+  edgeScene.add(new THREE.Mesh(new THREE.PlaneGeometry(2, 2), edgeMat));
+  function renderFrame() {
+    const bg = scene.background;
+    scene.overrideMaterial = normalMat; scene.background = null;
+    renderer.setRenderTarget(normalRT); renderer.setClearColor(0x000000, 0); renderer.clear(); renderer.render(scene, camera);
+    scene.overrideMaterial = null; scene.background = bg;
+    renderer.setRenderTarget(null); renderer.autoClear = true; renderer.render(scene, camera);
+    renderer.autoClear = false; renderer.render(edgeScene, edgeCam); renderer.autoClear = true;
+  }
   const camera = new THREE.PerspectiveCamera(39.6, 1, 0.05, 50);
   const controls = new THREE.OrbitControls(camera, canvas); controls.enableDamping = true;
   function resetView() { camera.position.fromArray(E.camera.position); controls.target.fromArray(E.camera.target); controls.update(); }
   resetView();
-  function size() { const r = canvas.getBoundingClientRect(); renderer.setSize(r.width, r.height, false); camera.aspect = r.width / r.height; camera.updateProjectionMatrix(); }
+  function size() {
+    const r = canvas.getBoundingClientRect(), pr = renderer.getPixelRatio();
+    renderer.setSize(r.width, r.height, false); camera.aspect = r.width / r.height; camera.updateProjectionMatrix();
+    normalRT.setSize(Math.round(r.width * pr), Math.round(r.height * pr));
+    // Sample one CSS pixel away, so lines are about 1 pt at any pixel ratio.
+    edgeMat.uniforms.texel.value.set(pr / Math.max(1, r.width * pr), pr / Math.max(1, r.height * pr));
+  }
   new ResizeObserver(size).observe(stage); size();
 
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -188,7 +230,7 @@ __DATA__
   (function loop(now) {
     const dt = (now - last) / 1000; last = now;
     if (playing) { t = (t + dt * E.fps / NF) % 1; apply(t); }
-    controls.update(); effect.render(scene, camera);
+    controls.update(); renderFrame();
     requestAnimationFrame(loop);
   })(last);
 })();
