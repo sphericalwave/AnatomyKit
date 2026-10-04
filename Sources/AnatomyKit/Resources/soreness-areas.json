@@ -1,0 +1,463 @@
+{
+  "source": "Draft: everyday soreness areas \u2192 catalog muscles, weighted by how much of the area each muscle makes up. suitJoints: SuitKit Joint raw values a note's joint maps to.",
+  "areas": [
+    {
+      "id": "neck",
+      "name": "Neck",
+      "muscles": [
+        {
+          "muscle": "sternocleidomastoid",
+          "weight": 1
+        },
+        {
+          "muscle": "splenius_capitis",
+          "weight": 1
+        },
+        {
+          "muscle": "splenius_cervicis",
+          "weight": 0.8
+        },
+        {
+          "muscle": "levator_scapulae",
+          "weight": 0.6
+        },
+        {
+          "muscle": "scalenus_anterior",
+          "weight": 0.6
+        },
+        {
+          "muscle": "trapezius",
+          "weight": 0.4
+        }
+      ],
+      "suitJoints": [
+        "neck"
+      ]
+    },
+    {
+      "id": "traps",
+      "name": "Upper traps",
+      "muscles": [
+        {
+          "muscle": "trapezius",
+          "weight": 1
+        },
+        {
+          "muscle": "levator_scapulae",
+          "weight": 0.6
+        }
+      ]
+    },
+    {
+      "id": "upper_back",
+      "name": "Upper back",
+      "muscles": [
+        {
+          "muscle": "rhomboid_major",
+          "weight": 1
+        },
+        {
+          "muscle": "rhomboid_minor",
+          "weight": 1
+        },
+        {
+          "muscle": "trapezius",
+          "weight": 0.7
+        },
+        {
+          "muscle": "infraspinatus",
+          "weight": 0.5
+        },
+        {
+          "muscle": "teres_major",
+          "weight": 0.5
+        },
+        {
+          "muscle": "erector_spinae",
+          "weight": 0.4
+        }
+      ],
+      "suitJoints": [
+        "thoracicSpine"
+      ]
+    },
+    {
+      "id": "lats",
+      "name": "Lats",
+      "muscles": [
+        {
+          "muscle": "latissimus_dorsi",
+          "weight": 1
+        },
+        {
+          "muscle": "teres_major",
+          "weight": 0.7
+        }
+      ]
+    },
+    {
+      "id": "low_back",
+      "name": "Low back",
+      "muscles": [
+        {
+          "muscle": "erector_spinae",
+          "weight": 1
+        },
+        {
+          "muscle": "quadratus_lumborum",
+          "weight": 0.8
+        },
+        {
+          "muscle": "multifidus",
+          "weight": 0.8
+        },
+        {
+          "muscle": "psoas_major",
+          "weight": 0.3
+        }
+      ],
+      "suitJoints": [
+        "lumbarSpine",
+        "sacroiliac"
+      ]
+    },
+    {
+      "id": "chest",
+      "name": "Chest",
+      "muscles": [
+        {
+          "muscle": "pectoralis_major",
+          "weight": 1
+        },
+        {
+          "muscle": "pectoralis_minor",
+          "weight": 0.6
+        },
+        {
+          "muscle": "serratus_anterior",
+          "weight": 0.4
+        }
+      ]
+    },
+    {
+      "id": "abs",
+      "name": "Abs",
+      "muscles": [
+        {
+          "muscle": "rectus_abdominis",
+          "weight": 1
+        },
+        {
+          "muscle": "transversus_abdominis",
+          "weight": 0.6
+        },
+        {
+          "muscle": "external_oblique",
+          "weight": 0.5
+        },
+        {
+          "muscle": "internal_oblique",
+          "weight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "obliques",
+      "name": "Obliques",
+      "muscles": [
+        {
+          "muscle": "external_oblique",
+          "weight": 1
+        },
+        {
+          "muscle": "internal_oblique",
+          "weight": 1
+        },
+        {
+          "muscle": "quadratus_lumborum",
+          "weight": 0.3
+        }
+      ]
+    },
+    {
+      "id": "shoulders",
+      "name": "Shoulders",
+      "muscles": [
+        {
+          "muscle": "deltoid",
+          "weight": 1
+        },
+        {
+          "muscle": "supraspinatus",
+          "weight": 0.7
+        },
+        {
+          "muscle": "infraspinatus",
+          "weight": 0.6
+        },
+        {
+          "muscle": "teres_minor",
+          "weight": 0.5
+        },
+        {
+          "muscle": "subscapularis",
+          "weight": 0.5
+        }
+      ],
+      "suitJoints": [
+        "shoulder"
+      ]
+    },
+    {
+      "id": "biceps",
+      "name": "Biceps",
+      "muscles": [
+        {
+          "muscle": "biceps_brachii",
+          "weight": 1
+        },
+        {
+          "muscle": "brachialis",
+          "weight": 0.8
+        },
+        {
+          "muscle": "brachioradialis",
+          "weight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "triceps",
+      "name": "Triceps",
+      "muscles": [
+        {
+          "muscle": "triceps_brachii",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "forearms",
+      "name": "Forearms",
+      "muscles": [
+        {
+          "muscle": "brachioradialis",
+          "weight": 1
+        },
+        {
+          "muscle": "flexor_digitorum_superficialis",
+          "weight": 0.8
+        },
+        {
+          "muscle": "flexor_carpi_radialis",
+          "weight": 0.8
+        },
+        {
+          "muscle": "extensor_digitorum",
+          "weight": 0.8
+        },
+        {
+          "muscle": "extensor_carpi_radialis_longus",
+          "weight": 0.8
+        },
+        {
+          "muscle": "pronator_teres",
+          "weight": 0.5
+        },
+        {
+          "muscle": "supinator",
+          "weight": 0.5
+        }
+      ],
+      "suitJoints": [
+        "elbow",
+        "wrist",
+        "hand"
+      ]
+    },
+    {
+      "id": "glutes",
+      "name": "Glutes",
+      "muscles": [
+        {
+          "muscle": "gluteus_maximus",
+          "weight": 1
+        },
+        {
+          "muscle": "gluteus_medius",
+          "weight": 0.8
+        },
+        {
+          "muscle": "gluteus_minimus",
+          "weight": 0.5
+        },
+        {
+          "muscle": "piriformis",
+          "weight": 0.5
+        }
+      ],
+      "suitJoints": [
+        "hip"
+      ]
+    },
+    {
+      "id": "hip_flexors",
+      "name": "Hip flexors",
+      "muscles": [
+        {
+          "muscle": "psoas_major",
+          "weight": 1
+        },
+        {
+          "muscle": "iliacus",
+          "weight": 1
+        },
+        {
+          "muscle": "rectus_femoris",
+          "weight": 0.6
+        },
+        {
+          "muscle": "tensor_fasciae_latae",
+          "weight": 0.4
+        },
+        {
+          "muscle": "sartorius",
+          "weight": 0.3
+        }
+      ]
+    },
+    {
+      "id": "adductors",
+      "name": "Inner thighs",
+      "muscles": [
+        {
+          "muscle": "adductor_magnus",
+          "weight": 1
+        },
+        {
+          "muscle": "adductor_longus",
+          "weight": 1
+        },
+        {
+          "muscle": "adductor_brevis",
+          "weight": 0.8
+        },
+        {
+          "muscle": "gracilis",
+          "weight": 0.7
+        },
+        {
+          "muscle": "pectineus",
+          "weight": 0.6
+        }
+      ]
+    },
+    {
+      "id": "quads",
+      "name": "Quads",
+      "muscles": [
+        {
+          "muscle": "rectus_femoris",
+          "weight": 1
+        },
+        {
+          "muscle": "vastus_lateralis",
+          "weight": 1
+        },
+        {
+          "muscle": "vastus_medialis",
+          "weight": 1
+        }
+      ],
+      "suitJoints": [
+        "knee"
+      ]
+    },
+    {
+      "id": "hamstrings",
+      "name": "Hamstrings",
+      "muscles": [
+        {
+          "muscle": "biceps_femoris",
+          "weight": 1
+        },
+        {
+          "muscle": "semitendinosus",
+          "weight": 1
+        },
+        {
+          "muscle": "semimembranosus",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "calves",
+      "name": "Calves",
+      "muscles": [
+        {
+          "muscle": "gastrocnemius",
+          "weight": 1
+        },
+        {
+          "muscle": "soleus",
+          "weight": 1
+        },
+        {
+          "muscle": "popliteus",
+          "weight": 0.3
+        }
+      ],
+      "suitJoints": [
+        "ankle"
+      ]
+    },
+    {
+      "id": "shins",
+      "name": "Shins",
+      "muscles": [
+        {
+          "muscle": "tibialis_anterior",
+          "weight": 1
+        },
+        {
+          "muscle": "extensor_digitorum_longus",
+          "weight": 0.6
+        },
+        {
+          "muscle": "fibularis_longus",
+          "weight": 0.5
+        },
+        {
+          "muscle": "fibularis_brevis",
+          "weight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "feet",
+      "name": "Feet",
+      "muscles": [
+        {
+          "muscle": "flexor_digitorum_brevis",
+          "weight": 1
+        },
+        {
+          "muscle": "flexor_hallucis_longus",
+          "weight": 0.6
+        },
+        {
+          "muscle": "flexor_digitorum_longus",
+          "weight": 0.6
+        },
+        {
+          "muscle": "tibialis_posterior",
+          "weight": 0.5
+        }
+      ],
+      "suitJoints": [
+        "foot"
+      ]
+    }
+  ]
+}

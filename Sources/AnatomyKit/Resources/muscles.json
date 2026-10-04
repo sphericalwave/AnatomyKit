@@ -1431,5 +1431,28 @@
       }
     ],
     "actionSource": "Draft from standard kinesiology (Neumann; Kendall)"
+  },
+  {
+    "id": "multifidus",
+    "name": "Multifidus",
+    "kind": "muscle",
+    "region": "trunk",
+    "actions": [
+      {
+        "direction": "lumbar_spine.extension",
+        "role": "prime"
+      },
+      {
+        "direction": "thoracic_spine.extension",
+        "role": "secondary"
+      },
+      {
+        "direction": "lumbar_spine.rotation",
+        "role": "secondary"
+      }
+    ],
+    "actionSource": "Draft from standard kinesiology (Neumann; Kendall)",
+    "source": "Added for soreness areas (low back)",
+    "reviewed": false
   }
 ]
