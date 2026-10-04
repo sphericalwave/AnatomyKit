@@ -1,0 +1,78 @@
+{
+  "id": "single_arm_low_cable_lateral_raise",
+  "name": "Single-arm low-cable lateral raise",
+  "_doc": "Angles in degrees. Arm directions: abduct = out to the side from hanging, forward = how far the raise sits in front of the frontal plane (scaption). elbowFlex bends the elbow. Targets: AnatomyKit direction IDs; prime movers of `prime` directions are tinted strongly; prime movers of `secondary` directions and helpers of `prime` directions are tinted lightly. shoulderElevate lifts the shoulder girdle (clavicle and scapula) so the scapula rotates with the arm, roughly a third of the arm's elevation (scapulohumeral rhythm).",
+  "targets": {
+    "prime": [
+      "glenohumeral.abduction"
+    ],
+    "secondary": [
+      "scapulothoracic.upward_rotation"
+    ]
+  },
+  "working_side": "right",
+  "poses": {
+    "bottom": {
+      "right": {
+        "abduct": 12,
+        "forward": 25,
+        "elbowFlex": 12,
+        "shoulderElevate": 0
+      },
+      "left": {
+        "abduct": 6,
+        "forward": 0,
+        "elbowFlex": 8,
+        "shoulderElevate": 0
+      }
+    },
+    "top": {
+      "right": {
+        "abduct": 88,
+        "forward": 25,
+        "elbowFlex": 12,
+        "shoulderElevate": 22
+      },
+      "left": {
+        "abduct": 6,
+        "forward": 0,
+        "elbowFlex": 8,
+        "shoulderElevate": 0
+      }
+    }
+  },
+  "loop": {
+    "frames": 60,
+    "fps": 24,
+    "hold_bottom": 6,
+    "hold_top": 6
+  },
+  "equipment": {
+    "type": "cable_tower",
+    "side": "left",
+    "_doc": "Tower beside the body on the non-working side, pulley low and slightly forward (metres, body frame: +x body's left, +y forward, z up from the floor).",
+    "pulley": [
+      0.42,
+      0.1,
+      0.14
+    ]
+  },
+  "camera": {
+    "azimuth": 30,
+    "elevation": 6,
+    "distance": 3.5,
+    "target": [
+      0.2,
+      0.0,
+      0.98
+    ],
+    "lens": 50
+  },
+  "render": {
+    "size": [
+      720,
+      720
+    ],
+    "detail": 0.35
+  }
+}

@@ -44,6 +44,27 @@ ZANATOMY_BLEND=$ZA $B -b $ZB --python export_usdz.py   # → usdz/*.usdz + manif
 $B -b $ZA --python usdsize.py              # optional: USDZ size per layer at 100/25/10%
 ```
 
+## Exercise animations
+
+One JSON spec per exercise in `exercises/`. The spec holds the poses, loop timing,
+equipment, camera, and the AnatomyKit movement directions to colour.
+
+```sh
+SPEC=exercises/cable_lateral_raise.json ZANATOMY_BLEND=$ZA \
+  $B -b $ZB --python render_exercise.py          # → $OUT/<id>/<id>.mp4, .gif, web/
+EXERCISE=<id> python3 build_pages.py             # → $OUT/<id>.html (render vs live)
+PREVIEW=1 …                                      # three frames only, to check the look
+```
+
+- **Render:** Blender Workbench with matte object colours, cavity shading for muscle
+  definition, and object outlines on white.
+- **Colours:** prime movers of the `prime` directions are red. Prime movers of the
+  `secondary` directions, and helpers of the prime ones, are light red. Working side only.
+- **Muscles:** Z-Anatomy's sheets (fascia, aponeuroses, retinacula) are left out. They
+  hide the tinted muscles and tear at the joints.
+- **Shoulder:** `shoulderElevate` lifts the shoulder girdle with the arm (scapulohumeral
+  rhythm), which keeps the deltoid from tearing at the top of a raise.
+
 ## Notes
 
 - **Squat:** RigKit's sample back squat, retargeted to the Z-Biomechanics
