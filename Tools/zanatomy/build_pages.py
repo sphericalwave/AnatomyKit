@@ -57,7 +57,8 @@ if EXERCISE:
     ex_dir = OUT + EXERCISE + '/'
     page = open(PAGES + 'exercise_template.html').read()
     files = {'d-skel': 'web/skeleton.bin', 'd-skelbones': 'web/skeleton_bones.bin', 'd-muscles': 'web/muscles.bin',
-             'd-weights': 'web/weights.bin', 'd-frames': 'web/frames.bin'}
+             'd-weights': 'web/weights.bin', 'd-frames': 'web/frames.bin',
+             'd-skelcav': 'web/skeleton_cavity.bin', 'd-musclecav': 'web/muscles_cavity.bin'}
     data = ''.join(f'<script type="application/octet-stream" id="{k}">{base64.b64encode(open(ex_dir + v, "rb").read()).decode()}</script>\n'
                    for k, v in files.items())
     mp4 = base64.b64encode(open(ex_dir + EXERCISE + '.mp4', 'rb').read()).decode()
